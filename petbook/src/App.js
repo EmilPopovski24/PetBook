@@ -8,9 +8,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Routes>
-          <Route path='/home' element={<Home />} />
-      </Routes> */}
+      <main id="main">
+        {/* <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes> */}
+      </main>
       <Footer />
     </div>
   );
