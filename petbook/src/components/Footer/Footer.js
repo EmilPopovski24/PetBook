@@ -2,6 +2,11 @@
 
 export const Footer = () => {
     return (
-        <h1>Footer</h1>
+        <>
+        <ul className="footer">
+            <li><a href="/terms">Terms and Conditions</a></li>
+            <li><a href="/faq">FAQ</a></li>
+        </ul>
+        </>
     )
 }
