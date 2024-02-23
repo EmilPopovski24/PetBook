@@ -11,9 +11,9 @@ body {margin:0;}
   width: 100%;
 }
 
-/* li {
-  float: left;
-} */
+li {
+    float: center;
+  }
 
 li a {
   display: block;
