@@ -9,21 +9,21 @@ body {margin:0;}
   position: fixed;
   bottom: 0;
   width: 100%;
-  float:none;
 }
 
-li {
-    float: center;
+.footer-links {
+    display: inline;
+
 }
 
-li a {
-  display: block;
+.footer-links a {
+  display: inline-block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-li a:hover {
+.footer-links a:hover {
   background-color: #111;
 }

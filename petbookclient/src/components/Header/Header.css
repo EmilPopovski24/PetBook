@@ -6,27 +6,30 @@
     background-color: #333;
 }
 
-li {
+.header-links {
     display: inline;
     float:left;
-    
 }
 
-.logo {
+.logo-div {
     margin-left:20px;
     margin-right:20px;
     background-color: red;
+    color:white;
+    float:left;
+    text-decoration: none;
 }
 
-li a {
-    display: block;
+.header-links a {
+    display: inline;
+    float:left;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-li a:hover {
+.header-links a:hover {
     background-color: #111;
 }
 
