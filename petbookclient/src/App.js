@@ -8,6 +8,7 @@ import { Catalog } from  './components/Catalog/Catalog';
 import { AddPet } from  './components/AddPet/AddPet';
 import { About } from  './components/About/About';
 import { Terms } from  './components/Terms/Terms';
+import { FAQ } from  './components/FAQ/FAQ';
 import { Route, Routes} from 'react-router-dom'
 import './App.css';
 
@@ -25,6 +26,7 @@ function App() {
         <Route path ='/addpet' element={<AddPet />} />
         <Route path ='/about' element={<About />} />
         <Route path ='/terms' element={<Terms />} />
+        <Route path ='/faq' element={<FAQ />} />
       </Routes>
     </div>
     <Footer />
