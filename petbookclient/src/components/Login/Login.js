@@ -1,10 +1,12 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import './Login.css'
 
 export const Login = () => {
     return (
         <>
+        
+        <form className='login-form' />
         <h1>Login form</h1>
-        <form action="action_page.php" method="post" />
             <div class="imgcontainer">
                 <img src="img_avatar2.png" alt="Avatar" class="avatar" />
             </div>
