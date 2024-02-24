@@ -1,4 +1,5 @@
-form {
+.login-form {
     width:40%;
-    float: right;
+    position: absolute;
+    margin: auto auto;
 }
