@@ -7,6 +7,7 @@ import { Logout } from  './components/Logout/Logout';
 import { Catalog } from  './components/Catalog/Catalog';
 import { AddPet } from  './components/AddPet/AddPet';
 import { About } from  './components/About/About';
+import { Terms } from  './components/Terms/Terms';
 import { Route, Routes} from 'react-router-dom'
 import './App.css';
 
@@ -23,6 +24,7 @@ function App() {
         <Route path ='/catalog' element={<Catalog />} />
         <Route path ='/addpet' element={<AddPet />} />
         <Route path ='/about' element={<About />} />
+        <Route path ='/terms' element={<Terms />} />
       </Routes>
     </div>
     <Footer />
