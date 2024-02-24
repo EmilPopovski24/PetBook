@@ -6,6 +6,7 @@ import { Register } from  './components/Register/Register';
 import { Logout } from  './components/Logout/Logout';
 import { Catalog } from  './components/Catalog/Catalog';
 import { AddPet } from  './components/AddPet/AddPet';
+import { About } from  './components/About/About';
 import { Route, Routes} from 'react-router-dom'
 import './App.css';
 
@@ -19,8 +20,9 @@ function App() {
         <Route path ='/login' element={<Login />} />
         <Route path ='/register' element={<Register />} />
         <Route path ='/logout' element={<Logout />} />
-        <Route path ='/addpet' element={<AddPet />} />
         <Route path ='/catalog' element={<Catalog />} />
+        <Route path ='/addpet' element={<AddPet />} />
+        <Route path ='/about' element={<About />} />
       </Routes>
     </div>
     <Footer />
