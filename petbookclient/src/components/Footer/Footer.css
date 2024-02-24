@@ -9,11 +9,12 @@ body {margin:0;}
   position: fixed;
   bottom: 0;
   width: 100%;
+  float:none;
 }
 
 li {
     float: center;
-  }
+}
 
 li a {
   display: block;
