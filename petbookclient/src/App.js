@@ -24,6 +24,7 @@ function App() {
   const authService = authServiceFactory(auth.accessToken)
 
   const onLoginSubmit = async (data) => {
+    console.log(data)
     const result = await authService.login(data);
     console.log(result)
     setAuth(result)

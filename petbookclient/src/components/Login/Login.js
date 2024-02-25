@@ -18,8 +18,8 @@ export const Login = () => {
 
     return (
         <>
-        <section id = "login-page">
-        <form className='login-form' onSubmit={onSubmit} style={{width:"40%", margin:"80px auto" }}>
+        <section id = "login-page" className='auth'>
+        <form className='login-form' method="POST" onSubmit={onSubmit} style={{width:"40%", margin:"80px auto" }}>
         <h1 style={{textAlign:"center", fontFamily:"sans-serif"}}>Login form</h1>
             <div className="imgcontainer">
                 <img src="https://fetchpetcare.com/wp-content/uploads/2016/11/dreamstime_xxl_87694876-1024x293.jpg" alt="Avatar" className="avatar" />
@@ -27,7 +27,7 @@ export const Login = () => {
 
             <div className="container" style={{textAlign:"center", fontFamily:"sans-serif"}}>
                 <label for="email" style={{display:"block"}}><b>Email</b></label>
-                <input type="email" placeholder="Enter Email" id="email" name={LoginKeys.Email} value={values[LoginKeys.Email]} onChange={changeHanlder} />
+                <input type="email" placeholder="Enter Email" id="email" name={LoginKeys.Email} value={values[LoginKeys.Password]} onChange={changeHanlder} />
 
                 <label for="password" style={{display:"block"}}><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" id="password" name={LoginKeys.Password} value={values[LoginKeys.Password]} onChange={changeHanlder} />
