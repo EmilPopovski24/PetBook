@@ -6,8 +6,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 const LoginKeys = {
     Email: 'email',
     Password: 'password'
-}
-
+};
 
 export const Login = () => {
 
@@ -27,7 +26,7 @@ export const Login = () => {
             </div>
 
             <div className="container" style={{textAlign:"center", fontFamily:"sans-serif"}}>
-                <label for="uname" style={{display:"block"}}><b>Username</b></label>
+                <label for="uname" style={{display:"block"}}><b>Email</b></label>
                 <input type="text" placeholder="Enter Email" name={LoginKeys.Email} value={values[LoginKeys.Email]} onChange={changeHanlder} required />
 
                 <label for="password" style={{display:"block"}}><b>Password</b></label>
