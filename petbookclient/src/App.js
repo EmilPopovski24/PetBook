@@ -17,7 +17,11 @@ import { Route, Routes} from 'react-router-dom';
 
 
 function App() {
+  const navigate = useNavigate();
+
+
   const [auth, setAuth] = useState({});
+
 
   const onLoginSubmit = (data) => {
     const result = authService.login(data);
