@@ -23,8 +23,9 @@ function App() {
 
   const onLoginSubmit = (data) => {
     const result = authService.login(data);
-    setAuth(result)
-    navigate('/catalog')
+    console.log(result)
+    // setAuth(result)
+    // navigate('/catalog')
   }
   return (
     <>
