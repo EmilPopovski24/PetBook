@@ -11,7 +11,7 @@ const LoginKeys = {
 export const Login = () => {
 
     const { onLoginSubmit } = useContext(AuthContext);
-    const { values, changeHanlder, onSubmit} = useForm({
+    const { values, changeHandler, onSubmit} = useForm({
         [LoginKeys.Email]: '',
         [LoginKeys.Password]: ''
     }, onLoginSubmit)
@@ -27,10 +27,10 @@ export const Login = () => {
 
             <div className="container" style={{textAlign:"center", fontFamily:"sans-serif"}}>
                 <label for="email" style={{display:"block"}}><b>Email</b></label>
-                <input type="email" placeholder="Enter Email" id="email" name={LoginKeys.Email} value={values[LoginKeys.Password]} onChange={changeHanlder} />
+                <input type="email" placeholder="Enter Email" id="email" name={LoginKeys.Email} onChange={changeHandler} />
 
                 <label for="password" style={{display:"block"}}><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" id="password" name={LoginKeys.Password} value={values[LoginKeys.Password]} onChange={changeHanlder} />
+                <input type="password" placeholder="Enter Password" id="password" name={LoginKeys.Password} onChange={changeHandler} />
 
             <button style={{display:"block", margin:"10px auto"}} type="submit">Login</button>
             </div>
