@@ -1,12 +1,17 @@
 import { Link } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm'
 import { useContext } from 'react';
+import { AuthContext } from '../../contexts/AuthContext';
 
 
 
 export const Login = () => {
 
     const { onLoginSubmit } = useContext(AuthContext);
+    const { values, changeHanlder, onSubmit} = useForm({
+        email: '',
+        password: ''
+    })
 
     return (
         <>
@@ -21,8 +26,8 @@ export const Login = () => {
                 <label for="uname" style={{display:"block"}}><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="uname" required />
 
-                <label for="psw" style={{display:"block"}}><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required />
+                <label for="password" style={{display:"block"}}><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required />
 
             <button style={{display:"block", margin:"10px auto"}} type="submit">Login</button>
             </div>
