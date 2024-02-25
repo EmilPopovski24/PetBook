@@ -19,14 +19,12 @@ import { authServiceFactory } from './services/authService';
 
 function App() {
   const navigate = useNavigate();
-
   const [auth, setAuth] = useState({});
   const authService = authServiceFactory(auth.accessToken)
 
   const onLoginSubmit = async (data) => {
     const result = await authService.login(data);
     setAuth(result)
-    console.log(setAuth)
     navigate('/catalog')
   };
 
