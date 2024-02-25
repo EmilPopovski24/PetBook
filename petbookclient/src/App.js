@@ -14,14 +14,12 @@ import { About } from  './components/About/About';
 import { Terms } from  './components/Terms/Terms';
 import { FAQ } from  './components/FAQ/FAQ';
 import { Route, Routes} from 'react-router-dom';
-
+import { authService } from './services/authService';
 
 function App() {
   const navigate = useNavigate();
 
-
   const [auth, setAuth] = useState({});
-
 
   const onLoginSubmit = (data) => {
     const result = authService.login(data);
