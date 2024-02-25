@@ -1,5 +1,7 @@
 import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { Home } from  './components/Home/Home';
@@ -13,7 +15,15 @@ import { Terms } from  './components/Terms/Terms';
 import { FAQ } from  './components/FAQ/FAQ';
 import { Route, Routes} from 'react-router-dom';
 
+
 function App() {
+  const [auth, setAuth] = useState({});
+
+  const onLoginSubmit = (data) => {
+    const result = authService.login(data);
+    setAuth(result)
+    navigate('/catalog')
+  }
   return (
     <>
     <Header />
