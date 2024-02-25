@@ -17,7 +17,7 @@ const request = async (method, token, url, data) => {
                 ...options.headers,
                 'X-Authorization': token,
             };
-        };
+        }
     
         const response = await fetch(url, options);
     

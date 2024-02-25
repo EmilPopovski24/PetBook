@@ -24,15 +24,20 @@ function App() {
   const authService = authServiceFactory(auth.accessToken)
 
   const onLoginSubmit = async (data) => {
-    console.log(data)
     const result = await authService.login(data);
-    console.log(result)
     setAuth(result)
+    console.log(setAuth)
     navigate('/catalog')
+  };
+
+  const onLogout = async () => {
+    await authService.logout();
+    setAuth({});
   };
 
   const contextValues = {
     onLoginSubmit,
+    onLogout,
     userId: auth._id,
     token: auth.accessToken,
     userEmail: auth.email,
