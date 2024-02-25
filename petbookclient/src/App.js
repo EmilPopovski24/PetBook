@@ -2,6 +2,7 @@ import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from './contexts/AuthContext';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { Home } from  './components/Home/Home';
@@ -14,7 +15,7 @@ import { About } from  './components/About/About';
 import { Terms } from  './components/Terms/Terms';
 import { FAQ } from  './components/FAQ/FAQ';
 import { Route, Routes} from 'react-router-dom';
-import { authService, authServiceFactory } from './services/authService';
+import { authServiceFactory } from './services/authService';
 
 function App() {
   const navigate = useNavigate();
@@ -22,14 +23,24 @@ function App() {
   const [auth, setAuth] = useState({});
   const authService = authServiceFactory(auth.accessToken)
 
-  const onLoginSubmit = (data) => {
-    const result = authService.login(data);
+  const onLoginSubmit = async (data) => {
+    const result = await authService.login(data);
     console.log(result)
-    // setAuth(result)
-    // navigate('/catalog')
-  }
+    setAuth(result)
+    navigate('/catalog')
+  };
+
+  const contextValues = {
+    onLoginSubmit,
+    userId: auth._id,
+    token: auth.accessToken,
+    userEmail: auth.email,
+    username: auth.username,
+    isAuthenticated: !!auth.accessToken //truthy - false and vice versa
+  };
+
   return (
-    <>
+    <AuthContext.Provider value={contextValues}>
     <Header />
     <div className="main-content">
       <Routes>
@@ -45,7 +56,7 @@ function App() {
       </Routes>
     </div>
     <Footer />
-    </>
+    </AuthContext.Provider>
   );
 }
 
