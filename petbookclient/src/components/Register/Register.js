@@ -1,9 +1,17 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
+import { useForm } from '../../hooks/useForm';
 
 export const Register = () => {
     const { onRegisterSubmit } = useContext(AuthContext);
+
+    const { values, changeHandler, onSubmit } = useForm({
+        username: '',
+        email: '',
+        password: '',
+        repassword: '',
+    }, onRegisterSubmit)
 
 
     return (
@@ -17,16 +25,16 @@ export const Register = () => {
 
             <div className="container" style={{textAlign:"center", fontFamily:"sans-serif"}}>
                 <label for="uname" style={{display:"block"}}><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required />
+                <input type="text" placeholder="Enter Username" name="uname" value={values.username} required />
 
                 <label for="email" style={{display:"block"}}><b>Email address</b></label>
                 <input type="text" placeholder="Enter email address" name="email" required />
 
-                <label for="psw" style={{display:"block"}}><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required />
+                <label for="password" style={{display:"block"}}><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required />
 
-                <label for="psw" style={{display:"block"}}><b>Confirm Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required />
+                <label for="repassword" style={{display:"block"}}><b>Confirm Password</b></label>
+                <input type="repassword" placeholder="Enter Password" name="repassword" required />
 
             <button style={{display:"block", margin:"10px auto"}} type="submit">Login</button>
             </div>
