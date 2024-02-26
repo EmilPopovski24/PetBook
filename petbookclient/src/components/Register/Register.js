@@ -34,7 +34,7 @@ export const Register = () => {
                 <input type="password" placeholder="Enter Password" name="password" value={values.password} onChange={changeHandler} required />
 
                 <label for="confrimPassword" style={{display:"block"}}><b>Confirm Password</b></label>
-                <input type="confrimPassword" placeholder="Re-enter Password" name="confrimPassword" value={values.repassword} onChange={changeHandler} required />
+                <input type="password" placeholder="Re-enter Password" name="confrimPassword" value={values.confirmPassword} onChange={changeHandler} required />
 
             <button style={{display:"block", margin:"10px auto"}} type="submit">Login</button>
             </div>
