@@ -31,7 +31,7 @@ function App() {
   const onRegisterSubmit = async(values) => {
     const { confirmPassword, ...registerData } = values;
 
-    if(confirmPassword !== registerData) {
+    if(confirmPassword !== registerData.password) {
       alert("Both passwords do not match!")
       return;
     };
