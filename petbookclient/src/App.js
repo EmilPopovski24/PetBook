@@ -34,7 +34,7 @@ function App() {
     if(confirmPassword !== registerData) {
       alert("Both passwords do not match!")
       return;
-    }
+    };
 
     try {
         const result = await authService.register(values);
@@ -44,7 +44,7 @@ function App() {
         alert("User with the same details already exists!")
     }
     
-  }
+  };
 
   const onLogout = async () => {
     await authService.logout();
