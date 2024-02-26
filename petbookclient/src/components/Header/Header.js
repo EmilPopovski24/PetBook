@@ -6,7 +6,7 @@ export const Header = () => {
         <>
         <ul className="navbar">
             {/* <div className='logo-div'> */}
-                <li className='logo'><Link to="/">PetBook</Link></li>
+                <li className='header-links' id="logo"><Link to="/">PetBook</Link></li>
             {/* </div> */}
                 <li className='header-links'><Link to="/">Home</Link></li>
                 <li className='header-links'><Link to="/login">Login</Link></li>

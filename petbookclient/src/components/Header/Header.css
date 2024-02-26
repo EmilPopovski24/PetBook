@@ -11,14 +11,9 @@
     float:left;
 }
 
-/* .logo {
-    margin-left:20px;
-    margin-right:20px;
+#logo {
     background-color: red;
-    color:white;
-    float:left;
-    text-decoration: none;
-} */
+}
 
 .header-links a {
     display: inline;
