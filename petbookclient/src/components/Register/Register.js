@@ -10,7 +10,7 @@ export const Register = () => {
         username: '',
         email: '',
         password: '',
-        confrimPassword: '',
+        confirmPassword: '',
     }, onRegisterSubmit)
 
 
