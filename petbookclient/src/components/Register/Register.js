@@ -10,7 +10,7 @@ export const Register = () => {
         username: '',
         email: '',
         password: '',
-        repassword: '',
+        confrimPassword: '',
     }, onRegisterSubmit)
 
 
@@ -33,8 +33,8 @@ export const Register = () => {
                 <label for="password" style={{display:"block"}}><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" value={values.password} onChange={changeHandler} required />
 
-                <label for="repassword" style={{display:"block"}}><b>Confirm Password</b></label>
-                <input type="repassword" placeholder="Re-enter Password" name="repassword" value={values.repassword} onChange={changeHandler} required />
+                <label for="confrimPassword" style={{display:"block"}}><b>Confirm Password</b></label>
+                <input type="confrimPassword" placeholder="Re-enter Password" name="confrimPassword" value={values.repassword} onChange={changeHandler} required />
 
             <button style={{display:"block", margin:"10px auto"}} type="submit">Login</button>
             </div>
