@@ -11,14 +11,14 @@
     float:left;
 }
 
-.logo-div {
+/* .logo {
     margin-left:20px;
     margin-right:20px;
     background-color: red;
     color:white;
     float:left;
     text-decoration: none;
-}
+} */
 
 .header-links a {
     display: inline;
