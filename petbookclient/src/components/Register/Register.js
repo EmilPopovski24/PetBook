@@ -24,17 +24,17 @@ export const Register = () => {
             </div>
 
             <div className="container" style={{textAlign:"center", fontFamily:"sans-serif"}}>
-                <label for="uname" style={{display:"block"}}><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" value={values.username} required />
+                <label for="username" style={{display:"block"}}><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" value={values.username} required />
 
                 <label for="email" style={{display:"block"}}><b>Email address</b></label>
-                <input type="text" placeholder="Enter email address" name="email" required />
+                <input type="text" placeholder="Enter email address" name="email" value={values.email} required />
 
                 <label for="password" style={{display:"block"}}><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" required />
+                <input type="password" placeholder="Enter Password" name="password" value={values.password} required />
 
                 <label for="repassword" style={{display:"block"}}><b>Confirm Password</b></label>
-                <input type="repassword" placeholder="Enter Password" name="repassword" required />
+                <input type="repassword" placeholder="Re-enter Password" name="repassword" value={values.repassword} required />
 
             <button style={{display:"block", margin:"10px auto"}} type="submit">Login</button>
             </div>
