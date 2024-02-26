@@ -25,16 +25,16 @@ export const Register = () => {
 
             <div className="container" style={{textAlign:"center", fontFamily:"sans-serif"}}>
                 <label for="username" style={{display:"block"}}><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="username" value={values.username} onChange={changeHandler} required />
+                <input type="text" placeholder="Enter Username" id="username" name="username" value={values.username} onChange={changeHandler} required />
 
                 <label for="email" style={{display:"block"}}><b>Email address</b></label>
-                <input type="text" placeholder="Enter email address" name="email" value={values.email} onChange={changeHandler} required />
+                <input type="text" placeholder="Enter email address" id="email" name="email" value={values.email} onChange={changeHandler} required />
 
                 <label for="password" style={{display:"block"}}><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" value={values.password} onChange={changeHandler} required />
+                <input type="password" placeholder="Enter Password" id="password" name="password" value={values.password} onChange={changeHandler} required />
 
                 <label for="confrimPassword" style={{display:"block"}}><b>Confirm Password</b></label>
-                <input type="password" placeholder="Re-enter Password" name="confrimPassword" value={values.confirmPassword} onChange={changeHandler} required />
+                <input type="password" placeholder="Re-enter Password" id="confirmPassword" name="confrimPassword" value={values.confirmPassword} onChange={changeHandler} required />
 
             <button style={{display:"block", margin:"10px auto"}} type="submit">Register</button>
             </div>
