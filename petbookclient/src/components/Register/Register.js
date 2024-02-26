@@ -25,7 +25,7 @@ export const Register = () => {
 
             <div className="container" style={{textAlign:"center", fontFamily:"sans-serif"}}>
                 <label for="username" style={{display:"block"}}><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="username" value={values.username} required />
+                <input type="text" placeholder="Enter Username" name="username" value={values.username} onChange={changeHandler} required />
 
                 <label for="email" style={{display:"block"}}><b>Email address</b></label>
                 <input type="text" placeholder="Enter email address" name="email" value={values.email} required />
