@@ -28,13 +28,13 @@ export const Register = () => {
                 <input type="text" placeholder="Enter Username" name="username" value={values.username} onChange={changeHandler} required />
 
                 <label for="email" style={{display:"block"}}><b>Email address</b></label>
-                <input type="text" placeholder="Enter email address" name="email" value={values.email} required />
+                <input type="text" placeholder="Enter email address" name="email" value={values.email} onChange={changeHandler} required />
 
                 <label for="password" style={{display:"block"}}><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="password" value={values.password} required />
+                <input type="password" placeholder="Enter Password" name="password" value={values.password} onChange={changeHandler} required />
 
                 <label for="repassword" style={{display:"block"}}><b>Confirm Password</b></label>
-                <input type="repassword" placeholder="Re-enter Password" name="repassword" value={values.repassword} required />
+                <input type="repassword" placeholder="Re-enter Password" name="repassword" value={values.repassword} onChange={changeHandler} required />
 
             <button style={{display:"block", margin:"10px auto"}} type="submit">Login</button>
             </div>
