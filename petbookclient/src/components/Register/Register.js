@@ -16,7 +16,7 @@ export const Register = () => {
 
     return (
         <>
-        <section id = "register-page">
+        <section id = "register-page" onSubmit={onSubmit} method="POST">
         <form className='register-form' style={{width:"40%", margin:"80px auto" }}>
         <h1 style={{textAlign:"center", fontFamily:"sans-serif"}}>Register form</h1>
             <div className="imgcontainer">
