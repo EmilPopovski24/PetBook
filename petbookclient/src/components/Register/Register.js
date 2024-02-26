@@ -33,8 +33,8 @@ export const Register = () => {
                 <label for="password" style={{display:"block"}}><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" id="password" name="password" value={values.password} onChange={changeHandler} required />
 
-                <label for="confrimPassword" style={{display:"block"}}><b>Confirm Password</b></label>
-                <input type="password" placeholder="Re-enter Password" id="confirmPassword" name="confrimPassword" value={values.confirmPassword} onChange={changeHandler} required />
+                <label for="confirmPassword" style={{display:"block"}}><b>Confirm Password</b></label>
+                <input type="password" placeholder="Re-enter Password" id="confirmPassword" name="confirmPassword" value={values.confirmPassword} onChange={changeHandler} required />
 
             <button style={{display:"block", margin:"10px auto"}} type="submit">Register</button>
             </div>
