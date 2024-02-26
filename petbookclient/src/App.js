@@ -53,6 +53,7 @@ function App() {
 
   const contextValues = {
     onLoginSubmit,
+    onRegisterSubmit,
     onLogout,
     userId: auth._id,
     token: auth.accessToken,
