@@ -28,6 +28,24 @@ function App() {
     navigate('/catalog')
   };
 
+  const onRegisterSubmit = async(values) => {
+    const { confirmPassword, ...registerData } = values;
+
+    if(confirmPassword !== registerData) {
+      alert("Both passwords do not match!")
+      return;
+    }
+
+    try {
+        const result = await authService.register(values);
+        setAuth(result);
+        navigate('/catalog')
+    } catch (error) {
+        alert("User with the same details already exists!")
+    }
+    
+  }
+
   const onLogout = async () => {
     await authService.logout();
     setAuth({});
