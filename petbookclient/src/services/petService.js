@@ -12,13 +12,13 @@ export const petServiceFactory = (token) => {
         return pets;
     };
     
-    const create = async(petData) => {
+    const addPet = async(petData) => {
         const result = await request.post(baseUrl, petData)
         return result;
     };
 
     return {
         getAll,
-        create
+        addPet
     }
 }
