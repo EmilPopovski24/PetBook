@@ -24,10 +24,10 @@ export const Register = () => {
             </div>
 
             <div className="container" style={{textAlign:"center", fontFamily:"sans-serif"}}>
-                <label for="username" style={{display:"block"}}><b>Username</b></label>
+                <label htmlFor="username" style={{display:"block"}}><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" id="username" name="username" value={values.username} onChange={changeHandler} required />
 
-                <label for="email" style={{display:"block"}}><b>Email address</b></label>
+                <label htmlFor="email" style={{display:"block"}}><b>Email address</b></label>
                 <input type="text" placeholder="Enter email address" id="email" name="email" value={values.email} onChange={changeHandler} required />
 
                 <label htmlFor="password" style={{display:"block"}}><b>Password</b></label>
