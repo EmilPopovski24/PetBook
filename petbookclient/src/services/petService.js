@@ -12,13 +12,8 @@ export const petServiceFactory = (token) => {
         return pets;
     };
     
-    const addPet = async(petData) => {
-        const result = await request.post(baseUrl, petData)
-        return result;
-    };
 
     return {
-        getAll,
-        addPet
+        getAll
     }
 }
