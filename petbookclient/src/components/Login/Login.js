@@ -35,7 +35,7 @@ export const Login = () => {
             <button style={{display:"block", margin:"10px auto"}} type="submit">Login</button>
             </div>
 
-            <div className="container" style={{"background-color":"#f1f1f1"}}>
+            <div className="container" style={{"backgroundColor":"#f1f1f1"}}>
                 <p className="registerOptionText" style={{textAlign:"center"}}>
                     You don't have a profile? ... Come on... Go to the <Link to={"/register"}><b>Register page</b></Link>
                 </p>
