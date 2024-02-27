@@ -2,18 +2,18 @@ import { requestFactory } from "./requester";
 
 const baseUrl = 'http://localhost:3030/data/pets';
 
-export const taskServiceFactory = (token) => {
+export const petServiceFactory = (token) => {
     
     const request = requestFactory(token);
 
     const getAll = async() => {
         const result = await request.get(baseUrl);
-        const tasks = Object.values(result);
-        return tasks;
+        const pets = Object.values(result);
+        return pets;
     };
     
-    const create = async(taskData) => {
-        const result = await request.post(baseUrl, taskData)
+    const create = async(petData) => {
+        const result = await request.post(baseUrl, petData)
         return result;
     };
 
