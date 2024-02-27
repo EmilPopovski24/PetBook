@@ -1,6 +1,6 @@
 import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './contexts/AuthContext';
 import { Header } from './components/Header/Header';
@@ -21,7 +21,12 @@ function App() {
   const navigate = useNavigate();
   const [auth, setAuth] = useState({});
   const [pets, setPets] = useState([]);
-  const authService = authServiceFactory(auth.accessToken)
+  const authService = authServiceFactory(auth.accessToken);
+  const petService = authServiceFactory(auth.accessToken);
+
+  useEffect(() => {
+    pet
+  })
 
   const onLoginSubmit = async (data) => {
     const result = await authService.login(data);
