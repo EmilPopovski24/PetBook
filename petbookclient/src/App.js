@@ -16,13 +16,14 @@ import { Terms } from  './components/Terms/Terms';
 import { FAQ } from  './components/FAQ/FAQ';
 import { Route, Routes} from 'react-router-dom';
 import { authServiceFactory } from './services/authService';
+import { petServiceFactory } from './services/petService';
 
 function App() {
   const navigate = useNavigate();
   const [auth, setAuth] = useState({});
   const [pets, setPets] = useState([]);
   const authService = authServiceFactory(auth.accessToken);
-  const petService = authServiceFactory(auth.accessToken);
+  const petService = petServiceFactory(auth.accessToken);
 
   useEffect(() => {
     petService.getAll()
