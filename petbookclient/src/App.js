@@ -25,12 +25,12 @@ function App() {
   const authService = authServiceFactory(auth.accessToken);
   const petService = petServiceFactory(auth.accessToken);
 
-  // useEffect(() => {
-  //   petService.getAll()
-  //     .then(result=> {
-  //       setPets(result)
-  //     })
-  // }, []);
+  useEffect(() => {
+    petService.getAll()
+      .then(result=> {
+        setPets(result)
+      })
+  }, []);
 
   const onLoginSubmit = async (data) => {
     const result = await authService.login(data);
