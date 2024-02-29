@@ -18,6 +18,7 @@ export const petServiceFactory = (token) => {
     }
     
     return {
-        getAll
+        getAll, 
+        addPet
     }
 }
