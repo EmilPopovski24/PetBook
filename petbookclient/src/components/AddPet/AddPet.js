@@ -9,11 +9,11 @@ export const AddPet = () => {
                     <label htmlFor="task-title">Name</label>
                     <input type="text" id="name" name="name" placeholder="Pet name..." />
                     <hr />
-                    <label htmlFor="task-title">Type</label>
+                    <label htmlFor="type-title">Type</label>
                     <input type="text" id="type" name="type" placeholder="Type..." />
                     <hr />
-                    <label htmlFor="task-title">Breed</label>
-                    <input type="text" id="title" name="title" placeholder="Task name..." />
+                    <label htmlFor="breed-title">Breed</label>
+                    <input type="text" id="breed" name="breed" placeholder="Breed..." />
                     <hr />
                     <label htmlFor="task-descrition">Age</label>
                     <input type="text" id="description" name="description" placeholder="Task description..." />
