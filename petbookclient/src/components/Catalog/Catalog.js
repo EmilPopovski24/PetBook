@@ -1,4 +1,4 @@
-import { PetItem } from "./PetItem/PetItem"
+import { PetItem } from "./PetItem/PetItem";
 
 export const Catalog = ({
     pets
