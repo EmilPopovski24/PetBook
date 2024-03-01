@@ -15,14 +15,14 @@ export const AddPet = () => {
                     <label htmlFor="breed-title">Breed</label>
                     <input type="text" id="breed" name="breed" placeholder="Breed..." />
                     <hr />
-                    <label htmlFor="task-descrition">Age</label>
-                    <input type="text" id="description" name="description" placeholder="Task description..." />
+                    <label htmlFor="age">Age</label>
+                    <input type="text" id="age" name="age" placeholder="Age..." />
                     <hr />
-                    <label htmlFor="task-date">Color</label>
+                    <label htmlFor="color">Color</label>
                     <br />
-                    <input type="date" id="date" name="date" placeholder="Task name..." />
+                    <input type="text" id="color" name="color" placeholder="Color..." />
                     <hr />
-                    <button type="submit" className="btn btn-primary">Create</button>
+                    <button type="submit" className="btn btn-primary">Add Your Pet</button>
                 </form>
             </section>
         </>
