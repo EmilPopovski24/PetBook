@@ -7,7 +7,7 @@ export const AddPet = () => {
             <section id ="create-page">
                 <form id="create"  method="POST">
                     <label htmlFor="task-title">Name</label>
-                    <input type="text" id="title" name="title" placeholder="Task name..." />
+                    <input type="text" id="name" name="name" placeholder="Pet name..." />
                     <hr />
                     <label htmlFor="task-title">Type</label>
                     <input type="text" id="title" name="title" placeholder="Task name..." />
