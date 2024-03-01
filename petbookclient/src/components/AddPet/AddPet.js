@@ -16,7 +16,7 @@ export const AddPet = () => {
                     <br />
                     <input type="date" id="date" name="date" placeholder="Task name..." />
                     <hr />
-                    <button style={{background:"blue", border:"none"}} type="submit" className="btn btn-primary">Create</button>
+                    <button type="submit" className="btn btn-primary">Create</button>
                 </form>
             </section>
         </>
