@@ -10,7 +10,7 @@ export const AddPet = () => {
                     <input type="text" id="name" name="name" placeholder="Pet name..." />
                     <hr />
                     <label htmlFor="task-title">Type</label>
-                    <input type="text" id="title" name="title" placeholder="Task name..." />
+                    <input type="text" id="type" name="type" placeholder="Type..." />
                     <hr />
                     <label htmlFor="task-title">Breed</label>
                     <input type="text" id="title" name="title" placeholder="Task name..." />
