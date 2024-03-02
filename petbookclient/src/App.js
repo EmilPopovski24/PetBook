@@ -87,7 +87,7 @@ function App() {
         <Route path ='/login' element={<Login />} />
         <Route path ='/register' element={<Register />} />
         <Route path ='/logout' element={<Logout />} />
-        <Route path ='/catalog' element={<Catalog />} />
+        <Route path ='/catalog' element={<Catalog pets={pets}/>} />
         <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit}/>} />
         <Route path ='/about' element={<About />} />
         <Route path ='/terms' element={<Terms />} />
