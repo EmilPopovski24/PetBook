@@ -2,6 +2,11 @@
     width:40%;
     margin: auto;
     border-radius: 10px;
-    border: 2px solid red;;
-    padding:20px;
+    border: 2px solid red;
+    padding: 20px 40px 20px 40px;
+}
+
+.parameters {
+    margin-bottom:10px;
+    display: block;
 }
