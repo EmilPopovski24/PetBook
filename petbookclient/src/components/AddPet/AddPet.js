@@ -10,9 +10,8 @@ export const AddPet = ({
         type: '',
         breed: '',
         age: '',
-        color: ''
+        color: '',
     }, onAddPetSubmit)
-
 
     return (
         <>
