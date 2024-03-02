@@ -10,3 +10,10 @@
     margin-bottom:10px;
     display: block;
 }
+
+.addPetBtn {
+    padding:10px;
+    border: none;
+    background-color: red;
+    color:white;
+}
