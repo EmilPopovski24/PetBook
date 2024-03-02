@@ -17,3 +17,8 @@
     background-color: red;
     color:white;
 }
+
+.addPetHeader {
+    text-align: center;
+    padding:30px;
+}

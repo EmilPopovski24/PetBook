@@ -1,11 +1,22 @@
 import './AddPet.css';
+import { useForm } from '../../hooks/useForm';
 
 export const AddPet = () => {
+
+    const { values, changeHandler, onSubmit } = useForm({
+        name: '',
+        type: '',
+        breed: '',
+        age: '',
+        color: ''
+    }, onAddPetSubmit)
+
+
     return (
         <>
-        <h1>Add Your Pet</h1>
+        <h1 className='addPetHeader'>Add Your Pet</h1>
             <section id ="create-page">
-                <form id="create"  method="POST">
+                <form id="create" onSubmit={onSubmit}  method="POST">
                     <label htmlFor="task-title">Name</label>
                     <input type="text" id="name" name="name" placeholder="Pet name..." className='parameters'/>
                     <hr />

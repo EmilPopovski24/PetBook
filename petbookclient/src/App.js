@@ -32,6 +32,12 @@ function App() {
       })
   }, []);
 
+  const onAddPetSubmit = async(petData) => {
+    const result = await petService.addPet(petData)
+    setPets(result);
+    navigate('/catalog')
+  }
+
   const onLoginSubmit = async (data) => {
     const result = await authService.login(data);
     setAuth(result)
@@ -82,7 +88,7 @@ function App() {
         <Route path ='/register' element={<Register />} />
         <Route path ='/logout' element={<Logout />} />
         <Route path ='/catalog' element={<Catalog />} />
-        <Route path ='/addpet' element={<AddPet />} />
+        <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit}/>} />
         <Route path ='/about' element={<About />} />
         <Route path ='/terms' element={<Terms />} />
         <Route path ='/faq' element={<FAQ />} />
