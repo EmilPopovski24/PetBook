@@ -39,10 +39,10 @@ function App() {
     navigate('/catalog')
   };
 
-  const onVisitPetAccount = async(petData) => {
-    await petService.getOne();
-    return;
-  }
+  // const onVisitPetAccount = async(petData) => {
+  //   await petService.getOne();
+  //   return;
+  // }
 
   const onLoginSubmit = async (data) => {
     const result = await authService.login(data);
@@ -95,7 +95,7 @@ function App() {
         <Route path ='/logout' element={<Logout />} />
         <Route path ='/catalog' element={<Catalog pets={pets}/>} />
         <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
-        <Route path ='/data/pets/:petId' element={<PetAccount onVisitPetAccount={onVisitPetAccount} />} />
+        <Route path ='/catalog/:petId' element={<PetAccount />} />
         <Route path ='/about' element={<About />} />
         <Route path ='/terms' element={<Terms />} />
         <Route path ='/faq' element={<FAQ />} />
