@@ -95,7 +95,7 @@ function App() {
         <Route path ='/logout' element={<Logout />} />
         <Route path ='/catalog' element={<Catalog pets={pets}/>} />
         <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
-        <Route path ='/catalog/:petId' element={<PetAccount onVisitPetAccount={onVisitPetAccount} />} />
+        <Route path ='/data/pets/:petId' element={<PetAccount onVisitPetAccount={onVisitPetAccount} />} />
         <Route path ='/about' element={<About />} />
         <Route path ='/terms' element={<Terms />} />
         <Route path ='/faq' element={<FAQ />} />
