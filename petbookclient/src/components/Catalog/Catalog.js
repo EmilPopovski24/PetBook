@@ -7,10 +7,10 @@ export const Catalog = ({
         <>
         <div id='catalog-page'>
         <h1>Pets</h1>
-            {pets.map(x=> <PetItem key={x._id} {...x} />)}
+            {/* {pets.map(x=> <PetItem key={x._id} {...x} />)}
             {pets.length === 0 && (
                 <h1>No pet accounts for now</h1>
-            )}
+            )} */}
         </div>
         </>
     )
