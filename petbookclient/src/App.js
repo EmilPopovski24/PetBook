@@ -17,6 +17,7 @@ import { FAQ } from  './components/FAQ/FAQ';
 import { Route, Routes} from 'react-router-dom';
 import { authServiceFactory } from './services/authService';
 import { petServiceFactory } from './services/petService';
+import { PetAccount } from './components/PetAccount/PetAccount';
 
 function App() {
   const navigate = useNavigate();
@@ -36,6 +37,11 @@ function App() {
     const newPet = await petService.addPet(petData);
     setPets(state => [...state, newPet]);
     navigate('/catalog')
+  };
+
+  const onVisitPetAccount = async(petData) => {
+    await petService.getOne();
+    return;
   }
 
   const onLoginSubmit = async (data) => {
@@ -88,7 +94,8 @@ function App() {
         <Route path ='/register' element={<Register />} />
         <Route path ='/logout' element={<Logout />} />
         <Route path ='/catalog' element={<Catalog pets={pets}/>} />
-        <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit}/>} />
+        <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
+        <Route path ='/catalog/:petId' element={<PetAccount onVisitPetAccount={onVisitPetAccount} />} />
         <Route path ='/about' element={<About />} />
         <Route path ='/terms' element={<Terms />} />
         <Route path ='/faq' element={<FAQ />} />

@@ -15,10 +15,16 @@ export const petServiceFactory = (token) => {
     const addPet = async(data) => {
         const result = await request.post(baseUrl, data);
         return result
+    };
+
+    const getOne = async(petId) => {
+        const result = await request.get(`${baseUrl}/${petId}`);
+        return result;
     }
     
     return {
         getAll, 
-        addPet
+        addPet,
+        getOne
     }
 }
