@@ -1,4 +1,4 @@
-
+import './AddPet.css';
 
 export const AddPet = () => {
     return (
