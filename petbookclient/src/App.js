@@ -33,9 +33,10 @@ function App() {
   }, []);
 
   const onAddPetSubmit = async(petData) => {
-    const newPet = await petService.addPet(petData)
-    setPets(state => [...state, newPet]);
-    navigate('/catalog')
+    const newPet = await petService.addPet(petData);
+    console.log(newPet)
+    // setPets(state => [...state, newPet]);
+    // navigate('/catalog')
   }
 
   const onLoginSubmit = async (data) => {
