@@ -9,6 +9,7 @@ export const PetAccount = ({
 }) => {
     return(
         <>
+        <h1>PetAccount</h1>
         <h1>{name}, {type}, {breed}, {age}, {color}</h1>
         </>
     )
