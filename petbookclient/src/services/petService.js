@@ -18,6 +18,7 @@ export const petServiceFactory = (token) => {
     };
 
     const getOne = async(petId) => {
+        console.log(petId)
         const result = await request.get(`${baseUrl}/${petId}`);
         return result;
     }
