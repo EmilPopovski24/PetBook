@@ -3,34 +3,36 @@ import { petServiceFactory } from "../../services/petService";
 import { useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContext';
+import { Link } from 'react-router-dom';
 
 export const PetAccount = () => {
     const { userId } = useContext(AuthContext);
-    const { taskId } = useParams({});//learn more about useParams
-    const [task, setTask] = useState({});
+    const { petId } = useParams({});//learn more about useParams
+    const [pet, setPet] = useState({});
     const petService = useService(petServiceFactory);
     
     useEffect(()=> {
-        petService.getOne(taskId)
+        petService.getOne(petId)
             .then(result => {
-                setTask(result)
+                setPet(result)
             })
-    }, [taskId]);
+    }, [petId]);
 
-    const isOwner = task._ownerId === userId;
+    const isOwner = pet._ownerId === userId;
    
     return(
         <>
-        <h1>PetAccount</h1>
-        <h3>{task.name}</h3>
-        <h3>{task.type}</h3>
-        <h3>{task.breed}</h3>
-        <h3>{task.age}</h3>
-        <h3>{task.color}</h3>
+        <button><Link to="/catalog">Go back</Link></button>
+        <h3>{pet.name}</h3>
+        <h3>Type: {pet.type}</h3>
+        <h3>Breed: {pet.breed}</h3>
+        <h3>Age: {pet.age}</h3>
+        <h3>Color: {pet.color}</h3>
         {isOwner && (
-            <button>
-                Edit
-            </button>
+            <div className='ownerDiv'>
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
         )}
         </>
     )
