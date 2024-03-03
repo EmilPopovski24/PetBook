@@ -23,7 +23,11 @@ export const PetAccount = () => {
         <>
         <h1>PetAccount</h1>
         <h1>{task.name}, {task.type}, {task.breed}, {task.age}, {task.color}</h1>
-
+        {isOwner && (
+            <button>
+                Edit
+            </button>
+        )}
         </>
     )
 }
