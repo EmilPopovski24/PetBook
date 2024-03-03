@@ -18,7 +18,7 @@ export const PetItem = ({
             <h3>Color: {color}</h3>
             {/* <button className="account-buttons">Edit</button>
             <button className="account-buttons">Delete</button> */}
-            <button className="account-buttons"><Link to={`/data/pets/${_id}`}>Visit Account</Link></button>
+            <button className="account-buttons"><Link to={`/catalog/${_id}`}>Visit Account</Link></button>
            <hr />
         </>
     )
