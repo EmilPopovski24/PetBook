@@ -9,13 +9,13 @@ export const EditPet = ({
 }) => {  
     const { petId } = useParams();
     const petService = useService(petServiceFactory);
-    const [values, changeHandler, onSubmit, changeValues] = useForm({
+    const {values, changeHandler, onSubmit, changeValues} = useForm({
         _id:'',
         name: '',
         type: '',
         breed: '',
         age: '',
-        color: '',
+        color: ''
     }, onPetEditSubmit)
 
     useEffect(()=> {
@@ -46,7 +46,7 @@ export const EditPet = ({
                     <br />
                     <input type="text" id="color" name="color" value={values.color}  onChange={changeHandler} className='parameters' />
                     <hr />
-                    <button type="submit" className="addPetBtn">Add Your Pet</button>
+                    <button type="submit" className="addPetBtn">Edit</button>
                 </form>
             </section>
         </>
