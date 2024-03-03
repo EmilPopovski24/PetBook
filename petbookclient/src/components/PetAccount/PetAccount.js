@@ -1,20 +1,30 @@
 import { useService } from '../../hooks/useService'
 import { petServiceFactory } from "../../services/petService";
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+// import { AuthContext } from '../../contexts/AuthContext';
 
 
 
 export const PetAccount = () => {
+    // const { userId } = useContext(AuthContext);
     const { taskId } = useParams({});//learn more about useParams
     const petService = useService(petServiceFactory);
     const [task, setTask] = useState({});
     
+    useEffect(()=> {
+        petService.getOne(taskId)
+            .then(result => {
+                setTask(result)
+            }, [taskId])       
+    });
+
+    // const isOwner = task._ownerId === userId;
    
     return(
         <>
         <h1>PetAccount</h1>
-        <h1>{values.name}, {values.type}, {values.breed}, {values.age}, {values.color}</h1>
+        <h1>{task.name}, {task.type}, {task.breed}, {task.age}, {task.color}</h1>
 
         </>
     )
