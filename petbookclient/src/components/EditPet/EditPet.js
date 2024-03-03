@@ -1,15 +1,16 @@
-import { useContext } from "react";
 import { useParams } from "react-router-dom"
-import { AuthContext } from "../../contexts/AuthContext";
 import { useForm } from "../../hooks/useForm";
-
+import { useService } from "../../hooks/useService";
+import { petServiceFactory } from "../../services/petService";
+import { useEffect } from "react";
 
 export const EditPet = ({
     onPetEditSubmit
 }) => {  
-    const { petId } = useParams({});
-    const { userId } = useContext(AuthContext);
-    const [values, changeHandler, onSubmit, changeHandler] = useForm({
+    const { petId } = useParams();
+    const petService = useService(petServiceFactory);
+    const [values, changeHandler, onSubmit, changeValues] = useForm({
+        _id:'',
         name: '',
         type: '',
         breed: '',
@@ -17,6 +18,12 @@ export const EditPet = ({
         color: '',
     }, onPetEditSubmit)
 
+    useEffect(()=> {
+        petService.getOne(petId)
+            .then(result => {
+                changeValues(result);
+            })
+    },[petId])
 
     return(
         <>
@@ -24,20 +31,20 @@ export const EditPet = ({
             <section id ="edit-page">
                 <form id="edit" onSubmit={onSubmit}  method="POST">
                     <label htmlFor="task-title">Name</label>
-                    <input type="text" id="name" name="name" values={values.name} onChange={changeHandler}  className='parameters'/>
+                    <input type="text" id="name" name="name" value={values.name} onChange={changeHandler}  className='parameters'/>
                     <hr />
                     <label htmlFor="type-title">Type</label>
-                    <input type="text" id="type" name="type" values={values.type} onChange={changeHandler} className='parameters' />
+                    <input type="text" id="type" name="type" value={values.type} onChange={changeHandler} className='parameters' />
                     <hr />
                     <label htmlFor="breed-title">Breed</label>
-                    <input type="text" id="breed" name="breed" values={values.breed} onChange={changeHandler}  className='parameters' />
+                    <input type="text" id="breed" name="breed" value={values.breed} onChange={changeHandler}  className='parameters' />
                     <hr />
                     <label htmlFor="age">Age</label>
-                    <input type="text" id="age" name="age" values={values.age} onChange={changeHandler}  className='parameters' />
+                    <input type="text" id="age" name="age" value={values.age} onChange={changeHandler}  className='parameters' />
                     <hr />
                     <label htmlFor="color">Color</label>
                     <br />
-                    <input type="text" id="color" name="color" values={values.color}  onChange={changeHandler} className='parameters' />
+                    <input type="text" id="color" name="color" value={values.color}  onChange={changeHandler} className='parameters' />
                     <hr />
                     <button type="submit" className="addPetBtn">Add Your Pet</button>
                 </form>
