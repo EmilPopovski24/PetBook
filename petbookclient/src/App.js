@@ -47,7 +47,6 @@ function App() {
   const onLoginSubmit = async (data) => {
     const result = await authService.login(data);
     setAuth(result)
-    console.log(result)
     navigate('/catalog')
   };
 
