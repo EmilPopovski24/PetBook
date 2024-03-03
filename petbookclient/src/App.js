@@ -18,6 +18,7 @@ import { Route, Routes} from 'react-router-dom';
 import { authServiceFactory } from './services/authService';
 import { petServiceFactory } from './services/petService';
 import { PetAccount } from './components/PetAccount/PetAccount';
+import { EditPet } from './components/EditPet/EditPet';
 
 function App() {
   const navigate = useNavigate();
@@ -39,10 +40,11 @@ function App() {
     navigate('/catalog')
   };
 
-  // const onVisitPetAccount = async(petData) => {
-  //   await petService.getOne();
-  //   return;
-  // }
+  const onPetEditSubmit = async(petId, petData) => {
+    const result = await petService.edit(petData);
+    navigate(`/cataog/${petId}`);
+    return;
+  }
 
   const onLoginSubmit = async (data) => {
     const result = await authService.login(data);
@@ -94,6 +96,7 @@ function App() {
         <Route path ='/logout' element={<Logout />} />
         <Route path ='/catalog' element={<Catalog pets={pets}/>} />
         <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
+        <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} />
         <Route path ='/catalog/:petId' element={<PetAccount />} />
         <Route path ='/about' element={<About />} />
         <Route path ='/terms' element={<Terms />} />
