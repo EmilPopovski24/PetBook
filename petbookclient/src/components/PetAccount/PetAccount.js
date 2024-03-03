@@ -30,7 +30,7 @@ export const PetAccount = () => {
         <h3>Color: {pet.color}</h3>
         {isOwner && (
             <div className='ownerDiv'>
-                <button><Link to={`/cataog/${pet._id}/edit`}> Edit</ Link></button>
+                <button><Link to={`/catalog/${pet._id}/edit`}> Edit</ Link></button>
                 <button>Delete</button>
             </div>
         )}
