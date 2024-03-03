@@ -4,8 +4,6 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 // import { AuthContext } from '../../contexts/AuthContext';
 
-
-
 export const PetAccount = () => {
     // const { userId } = useContext(AuthContext);
     const { taskId } = useParams({});//learn more about useParams
