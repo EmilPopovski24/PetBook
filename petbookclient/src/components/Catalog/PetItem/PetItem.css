@@ -1,6 +1,6 @@
 .account-buttons {
     padding: 10px;
-    margin:10px 20px;
+    margin:10px;
     background-color: red;
     color:white;
     border:none;
@@ -15,4 +15,8 @@
 .account-buttons:hover {
     cursor: pointer;
     background-color: rgb(65, 1, 10);
+}
+
+.pet-item {
+    margin: 10px;
 }

@@ -11,6 +11,7 @@ export const PetItem = ({
 }) => {
     return (
         <>
+        <div className='pet-item'>
             <h1>{name}</h1>
             <h3>Type: {type}</h3>
             <h3>Breed: {breed}</h3>
@@ -20,6 +21,7 @@ export const PetItem = ({
             <button className="account-buttons">Delete</button> */}
             <button className="account-buttons"><Link to={`/catalog/${_id}`}>Visit Account</Link></button>
            <hr />
+        </div>
         </>
     )
 }
