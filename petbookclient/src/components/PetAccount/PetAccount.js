@@ -29,7 +29,7 @@ export const PetAccount = () => {
 
     return(
         <>
-        <button><Link to="/catalog">Go back</Link></button>
+        <button className='ownerBtn'><Link to="/catalog">Go back</Link></button>
         <h3>{pet.name}</h3>
         <h3>Type: {pet.type}</h3>
         <h3>Breed: {pet.breed}</h3>
