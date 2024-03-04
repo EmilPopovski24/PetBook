@@ -1,5 +1,4 @@
 .edit-page {
-    width: 40%;
     margin: auto;
     margin-top: 50px;
 }
@@ -14,4 +13,12 @@
     border: none;
     background-color: red;
     color:white;
+}
+
+#edit {
+    width:40%;
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid red;
+    padding: 20px 40px 20px 40px;
 }
