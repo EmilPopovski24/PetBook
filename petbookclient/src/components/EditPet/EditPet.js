@@ -47,7 +47,7 @@ export const EditPet = ({
                     <br />
                     <input type="text" id="color" name="color" value={values.color}  onChange={changeHandler} className='parameters' />
                     <hr />
-                    <button type="submit" className="addPetBtn">Edit</button>
+                    <button type="submit" className="editPetBtn">Edit</button>
                 </form>
             </section>
         </>
