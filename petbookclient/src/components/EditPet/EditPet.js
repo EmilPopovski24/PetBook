@@ -3,6 +3,7 @@ import { useForm } from "../../hooks/useForm";
 import { useService } from "../../hooks/useService";
 import { petServiceFactory } from "../../services/petService";
 import { useEffect } from "react";
+import './EditPet.css';
 
 export const EditPet = ({
     onPetEditSubmit
