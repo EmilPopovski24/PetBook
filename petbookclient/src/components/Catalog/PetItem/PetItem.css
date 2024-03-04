@@ -4,6 +4,12 @@
     background-color: red;
     color:white;
     border:none;
+    
+}
+
+.account-buttons a {
+    text-decoration: none;
+    color:white;
 }
 
 .account-buttons:hover {
