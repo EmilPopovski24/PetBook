@@ -1,5 +1,9 @@
 .edit-page {
     width: 40%;
     margin: auto;
+    margin-top: 50px;
+}
 
+.editPetHeader {
+    margin: auto ;
 }
