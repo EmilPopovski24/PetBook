@@ -9,5 +9,9 @@
     color: white;
     padding:10px;
     border: none;
-    margin: auto 10px;
+    margin: 10px 10px;
+}
+
+.pet-details {
+    margin: 10px;
 }
