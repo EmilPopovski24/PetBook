@@ -1,0 +1,13 @@
+.ownerDiv {
+    padding:10px;
+    border: none;
+    margin: auto auto;
+}
+
+.ownerBtn {
+    background-color: red;
+    color: white;
+    padding:10px;
+    border: none;
+    margin: auto 10px;
+}

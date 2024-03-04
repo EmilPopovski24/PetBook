@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
+import './PetAccount.css';
 
 export const PetAccount = () => {
     const { userId } = useContext(AuthContext);
@@ -36,8 +37,8 @@ export const PetAccount = () => {
         <h3>Color: {pet.color}</h3>
         {isOwner && (
             <div className='ownerDiv'>
-                <button><Link to={`/catalog/${pet._id}/edit`}> Edit</ Link></button>
-                <button onClick={onDeletePet}>Delete</button>
+                <button className='ownerBtn'><Link to={`/catalog/${pet._id}/edit`}> Edit</ Link></button>
+                <button className='ownerBtn'onClick={onDeletePet}>Delete</button>
             </div>
         )}
         </>
