@@ -3,6 +3,7 @@ import { useForm } from "../../hooks/useForm";
 import { useService } from "../../hooks/useService";
 import { petServiceFactory } from "../../services/petService";
 import { useEffect } from "react";
+import { Link } from 'react-router-dom';
 import './EditPet.css';
 
 export const EditPet = ({
@@ -28,6 +29,7 @@ export const EditPet = ({
 
     return(
         <>
+        <button className='ownerBtn'><Link to={`/catalog/${pet._id}`}>Go back</Link></button>
         <section className="edit-page">
             <h1 className='editPetHeader'>Edit Your Pet Details</h1>
                 <form id="edit" onSubmit={onSubmit}  method="POST">
