@@ -28,3 +28,8 @@
     background-color: #111;
 }
 
+.header-username {
+    display: block;
+    color: white;
+}
+
