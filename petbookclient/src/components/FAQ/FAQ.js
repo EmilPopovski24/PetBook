@@ -2,6 +2,6 @@
 
 export const FAQ = () => {
     return (
-        <h1>Frequently Asked Questions</h1>
+        <h1>!Frequently Asked Questions!</h1>
     )
 }
