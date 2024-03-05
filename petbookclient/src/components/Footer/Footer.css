@@ -13,7 +13,6 @@ body {margin:0;}
 
 .footer-links {
     display: inline;
-
 }
 
 .footer-links a {
@@ -31,5 +30,4 @@ body {margin:0;}
 .footer-logo {
   display: inline;
   color:white;
-  margin: auto auto;
 }
