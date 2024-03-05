@@ -17,6 +17,11 @@
     color:white;
 }
 
+.ownerBtn:hover{
+    cursor: pointer;
+    background-color: rgb(65, 1, 10);
+}
+
 .pet-details {
     margin: 10px;
 }
