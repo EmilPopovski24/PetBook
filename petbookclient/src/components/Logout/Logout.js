@@ -5,5 +5,5 @@ import { Navigate } from "react-router-dom";
 export const Logout = () => {
         const { onLogout } = useContext(AuthContext);
         onLogout();
-        return <Navigate to='/login' />
+        return <Navigate to='/' />
 };
