@@ -21,13 +21,15 @@ export const Header = () => {
             {isAuthenticated && (
                 <div>
                     <li className='header-links'><Link to="/addpet">Add Your Pet</Link></li>
-                    <li className='header-links'><Link to="/catalog">Catalog</Link></li>
-                    <li className='header-links'><Link to="/logout">Logout</Link></li>
+                    <li className='header-links'><Link to="/catalog">Catalog</Link></li>                 
                 </div>
             )}                 
             <li className='header-links'><Link to="/about">About</Link></li>
             {isAuthenticated && (
-                <li className='header-username'>Hello, {username}</li>
+                <div>
+                    <li className='header-links'><Link to="/logout">Logout</Link></li>
+                    <li className='header-username'>Hello, {username}</li>
+                </div>
             )}
         </ul>
         </>
