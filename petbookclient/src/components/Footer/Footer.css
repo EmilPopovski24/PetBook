@@ -1,4 +1,6 @@
-body {margin:0;}
+body {
+  margin:0;
+}
 
 .footer {
   list-style-type: none;
@@ -12,7 +14,7 @@ body {margin:0;}
 }
 
 .footer-links {
-    display: inline;
+  display: inline;
 }
 
 .footer-links a {
