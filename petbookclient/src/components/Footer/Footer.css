@@ -27,3 +27,8 @@ body {margin:0;}
 .footer-links a:hover {
   background-color: #111;
 }
+
+.footer-logo {
+  display: inline;
+  
+}
