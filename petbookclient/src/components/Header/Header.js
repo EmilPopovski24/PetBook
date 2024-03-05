@@ -27,7 +27,7 @@ export const Header = () => {
             )}                 
             <li className='header-links'><Link to="/about">About</Link></li>
             {isAuthenticated && (
-                <li className='header-links'><h5 className='header-username'>Hello, {username}</h5></li>
+                <li className='header-username'>Hello, {username}</li>
             )}
         </ul>
         </>

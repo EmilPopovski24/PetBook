@@ -29,7 +29,8 @@
 }
 
 .header-username {
-    display: block;
+    float:right;
+    margin-right: 10px;
     color: white;
 }
 
