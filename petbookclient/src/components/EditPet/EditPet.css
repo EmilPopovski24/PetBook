@@ -1,6 +1,6 @@
 .edit-page {
     margin: auto;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .editPetHeader {
@@ -14,6 +14,11 @@
     background-color: red;
     color:white;
     margin: auto auto;
+}
+
+.editPetBtn:hover {
+    cursor: pointer;
+    background-color: rgb(65, 1, 10);
 }
 
 #edit {
