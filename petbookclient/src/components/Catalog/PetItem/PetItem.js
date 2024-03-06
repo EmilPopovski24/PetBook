@@ -14,10 +14,10 @@ export const PetItem = ({
         <div className='pet-item'>
             <h1>{name}</h1>
             <ul>
-            <h3>Type: {type}</h3>
-            <h3>Breed: {breed}</h3>
-            <h3>Age: {age}</h3>
-            <h3>Color: {color}</h3>
+                <li><h3>Type: {type}</h3></li>
+                <li><h3>Breed: {breed}</h3></li>
+                <li><h3>Age: {age}</h3></li>
+                <li><h3>Color: {color}</h3></li>
             </ul>
             {/* <button className="account-buttons">Edit</button>
             <button className="account-buttons">Delete</button> */}
