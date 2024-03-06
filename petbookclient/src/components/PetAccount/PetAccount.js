@@ -29,7 +29,7 @@ export const PetAccount = () => {
 
     return(
         <>
-        <div className='petAccount'>
+        <div className='pet-account'>
             <button className='ownerBtn'><Link to="/catalog">Go back</Link></button>
             <div className='pet-details'>
                 <h3>{pet.name}</h3>

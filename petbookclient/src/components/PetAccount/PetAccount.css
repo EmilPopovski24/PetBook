@@ -9,7 +9,7 @@
     color: white;
     padding:10px;
     border: none;
-    margin: 10px 10px;
+    /* margin: 10px 10px; */
 }
 
 .ownerBtn a {
@@ -22,6 +22,6 @@
     background-color: rgb(65, 1, 10);
 }
 
-.pet-details {
-    margin: 10px;
+.pet-account {
+    margin: 10 px;
 }
