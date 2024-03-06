@@ -32,12 +32,10 @@ export const PetAccount = () => {
         <div className='pet-account'>
             <button className='ownerBtn'><Link to="/catalog">Go back</Link></button>
             <div className='pet-details'>
-                <ul>
-                    <li><h3>{pet.name}</h3></li>
-                    <li><h3>Type: {pet.type}</h3></li>
-                    <li><h3>Breed: {pet.breed}</h3></li>
-                    <li><h3>Age: {pet.age}</h3></li>
-                </ul>
+                <h3>{pet.name}</h3>
+                <h3>Type: {pet.type}</h3>
+                <h3>Breed: {pet.breed}</h3>
+                <h3>Age: {pet.age}</h3>
             </div>
             {isOwner && (
                 <div className='ownerDiv'>
