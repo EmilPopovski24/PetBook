@@ -19,8 +19,6 @@ export const PetItem = ({
                 <li><h3>Age: {age}</h3></li>
                 <li><h3>Color: {color}</h3></li>
             </ul>
-            {/* <button className="account-buttons">Edit</button>
-            <button className="account-buttons">Delete</button> */}
             <button className="account-buttons"><Link to={`/catalog/${_id}`}>Visit Account</Link></button>
            <hr />
         </div>
