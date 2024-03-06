@@ -29,19 +29,21 @@ export const PetAccount = () => {
 
     return(
         <>
-        <button className='ownerBtn'><Link to="/catalog">Go back</Link></button>
-        <div className='pet-details'>
-            <h3>{pet.name}</h3>
-            <h3>Type: {pet.type}</h3>
-            <h3>Breed: {pet.breed}</h3>
-            <h3>Age: {pet.age}</h3>
-        </div>
-        {isOwner && (
-            <div className='ownerDiv'>
-                <button className='ownerBtn'><Link to={`/catalog/${pet._id}/edit`}> Edit</ Link></button>
-                <button className='ownerBtn'onClick={onDeletePet}>Delete</button>
+        <div className='petAccount'>
+            <button className='ownerBtn'><Link to="/catalog">Go back</Link></button>
+            <div className='pet-details'>
+                <h3>{pet.name}</h3>
+                <h3>Type: {pet.type}</h3>
+                <h3>Breed: {pet.breed}</h3>
+                <h3>Age: {pet.age}</h3>
             </div>
-        )}
+            {isOwner && (
+                <div className='ownerDiv'>
+                    <button className='ownerBtn'><Link to={`/catalog/${pet._id}/edit`}> Edit</ Link></button>
+                    <button className='ownerBtn'onClick={onDeletePet}>Delete</button>
+                </div>
+            )}
+        </div>
         </>
     )
 }
