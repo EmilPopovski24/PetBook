@@ -1,15 +1,19 @@
+.pet-account {
+    margin: 10 px;
+}
+
 .ownerDiv {
     padding:10px;
     border: none;
     margin: auto auto;
-}
+} 
 
 .ownerBtn {
     background-color: red;
     color: white;
     padding:10px;
     border: none;
-    /* margin: 10px 10px; */
+    margin: 10px 10px;
 }
 
 .ownerBtn a {
@@ -20,8 +24,5 @@
 .ownerBtn:hover{
     cursor: pointer;
     background-color: rgb(65, 1, 10);
-}
+}  
 
-.pet-account {
-    margin: 10 px;
-}
