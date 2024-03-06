@@ -13,7 +13,6 @@
     color: white;
     padding:10px;
     border: none;
-    margin: 10px;
 }
 
 .ownerBtn a {
@@ -24,5 +23,9 @@
 .ownerBtn:hover{
     cursor: pointer;
     background-color: rgb(65, 1, 10);
-}  
+} 
+
+#delBtn {
+    margin-left:10px;
+}
 
