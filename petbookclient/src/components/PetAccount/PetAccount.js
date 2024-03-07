@@ -6,7 +6,9 @@ import { AuthContext } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 import './PetAccount.css';
 
-export const PetAccount = () => {
+export const PetAccount = ({
+    onDeleteUpdateState
+}) => {
     const { userId } = useContext(AuthContext);
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
@@ -22,6 +24,7 @@ export const PetAccount = () => {
 
     const onDeletePet = async() => {
         await petService.deletePet(pet._id);
+        onDeleteUpdateState()
         navigate('/catalog')
     }
 
