@@ -19,6 +19,7 @@ import { authServiceFactory } from './services/authService';
 import { petServiceFactory } from './services/petService';
 import { PetAccount } from './components/PetAccount/PetAccount';
 import { EditPet } from './components/EditPet/EditPet';
+import { Profile } from './components/Profile/Profile';
 
 function App() {
   const navigate = useNavigate();
@@ -97,6 +98,7 @@ function App() {
         <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
         <Route path ='/catalog/:petId' element={<PetAccount />} />
         <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} />
+        <Route path ='/profile' element={<Profile />} />
         <Route path ='/about' element={<About />} />
         <Route path ='/terms' element={<Terms />} />
         <Route path ='/faq' element={<FAQ />} />
