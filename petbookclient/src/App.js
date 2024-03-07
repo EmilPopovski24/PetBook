@@ -34,6 +34,10 @@ function App() {
       })
   }, []);
 
+  const onDeleteUpdateState = () => {
+
+  }
+
   const onAddPetSubmit = async(petData) => {
     const newPet = await petService.addPet(petData);
     setPets(state => [...state, newPet]);
@@ -78,6 +82,7 @@ function App() {
     onLoginSubmit,
     onRegisterSubmit,
     onLogout,
+    onDeleteUpdateState,
     userId: auth._id,
     token: auth.accessToken,
     userEmail: auth.email,
