@@ -66,7 +66,6 @@ function App() {
     } catch (error) {
         alert("User with the same details already exists!")
     }
-    
   };
 
   const onLogout = async () => {
