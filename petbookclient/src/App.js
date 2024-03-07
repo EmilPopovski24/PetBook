@@ -35,7 +35,7 @@ function App() {
   }, []);
 
   const onDeleteUpdateState = () => {
-
+    setPets(state => [...state])
   }
 
   const onAddPetSubmit = async(petData) => {
