@@ -6,9 +6,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 import './PetAccount.css';
 
-export const PetAccount = ({
-    onDeleteUpdateState
-}) => {
+export const PetAccount = () => {
     const { userId } = useContext(AuthContext);
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
