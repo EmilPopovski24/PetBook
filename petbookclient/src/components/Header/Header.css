@@ -34,3 +34,9 @@
     color: white;
 }
 
+#hello-username {
+    float:right;
+    color: white;
+    display: block;
+}
+
