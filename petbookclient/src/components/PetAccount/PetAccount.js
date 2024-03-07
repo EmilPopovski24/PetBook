@@ -24,7 +24,7 @@ export const PetAccount = ({
 
     const onDeletePet = async() => {
         await petService.deletePet(pet._id);
-        navigate('/catalog')
+        navigate('/catalog');
     }
 
     const isOwner = pet._ownerId === userId;
