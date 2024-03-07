@@ -31,8 +31,10 @@ export const PetAccount = () => {
         <>
         <div className='pet-account'>
             <button className='ownerBtn'><Link to="/catalog">Go back</Link></button>
+            <div className='pet-name'>
+                <h1>{pet.name}</h1>
+            </div>
             <div className='pet-details'>
-                <h3>{pet.name}</h3>
                 <h3>Type: {pet.type}</h3>
                 <h3>Breed: {pet.breed}</h3>
                 <h3>Age: {pet.age}</h3>
