@@ -1,10 +1,9 @@
 
 
 export const Profile = ({
-    email,
-    username
+    username,
+    email
 }) => {
-    
 
     return(
         <>
