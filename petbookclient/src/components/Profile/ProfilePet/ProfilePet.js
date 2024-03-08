@@ -1,16 +1,12 @@
-
+import { Link } from "react-router-dom"
 
 export const ProfilePet = ({
     name,
-    type,
-    breed,
-    age,
-    color, 
     _id
 }) => {
     return(
         <>
-        {name}
+        <Link to={`/catalog/${_id}`}>{name}</Link>
         </>
     )
 }
