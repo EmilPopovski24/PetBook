@@ -7,8 +7,8 @@ export const Profile = () => {
         <h1>MyProfile</h1>
         <h3>Personal Info</h3> 
             <ul>
-                <li>Username: {username}</li>
-                <li>Email: {userEmail}</li>
+                <li>Username: {user.username}</li>
+                <li>Email: {user.userEmail}</li>
 
             </ul>
         </>
