@@ -1,9 +1,6 @@
 
 
-export const Profile = ({
-    username,
-    userEmail
-}) => {
+export const Profile = () => {
 
     return(
         <>
