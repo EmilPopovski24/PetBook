@@ -2,7 +2,7 @@
 
 export const Profile = ({
     username,
-    email
+    userEmail
 }) => {
 
     return(
@@ -11,7 +11,7 @@ export const Profile = ({
         <h3>Personal Info</h3> 
             <ul>
                 <li>Username: {username}</li>
-                <li>Email: {email}</li>
+                <li>Email: {userEmail}</li>
 
             </ul>
         </>
