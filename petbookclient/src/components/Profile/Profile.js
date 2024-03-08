@@ -13,8 +13,8 @@ export const Profile = () => {
             <ul>
                 <li>Username: {user.username}</li>
                 <li>Email: {user.userEmail}</li>
-
             </ul>
+        <h3>My pets</h3>
         </>
     )
 }
