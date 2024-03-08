@@ -20,6 +20,7 @@ import { petServiceFactory } from './services/petService';
 import { PetAccount } from './components/PetAccount/PetAccount';
 import { EditPet } from './components/EditPet/EditPet';
 import { Profile } from './components/Profile/Profile';
+import { AdvicesList } from './components/AdvicesList/AdvicesList';
 
 function App() {
   const navigate = useNavigate();
@@ -99,6 +100,7 @@ function App() {
         <Route path ='/catalog/:petId' element={<PetAccount />} />
         <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} />
         <Route path ='/profile' element={<Profile />} />
+        <Route path ='/advices' element={<AdvicesList />} />
         <Route path ='/about' element={<About />} />
         <Route path ='/terms' element={<Terms />} />
         <Route path ='/faq' element={<FAQ />} />
