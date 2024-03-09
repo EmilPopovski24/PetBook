@@ -1,4 +1,5 @@
 import { PetItem } from "./PetItem/PetItem";
+import './Catalog.css';
 
 export const Catalog = ({
     pets
