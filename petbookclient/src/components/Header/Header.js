@@ -16,7 +16,7 @@ export const Header = () => {
                 <div className='authenticated'>
                     <li className='header-links'><Link to="/login">Login</Link></li>
                     <li className='header-links'><Link to="/register">Register</Link></li>
-                    
+
                 </div>
             )}
             {isAuthenticated && (
@@ -25,6 +25,7 @@ export const Header = () => {
                     <li className='header-links'><Link to="/catalog">Catalog</Link></li>   
                     <li className='header-links'><Link to="/profile">My Profile</Link></li>
                     <li className='header-links'><Link to="/advices">Advices</Link></li>   
+                    
                 </div>
             )}                 
             <li className='header-links'><Link to="/about">About</Link></li>
