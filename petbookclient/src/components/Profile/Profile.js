@@ -25,7 +25,7 @@ export const Profile = ({
             )} */}
             <div class="card">   
                 <form action="/action_page.php">
-                    <p>Add your photo</p>
+                    <p>Add your profile photo</p>
                     <label for="img">Select image:</label>
                     <input type="file" id="img" name="img" accept="image/*" />
                     <input type="submit"/>
