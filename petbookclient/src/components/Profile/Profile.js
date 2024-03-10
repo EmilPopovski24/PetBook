@@ -24,6 +24,10 @@ export const Profile = ({
                 <h1>No pet accounts for now</h1>
             )} */}
             <div class="card">
+                <form className="img-box">
+                    <p>Add your photo</p>
+                    <input type="img" />
+                </form>
                 <img src="img.jpg" alt="{user.username}" style={{width:"100%"}} />
                 <h3>Personal Info</h3> 
                     <ul>
