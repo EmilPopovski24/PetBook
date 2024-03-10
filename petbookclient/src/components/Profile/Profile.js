@@ -2,13 +2,20 @@ import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 // import { PetItem } from "../Catalog/PetItem/PetItem";
 import { ProfilePet } from "./ProfilePet/ProfilePet";
+import { authServiceFactory } from "../../services/authService";
 // import  Link  from 'react-router-dom;'
 
 export const Profile = ({
     pets
 }) => {
 
-    const user = useContext(AuthContext)
+    const user = useContext(AuthContext);
+    const authService = useService(authServiceFactory);
+
+    const onAddPhoto = async(photo) => {
+        const result = await authService.addPhoto(photo)
+        return result;
+    }
 
     return(
         <>
@@ -24,7 +31,7 @@ export const Profile = ({
                 <h1>No pet accounts for now</h1>
             )} */}
             <div class="card">   
-                <form action="/action_page.php">
+                <form action="/action_page.php" onSubmit={}>
                     <p>Add your profile photo</p>
                     <label for="img">Select image:</label>
                     <input type="file" id="img" name="img" accept="image/*" />
