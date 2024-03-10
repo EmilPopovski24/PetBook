@@ -38,7 +38,7 @@ export const Profile = ({
                     <input type="file" id="img" name="img" accept="image/*" />
                     <input type="submit"/>
                 </form>
-                <img src="img.jpg" alt="{user.username}" className="profile-image"style={{width:"100%"}} />
+                <img src="img.jpg" alt="{user.username}" className="profile-image" style={{width:"100%"}} />
                 <h3>Personal Info</h3> 
                     <ul>
                         <li>Username: {user.username}</li>
