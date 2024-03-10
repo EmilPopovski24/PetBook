@@ -23,10 +23,12 @@ export const Profile = ({
             {pets.length === 0 && (
                 <h1>No pet accounts for now</h1>
             )} */}
-            <div class="card">
-                <form className="img-box">
+            <div class="card">   
+                <form action="/action_page.php">
                     <p>Add your photo</p>
-                    <input type="img" />
+                    <label for="img">Select image:</label>
+                    <input type="file" id="img" name="img" accept="image/*" />
+                    <input type="submit"/>
                 </form>
                 <img src="img.jpg" alt="{user.username}" style={{width:"100%"}} />
                 <h3>Personal Info</h3> 
