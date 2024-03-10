@@ -3,7 +3,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 // import { PetItem } from "../Catalog/PetItem/PetItem";
 import { ProfilePet } from "./ProfilePet/ProfilePet";
 import { authServiceFactory } from "../../services/authService";
-// import  Link  from 'react-router-dom;'
+
 
 export const Profile = ({
     pets
