@@ -31,7 +31,7 @@ export const Profile = ({
                 <h1>No pet accounts for now</h1>
             )} */}
             <div class="card">   
-                <form action="/action_page.php" onSubmit={}>
+                <form action="/action_page.php" onSubmit={onAddPhoto}>
                     <p>Add your profile photo</p>
                     <label for="img">Select image:</label>
                     <input type="file" id="img" name="img" accept="image/*" />
