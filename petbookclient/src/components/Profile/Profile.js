@@ -27,7 +27,7 @@ export const Profile = ({
                 <img src="img.jpg" alt="{user.username}" style={{width:"100%"}} />
                 <h3>Personal Info</h3> 
                     <ul>
-                        <li>Username: {user.username}s</li>
+                        <li>Username: {user.username}</li>
                         <li>Email: {user.userEmail}</li>
                     </ul>         
                 <p class="title">CEO & Founder, Example</p>
