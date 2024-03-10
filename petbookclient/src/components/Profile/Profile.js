@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 // import { PetItem } from "../Catalog/PetItem/PetItem";
-import { ProfilePet } from "./ProfilePet/ProfilePet";
+// import { ProfilePet } from "./ProfilePet/ProfilePet";
 import { authServiceFactory } from "../../services/authService";
-
+import { useService } from "../../hooks/useService";
 
 export const Profile = ({
     pets
@@ -14,7 +14,8 @@ export const Profile = ({
 
     const onAddPhoto = async(photo) => {
         const result = await authService.addPhoto(photo)
-        return result;
+        console.log(photo);
+        console.log(result)
     }
 
     return(
