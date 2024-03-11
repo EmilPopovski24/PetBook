@@ -13,6 +13,7 @@ export const Profile = ({
     // const authService = useService(authServiceFactory);
     console.log(pets)
     
+    
     // const onAddPhoto = async(photo) => {
     //     const result = await authService.addPhoto(photo)
     //     console.log(photo);
