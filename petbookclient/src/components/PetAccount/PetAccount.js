@@ -33,7 +33,7 @@ export const PetAccount = () => {
             <button className='ownerBtn'><Link to="/catalog">Go back</Link></button>
             <div className='pet-name'>
                 <h1>{pet.name}</h1>
-                <img src={pet.imageUrl} alt={pet.name} />
+                <img src={pet.imageUrl} alt={pet.name} className='petAccount-pic'/>
             </div>
             <div className='pet-details'>
                 <h3>Type: {pet.type}</h3>
