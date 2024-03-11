@@ -49,7 +49,7 @@ export const Profile = ({
                 <p>Harvard University</p> */}
                 <h3>My pets</h3>
                 {}
-                    {pets.map(x=> <ProfilePet key={x._Id} {...x} />)}
+                    {pets.map(x=> <ProfilePet key={x._Id} {...x.ownerId} />)}
                     {pets.length === 0 && (
                     <h1>No pet accounts for now</h1>
                 )}
