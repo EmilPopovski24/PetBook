@@ -32,6 +32,9 @@ export const AddPet = ({
                     <hr />
                     <label htmlFor="color">Color</label>
                     <br />
+                    <label htmlFor="imageUrl">Image</label>
+                    <input type="image" alt="pet-photo" id="imageUrl" name="age" values={values.imageUrl} onChange={changeHandler} placeholder="Image..." className='parameters' />
+                    <hr />
                     <input type="text" id="color" name="color" values={values.color}  onChange={changeHandler} placeholder="Color..." className='parameters' />
                     <hr />
                     <button type="submit" className="addPetBtn">Add Your Pet</button>

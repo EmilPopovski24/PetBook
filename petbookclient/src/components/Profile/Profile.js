@@ -44,8 +44,8 @@ export const Profile = ({
                         <li>Username: {user.username}</li>
                         <li>Email: {user.userEmail}</li>
                     </ul>         
-                <p className="title">CEO & Founder, Example</p>
-                <p>Harvard University</p>
+                {/* <p className="title">CEO & Founder, Example</p>
+                <p>Harvard University</p> */}
                 <h3>My pets</h3>
                     {pets.map(x=> <ProfilePet key={x._Id} {...x} />)}
                     {pets.length === 0 && (
