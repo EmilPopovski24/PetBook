@@ -31,11 +31,11 @@ export const AddPet = ({
                     <input type="text" id="age" name="age" values={values.age} onChange={changeHandler} placeholder="Age..." className='parameters' />
                     <hr />
                     <label htmlFor="color">Color</label>
-                    <br />
-                    <label htmlFor="imageUrl">Image</label>
-                    <input type="image" alt="pet-photo" id="imageUrl" name="age" values={values.imageUrl} onChange={changeHandler} placeholder="Image..." className='parameters' />
-                    <hr />
+                    {/* <br /> */}
                     <input type="text" id="color" name="color" values={values.color}  onChange={changeHandler} placeholder="Color..." className='parameters' />
+                    <hr />
+                    <label htmlFor="image">Image</label>
+                    <input type="text" alt="PetPicture" id="imageUrl" name="imageUrl" values={values.image} onChange={changeHandler} placeholder="Image..." className='parameters' />
                     <hr />
                     <button type="submit" className="addPetBtn">Add Your Pet</button>
                 </form>

@@ -7,12 +7,14 @@ export const PetItem = ({
     breed,
     age,
     color, 
-    _id
+    _id,
+    imageUrl,
 }) => {
     return (
         <>
         <div className='pet-item'>
             <h1>{name}</h1>
+            <img src="{imageUrl}" alt="PetPicture" />
             <ul>
                 <li><h3>Type: {type}</h3></li>
                 <li><h3>Breed: {breed}</h3></li>
