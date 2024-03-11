@@ -12,7 +12,7 @@ export const Profile = ({
     const user = useContext(AuthContext);
     // const authService = useService(authServiceFactory);
     console.log(pets)
-    const isPetOwner = user.userId === pets.ownerId
+    const isPetOwner = user.userId === pets
     
     // const onAddPhoto = async(photo) => {
     //     const result = await authService.addPhoto(photo)
