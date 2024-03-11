@@ -11,6 +11,7 @@ export const AddPet = ({
         breed: '',
         age: '',
         color: '',
+        imageUrl: '',
     }, onAddPetSubmit)
 
     return (
