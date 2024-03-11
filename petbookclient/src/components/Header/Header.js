@@ -16,7 +16,6 @@ export const Header = () => {
                 <div className='authenticated'>
                     <li className='header-links'><Link to="/login">Login</Link></li>
                     <li className='header-links'><Link to="/register">Register</Link></li>
-
                 </div>
             )}
             {isAuthenticated && (
