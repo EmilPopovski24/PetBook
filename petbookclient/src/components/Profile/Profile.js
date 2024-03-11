@@ -10,13 +10,14 @@ export const Profile = ({
 }) => {
 
     const user = useContext(AuthContext);
-    const authService = useService(authServiceFactory);
-
-    const onAddPhoto = async(photo) => {
-        const result = await authService.addPhoto(photo)
-        console.log(photo);
-        console.log(result)
-    }
+    // const authService = useService(authServiceFactory);
+    console.log(pets)
+    
+    // const onAddPhoto = async(photo) => {
+    //     const result = await authService.addPhoto(photo)
+    //     console.log(photo);
+    //     console.log(result)
+    // }
 
     return(
         <>
@@ -31,13 +32,13 @@ export const Profile = ({
             {pets.length === 0 && (
                 <h1>No pet accounts for now</h1>
             )} */}
-            <div class="card">   
-                <form action="/action_page.php" onSubmit={onAddPhoto}>
+            <div className="card">   
+                {/* <form action="/action_page.php" onSubmit={onAddPhoto}>
                     <p>Add your profile photo</p>
                     <label for="img">Select image:</label>
                     <input type="file" id="img" name="img" accept="image/*" />
                     <input type="submit"/>
-                </form>
+                </form> */}
                 {/* <img src="img.jpg" alt="{user.username}" className="profile-image" style={{width:"100%"}} /> */}
                 <h3>Personal Info</h3> 
                     <ul>
@@ -47,6 +48,7 @@ export const Profile = ({
                 {/* <p className="title">CEO & Founder, Example</p>
                 <p>Harvard University</p> */}
                 <h3>My pets</h3>
+                {}
                     {pets.map(x=> <ProfilePet key={x._Id} {...x} />)}
                     {pets.length === 0 && (
                     <h1>No pet accounts for now</h1>
@@ -55,7 +57,6 @@ export const Profile = ({
                 <Link to="/"><i class="fa fa-twitter">ui</i></Link>
                 <Link to="/"><i class="fa fa-linkedin">ui</i></Link>
                 <Link to="/"><i class="fa fa-facebook">ui</i></Link> */}
-                <p><button>Contact</button></p>
             </div>
         </>
     )
