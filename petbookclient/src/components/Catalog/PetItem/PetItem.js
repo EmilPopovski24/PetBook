@@ -14,7 +14,7 @@ export const PetItem = ({
         <>
         <div className='pet-item'>
             <h1>{name}</h1>
-            <img src="{imageUrl}" alt="PetPicture" />
+            <img src={imageUrl} alt={name} />
             <ul>
                 <li><h3>Type: {type}</h3></li>
                 <li><h3>Breed: {breed}</h3></li>
