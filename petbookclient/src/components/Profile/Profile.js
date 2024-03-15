@@ -11,7 +11,7 @@ export const Profile = ({
 
     const user = useContext(AuthContext);
     // const authService = useService(authServiceFactory);
-    console.log(pets)
+    // console.log(pets)
     // const isPetOwner = user.userId === pets
     
     // const onAddPhoto = async(photo) => {
