@@ -26,7 +26,6 @@ export const EditPet = ({
                 changeValues(result);
             })
     },[petId])
-\
 
     return(
         <>
