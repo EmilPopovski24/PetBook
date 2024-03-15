@@ -13,6 +13,7 @@ body {
   width: 100%;
 }
 
+
 .footer-links {
   display: inline;
 }
@@ -28,7 +29,6 @@ body {
 .footer-links a:hover {
   background-color: #111;
 }
-
 
 .footer-logo {
   display: inline;
