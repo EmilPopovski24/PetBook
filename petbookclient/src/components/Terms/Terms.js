@@ -2,6 +2,6 @@
 
 export const Terms = () => {
     return (
-        <h1>Terms and Conditions</h1>
+        <h1>Terms & Conditions</h1>
     )
 }
