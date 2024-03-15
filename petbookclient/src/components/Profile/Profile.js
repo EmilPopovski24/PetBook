@@ -22,7 +22,7 @@ export const Profile = ({
 
     return(
         <>
-        <h1>MyProfile</h1>
+        {/* <h1>MyProfile</h1>
         <h3>Personal Info</h3> 
             <ul>
                 <li>Username: {user.username}</li>
@@ -32,7 +32,7 @@ export const Profile = ({
         {pets.map(x=> <ProfilePet key={x._ownerId} {...x} />)}
             {pets.length === 0 && (
                 <h1>No pet accounts for now</h1>
-            )}
+            )} */}
             <div className="card">   
                 {/* <form action="/action_page.php" onSubmit={onAddPhoto}>
                     <p>Add your profile photo</p>
