@@ -27,8 +27,8 @@ export const Login = () => {
             <div className="container" style={{textAlign:"center", fontFamily:"sans-serif"}}>
                 <label htmlFor="email" style={{display:"block"}}><b>Email</b></label>
                 <input type="email" placeholder="Enter Email" id="email" name={LoginKeys.Email} value={values[LoginKeys.Email]} onChange={changeHandler} />
+               
                 <label htmlFor="password" style={{display:"block"}}><b>Password</b></label>
-                
                 <input type="password" placeholder="Enter Password" id="password" name={LoginKeys.Password} value={values[LoginKeys.Password]} onChange={changeHandler} />
             <button style={{display:"block", margin:"10px auto"}} type="submit">Login</button>
             </div>
