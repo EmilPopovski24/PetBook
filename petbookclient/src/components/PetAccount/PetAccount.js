@@ -8,6 +8,7 @@ import './PetAccount.css';
 
 export const PetAccount = () => {
     const { userId } = useContext(AuthContext);
+    const user = useContext(AuthContext);
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
     const petService = useService(petServiceFactory);
@@ -39,7 +40,7 @@ export const PetAccount = () => {
                 <h3>Type: {pet.type}</h3>
                 <h3>Breed: {pet.breed}</h3>
                 <h3>Age: {pet.age}</h3>
-                <h3>Owner:</h3>
+                <h3>Owner: {user.username} </h3>
                 {isOwner && (
                     <div className='ownerDiv'>
                         <button className='ownerBtn'><Link to={`/catalog/${pet._id}/edit`}> Edit</ Link></button>
