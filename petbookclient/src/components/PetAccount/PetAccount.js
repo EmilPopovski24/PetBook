@@ -30,19 +30,19 @@ export const PetAccount = () => {
 
     return(
         <>
-        <div className='pet-account'>
-            <button className='ownerBtn'><Link to="/catalog">Go back</Link></button>
-            <Link to={`/catalog/${pet._id}`}><div className='pet-name'>
+        <div className='pet-account'>     
+            <div className='pet-name'>
                 <h1 className='petAccount-name'>{pet.name}</h1>
                 <img src={pet.imageUrl} alt={pet.name} className='petAccount-pic'/>
-            </div></Link>
+            </div>
             <div className='pet-details'>
                 <h3>Type: {pet.type}</h3>
                 <h3>Breed: {pet.breed}</h3>
                 <h3>Age: {pet.age}</h3>
                 <h3>Owner: {user.username} </h3>
                 {isOwner && (
-                    <div className='ownerDiv'>
+                    <div className='actionsDiv'>
+                        <button className='ownerBtn'><Link to="/catalog">Go back</Link></button>
                         <button className='ownerBtn'><Link to={`/catalog/${pet._id}/edit`}> Edit</ Link></button>
                         <button className='ownerBtn' id="delBtn" onClick={onDeletePet}>Delete</button>
                     </div>
