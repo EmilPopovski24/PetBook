@@ -32,10 +32,10 @@ export const PetAccount = () => {
         <>
         <div className='pet-account'>
             <button className='ownerBtn'><Link to="/catalog">Go back</Link></button>
-            <div className='pet-name'>
+            <Link to={`/catalog/${pet._id}`}><div className='pet-name'>
                 <h1 className='petAccount-name'>{pet.name}</h1>
                 <img src={pet.imageUrl} alt={pet.name} className='petAccount-pic'/>
-            </div>
+            </div></Link>
             <div className='pet-details'>
                 <h3>Type: {pet.type}</h3>
                 <h3>Breed: {pet.breed}</h3>

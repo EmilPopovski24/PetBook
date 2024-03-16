@@ -6,7 +6,7 @@ export const ProfilePet = ({
 }) => {
     return(
         <>
-        <div className="profile=pet"></div>
+        <div className="profile-pet"></div>
         <Link to={`/catalog/${_id}`}>{name}</Link>
         </>
     )
