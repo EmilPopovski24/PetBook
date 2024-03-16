@@ -3,12 +3,6 @@
     margin-left: 100px;
 }
 
-.ownerDiv {
-    padding:10px;
-    border: none;
-    margin: auto auto;
-} 
-
 .ownerBtn {
     background-color: red;
     color: white;
@@ -36,6 +30,8 @@
 
 .petAccount-pic {
     width:20%;
+    border: none;
+    border-radius: 5%;
 }
 
 
