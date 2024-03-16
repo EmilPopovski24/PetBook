@@ -24,7 +24,7 @@ export const PetAccount = () => {
         await petService.deletePet(pet._id);
         navigate('/catalog');
     }
-
+    console.log(userId)
     const isOwner = pet._ownerId === userId;
 
     return(
