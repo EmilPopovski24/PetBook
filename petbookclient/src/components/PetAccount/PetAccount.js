@@ -42,7 +42,7 @@ export const PetAccount = () => {
                 <h3>Owner: {user.username} </h3>
                 {isOwner && (
                     <div className='actionsDiv'>
-                        <button className='ownerBtn'><Link to="/catalog">Go back</Link></button>
+                        <button className='ownerBtn'><Link to="/catalog">Go to Catalog</Link></button>
                         <button className='ownerBtn'><Link to={`/catalog/${pet._id}/edit`}> Edit</ Link></button>
                         <button className='ownerBtn' id="delBtn" onClick={onDeletePet}>Delete</button>
                     </div>
