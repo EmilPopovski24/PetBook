@@ -39,6 +39,7 @@ export const PetAccount = () => {
                 <h3>Type: {pet.type}</h3>
                 <h3>Breed: {pet.breed}</h3>
                 <h3>Age: {pet.age}</h3>
+                <h3>Owner: {pet._ownerId}</h3>
             </div>
             {isOwner && (
                 <div className='ownerDiv'>
