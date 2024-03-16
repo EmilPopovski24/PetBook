@@ -4,6 +4,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { ProfilePet } from "./ProfilePet/ProfilePet";
 import { authServiceFactory } from "../../services/authService";
 import { useService } from "../../hooks/useService";
+import "./Profile.css"
 
 export const Profile = ({
     pets
