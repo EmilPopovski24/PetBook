@@ -24,7 +24,7 @@ export const PetAccount = () => {
         await petService.deletePet(pet._id);
         navigate('/catalog');
     }
-    console.log(userId)
+   
     const isOwner = pet._ownerId === userId;
 
     return(
@@ -39,15 +39,15 @@ export const PetAccount = () => {
                 <h3>Type: {pet.type}</h3>
                 <h3>Breed: {pet.breed}</h3>
                 <h3>Age: {pet.age}</h3>
-                <h3>Owner: {pet._ownerId}</h3>
-            </div>
-            {isOwner && (
-                <div className='ownerDiv'>
-                    <button className='ownerBtn'><Link to={`/catalog/${pet._id}/edit`}> Edit</ Link></button>
-                    <button className='ownerBtn' id="delBtn" onClick={onDeletePet}>Delete</button>
+                <h3>Owner:</h3>
+                {isOwner && (
+                    <div className='ownerDiv'>
+                        <button className='ownerBtn'><Link to={`/catalog/${pet._id}/edit`}> Edit</ Link></button>
+                        <button className='ownerBtn' id="delBtn" onClick={onDeletePet}>Delete</button>
+                    </div>
+                )}
                 </div>
-            )}
-        </div>
+            </div>
         </>
     )
 }
