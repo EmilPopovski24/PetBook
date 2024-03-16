@@ -17,7 +17,8 @@ export const EditPet = ({
         type: '',
         breed: '',
         age: '',
-        color: ''
+        color: '',
+        imageUrl:'',
     }, onPetEditSubmit)
 
     useEffect(()=> {
@@ -49,6 +50,8 @@ export const EditPet = ({
                     <br />
                     <input type="text" id="color" name="color" value={values.color}  onChange={changeHandler} className='parameters' />
                     <hr />
+                    <label htmlFor="task-title">Image</label>
+                    <input type="text" id="imageUrl" name="imageUrl" value={values.imageUrl} onChange={changeHandler}  className='parameters'/>
                     <button type="submit" className="editPetBtn">Edit</button>
                 </form>
             </section>
