@@ -8,11 +8,13 @@
     color: white;
     padding:10px;
     border: none;
+    margin:10px;
 }
 
 .ownerBtn a {
     text-decoration: none;
     color:white;
+    
 }
 
 .ownerBtn:hover{
@@ -30,9 +32,13 @@
 
 .petAccount-pic {
     width:20%;
+    max-height: 20%;
     border: none;
     border-radius: 5%;
 }
 
+.ownerDiv {
+    background-color: yellow;
+}
 
 
