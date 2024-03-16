@@ -14,7 +14,9 @@ export const PetItem = ({
         <>
         <div className='pet-item'>
             <h1>{name}</h1>
-            <Link to={`/catalog/${_id}`}><img src={imageUrl} alt={name} className='petitem-pic'/></Link>
+            <div className='petitem-pic'>
+                <Link to={`/catalog/${_id}`}><img src={imageUrl} alt={name} className='catalog-pic'/></Link>
+            </div>
             {/* <ul>
                 <li><h3>Type: {type}</h3></li>
                 <li><h3>Breed: {breed}</h3></li>
