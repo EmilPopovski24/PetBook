@@ -3,6 +3,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './contexts/AuthContext';
+import { OwnerContext } from './contexts/OwnerContext';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { Home } from  './components/Home/Home';
@@ -85,6 +86,10 @@ function App() {
     username: auth.username,
     isAuthenticated: !!auth.accessToken //truthy - false and vice versa
   };
+
+  const ownerValues = {
+    owner:
+  }
 
   return (
     <AuthContext.Provider value={contextValues}>
