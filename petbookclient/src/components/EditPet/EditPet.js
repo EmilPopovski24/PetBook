@@ -30,7 +30,7 @@ export const EditPet = ({
 
     return(
         <>
-        <button className='ownerBtn'><Link to={`/catalog/${values._id}`}>Go back</Link></button>
+        
         <section className="edit-page">
             <h1 className='editPetHeader'>Edit Your Pet Details</h1>
                 <form id="edit" onSubmit={onSubmit}  method="POST">
@@ -52,7 +52,8 @@ export const EditPet = ({
                     <hr />
                     <label htmlFor="task-title">Image</label>
                     <input type="text" id="imageUrl" name="imageUrl" value={values.imageUrl} onChange={changeHandler}  className='parameters'/>
-                    <button type="submit" className="editPetBtn">Edit</button>
+                    <button className='ownerBtn'><Link to={`/catalog/${values._id}`}>Go back</Link></button>
+                    <button type="submit" className="editPetBtn">Edit</button>           
                 </form>
             </section>
         </>
