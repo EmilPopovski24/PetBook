@@ -32,7 +32,6 @@ export const AddPet = ({
                     <input type="text" id="age" name="age" values={values.age} onChange={changeHandler} placeholder="Age..." className='parameters' />
                     <hr />
                     <label htmlFor="color">Color</label>
-                    {/* <br /> */}
                     <input type="text" id="color" name="color" values={values.color}  onChange={changeHandler} placeholder="Color..." className='parameters' />
                     <hr />
                     <label htmlFor="image">Image</label>
