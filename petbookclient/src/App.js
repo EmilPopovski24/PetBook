@@ -88,7 +88,8 @@ function App() {
   };
 
   const ownerValues = {
-    owner:
+    onAddPetSubmit,
+    owner: auth._ownerId
   }
 
   return (
@@ -102,7 +103,9 @@ function App() {
         <Route path ='/logout' element={<Logout />} />
         <Route path ='/catalog' element={<Catalog pets={pets}/>} />
         <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
+    <OwnerContext.Provider value={ownerValues}>
         <Route path ='/catalog/:petId' element={<PetAccount />} />
+    </OwnerContext.Provider>
         <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} />
         <Route path ='/profile' element={<Profile pets={pets}/>} />
         <Route path ='/advices' element={<AdvicesList />} />
