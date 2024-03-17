@@ -1,5 +1,4 @@
 import './App.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './contexts/AuthContext';
