@@ -27,7 +27,7 @@ export const PetAccount = () => {
     }
    
     const isOwner = pet._ownerId === userId;
-    console.log(user)
+    console.log(pet)
 
     return(
         <>
@@ -40,7 +40,6 @@ export const PetAccount = () => {
                 <h3>Type: {pet.type}</h3>
                 <h3>Breed: {pet.breed}</h3>
                 <h3>Age: {pet.age}</h3>
-                <h3>Owner: {user.username} </h3>
                 {isOwner && (
                     <div className='actionsDiv'>
                         <button className='ownerBtn'><Link to="/catalog">Go to Catalog</Link></button>
