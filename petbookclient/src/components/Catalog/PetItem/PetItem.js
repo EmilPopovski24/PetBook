@@ -3,13 +3,8 @@ import { Link } from 'react-router-dom';
 
 export const PetItem = ({
     name,
-    type,
-    breed,
-    age,
-    color, 
     _id,
     imageUrl,
-    _ownerId,
 }) => {
 
     return (
