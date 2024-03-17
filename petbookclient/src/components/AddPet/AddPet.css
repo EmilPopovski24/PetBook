@@ -4,16 +4,20 @@
     border-radius: 10px;
     border: 2px solid red;
     padding: 20px 40px 20px 40px;
+    background-color: grey;
+    color:white;
 }
 
 .parameters {
     margin-bottom:10px;
     display: block;
+    
 }
 
 .addPetBtn {
     padding:10px;
     border: none;
+    border-radius: 5px;
     background-color: red;
     color:white;
 }
@@ -21,4 +25,8 @@
 .addPetHeader {
     text-align: center;
     padding:30px;
+}
+
+input {
+    size: 20px;
 }
