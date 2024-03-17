@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import { ProfilePet } from "./ProfilePet/ProfilePet";
 import "./Profile.css"
@@ -8,7 +8,8 @@ export const Profile = ({
 }) => {
 
     const user = useContext(AuthContext);
-
+    const [image, setImage] = useState([]);
+    
     return(
         <>
             <div className="card">   
