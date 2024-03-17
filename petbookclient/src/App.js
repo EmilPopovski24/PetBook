@@ -3,7 +3,6 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './contexts/AuthContext';
-import { OwnerContext } from './contexts/OwnerContext';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { Home } from  './components/Home/Home';
@@ -87,11 +86,6 @@ function App() {
     isAuthenticated: !!auth.accessToken //truthy - false and vice versa
   };
 
-  const ownerValues = {
-    onAddPetSubmit,
-    owner: auth._ownerId
-  }
-
   return (
     <AuthContext.Provider value={contextValues}>
     <Header />
@@ -103,9 +97,7 @@ function App() {
         <Route path ='/logout' element={<Logout />} />
         <Route path ='/catalog' element={<Catalog pets={pets}/>} />
         <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
-    <OwnerContext.Provider value={ownerValues}>
         <Route path ='/catalog/:petId' element={<PetAccount />} />
-    </OwnerContext.Provider>
         <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} />
         <Route path ='/profile' element={<Profile pets={pets}/>} />
         <Route path ='/advices' element={<AdvicesList />} />
