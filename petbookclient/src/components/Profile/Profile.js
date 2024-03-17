@@ -4,16 +4,18 @@ import { ProfilePet } from "./ProfilePet/ProfilePet";
 import "./Profile.css"
 
 export const Profile = ({
-    pets
+    pets,
+    onSubmit
 }) => {
 
     const user = useContext(AuthContext);
     const [image, setImage] = useState([]);
-    
+
     return(
         <>
             <div className="card">   
                 <h3>Personal Info</h3> 
+                <h5>Add your Photo</h5>
                 <img src="" alt="profile-pic" className="profile-pic"/>
                     <ul>
                         <li>Username: {user.username}</li>
