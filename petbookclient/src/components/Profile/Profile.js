@@ -25,7 +25,6 @@ export const Profile = ({
                     {pets.length === 0 && (
                     <h1>No pet accounts for now</h1>
                 )}
-                
             </div>
         </>
     )
