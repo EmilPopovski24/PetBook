@@ -9,7 +9,10 @@ export const PetItem = ({
     color, 
     _id,
     imageUrl,
+    _ownerId,
 }) => {
+
+
     return (
         <>
         <div className='pet-item'>

@@ -11,7 +11,9 @@
 .parameters {
     margin-bottom:10px;
     display: block;
-    
+    height:30px;
+    width: 200px;
+    padding:2px;
 }
 
 .addPetBtn {
@@ -25,8 +27,4 @@
 .addPetHeader {
     text-align: center;
     padding:30px;
-}
-
-input {
-    size: 20px;
 }
