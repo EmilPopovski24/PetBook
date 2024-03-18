@@ -10,9 +10,11 @@ export const Profile = ({
 
     const user = useContext(AuthContext);
     const [image, setImage] = useState();
+    const authService = useContext(AuthContext);
 
-    const onProfilePhotoAdd = () => {
-        
+    const onProfilePhotoAdd = async() => {
+        const result = await authService.addPhoto()
+        setImage(result);
     }
 
     return(
