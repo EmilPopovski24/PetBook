@@ -7,7 +7,6 @@ export const authServiceFactory = (token) => {
     return {
         login:(loginData) => request.post(`${userUrl}/login`, loginData),
         register: (registerData) =>  request.post(`${userUrl}/register`, registerData),
-        logout:() => request.get(`${userUrl}/logout`),
-        addPhoto:()=> request.post(`${userUrl}/photo`)  
+        logout:() => request.get(`${userUrl}/logout`) 
     };  
 };
