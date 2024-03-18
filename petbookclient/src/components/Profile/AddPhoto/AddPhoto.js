@@ -5,7 +5,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 
 export const AddPhoto = () => {
 
-    const [image, setImage] = useState(0);
+    const [image, setImage] = useState([]);
     const authService = useContext(AuthContext);
     const onProfilePhotoAdd = (data) => {
         const result = authService.addPhoto(data)
