@@ -1,27 +1,20 @@
-import { useContext, useState } from "react";
-import { AuthContext } from "../../contexts/AuthContext";
+import { useContext } from "react";
 import { ProfilePet } from "./ProfilePet/ProfilePet";
 import "./Profile.css"
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 export const Profile = ({
     pets,
-    onSubmit
 }) => {
 
     const user = useContext(AuthContext);
-    const [image, setImage] = useState();
-    const authService = useContext(AuthContext);
-
-    const onProfilePhotoAdd = async() => {
-        const result = await authService.addPhoto()
-        setImage(result);
-    }
 
     return(
         <>
             <div className="card">   
                 <h3>Personal Info</h3> 
-                <button onClick={onProfilePhotoAdd}>Add your Photo</button>
+                <button><Link to={`/profile/addphoto`}></Link>Add your Photo</button>
                 <img src="" alt="profile-pic" className="profile-pic"/>
                     <ul>
                         <li>Username: {user.username}</li>
