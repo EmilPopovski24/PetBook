@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { ProfilePet } from "./ProfilePet/ProfilePet";
-import "./Profile.css"
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
+import "./Profile.css"
 
 export const Profile = ({
     pets,
@@ -14,7 +14,7 @@ export const Profile = ({
         <>
             <div className="card">   
                 <h3>Personal Info</h3> 
-                <button><Link to={`/profile/addphoto`}></Link>Add your Photo</button>
+                <button><Link to={'/profile/addphoto'}>Add your Photo</Link></button>
                 <img src="" alt="profile-pic" className="profile-pic"/>
                     <ul>
                         <li>Username: {user.username}</li>
