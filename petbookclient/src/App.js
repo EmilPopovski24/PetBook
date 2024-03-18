@@ -20,6 +20,7 @@ import { PetAccount } from './components/PetAccount/PetAccount';
 import { EditPet } from './components/EditPet/EditPet';
 import { Profile } from './components/Profile/Profile';
 import { AdvicesList } from './components/AdvicesList/AdvicesList';
+import { AddPhoto } from './components/Profile/AddPhoto/AddPhoto';
 
 function App() {
   const navigate = useNavigate();
@@ -97,8 +98,9 @@ function App() {
         <Route path ='/catalog' element={<Catalog pets={pets}/>} />
         <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
         <Route path ='/catalog/:petId' element={<PetAccount />} />
-        <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} />
+        <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} /> 
         <Route path ='/profile' element={<Profile pets={pets}/>} />
+        <Route path ='/profile/addphoto' element={<AddPhoto />} />
         <Route path ='/advices' element={<AdvicesList />} />
         <Route path ='/about' element={<About />} />
         <Route path ='/terms' element={<Terms />} />
