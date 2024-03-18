@@ -9,13 +9,17 @@ export const Profile = ({
 }) => {
 
     const user = useContext(AuthContext);
-    const [image, setImage] = useState([]);
+    const [image, setImage] = useState();
+
+    const onProfilePhotoAdd = () => {
+        
+    }
 
     return(
         <>
             <div className="card">   
                 <h3>Personal Info</h3> 
-                <h5>Add your Photo</h5>
+                <button onClick={onProfilePhotoAdd}>Add your Photo</button>
                 <img src="" alt="profile-pic" className="profile-pic"/>
                     <ul>
                         <li>Username: {user.username}</li>
