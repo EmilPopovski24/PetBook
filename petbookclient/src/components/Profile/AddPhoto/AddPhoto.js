@@ -1,11 +1,13 @@
 import { useForm } from "../../../hooks/useForm";
 
 
-export const AddPhoto = () => {
+export const AddPhoto = ({
+    onProilePicSubmit 
+}) => {
 
         const { values, changeHandler, onSubmit } = useForm({
         imageUrl:''
-    } )
+    },onProilePicSubmit )
 
         return(
         <>
