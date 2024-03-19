@@ -5,11 +5,7 @@ export const AddPhoto = () => {
 
     const [image, setImage] = useState([]);
     const authService = useContext(AuthContext);
-    const onProfilePhotoAdd = (data) => {
-        const result = authService.addPhoto(data)
-        setImage(result)
-        console.log(result)
-    }
+
 
     return(
         <>
@@ -18,7 +14,7 @@ export const AddPhoto = () => {
                 <h1 style={{textAlign:"center", fontFamily:"sans-serif"}}>Add your photo</h1>
                 <label htmlFor="image">Image</label>
                 <input type="imageUrl" alt="UserProfile" id="imageUrl" name="imageUrl" v placeholder="Image..." className='parameters' />
-                <button type="submit" className="addProfilePic" onClick={onProfilePhotoAdd}>Add Your Photo</button>
+                <button type="submit" className="addProfilePic">Add Your Photo</button>
             </form>
             </section> 
         </>
