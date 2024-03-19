@@ -3,10 +3,6 @@ import { AuthContext } from "../../../contexts/AuthContext";
 
 export const AddPhoto = () => {
 
-    const [image, setImage] = useState([]);
-    const authService = useContext(AuthContext);
-
-
     return(
         <>
         <section id = "login-page" className='auth'>
