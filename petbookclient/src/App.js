@@ -21,6 +21,7 @@ import { EditPet } from './components/EditPet/EditPet';
 import { Profile } from './components/Profile/Profile';
 import { AdvicesList } from './components/AdvicesList/AdvicesList';
 import { AddPhoto } from './components/Profile/AddPhoto/AddPhoto';
+import { profileServiceFactory } from './services/profileService';
 
 function App() {
   const navigate = useNavigate();
@@ -28,6 +29,7 @@ function App() {
   const [pets, setPets] = useState([]);
   const authService = authServiceFactory(auth.accessToken);
   const petService = petServiceFactory(auth.accessToken);
+  const profileService = profileServiceFactory(auth.accessToken);
 
   useEffect(() => {
     petService.getAll()
@@ -74,6 +76,12 @@ function App() {
     await authService.logout();
     setAuth({});
   };
+
+  const onProfilePicSubmit = async(data) => {
+    const result = await profileService.addPhoto(data)
+    setImage(result)
+    console.log(result)
+}
 
   const contextValues = {
     onLoginSubmit,
