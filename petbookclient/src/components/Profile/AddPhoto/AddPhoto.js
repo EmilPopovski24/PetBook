@@ -1,7 +1,6 @@
 import { useContext, useState } from "react"
 import { AuthContext } from "../../../contexts/AuthContext";
 
-
 export const AddPhoto = () => {
 
     const [image, setImage] = useState([]);
