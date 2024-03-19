@@ -3,9 +3,9 @@ import { useForm } from "../../../hooks/useForm";
 
 export const AddPhoto = () => {
 
-    //     const { values, changeHandler, onSubmit } = useForm({
-    //     imageUrl:''
-    // } )
+        const { values, changeHandler, onSubmit } = useForm({
+        imageUrl:''
+    } )
 
         return(
         <>
