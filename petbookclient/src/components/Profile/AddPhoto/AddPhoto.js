@@ -2,18 +2,17 @@ import { useState } from "react"
 import { useForm } from "../../../hooks/useForm";
 import { profileServiceFactory } from "../../../services/authService";
 import { useService } from "../../../hooks/useService";
-import { profileServiceFactory } from "../../../services/profileService";
 
 export const AddPhoto = () => {
 
-    const provileService = useService(profileServiceFactory);
+    const profileService = useService(profileServiceFactory);
     const [image, setImage] = useState();
     const { values, changeHandler, onSubmit } = useForm({
         imageUrl:''
     } )
 
     const onProfilePicSubmit = async(data) => {
-        const result = await profileServiceFactory.addPhoto(data)
+        const result = await profileService.addPhoto(data)
         setImage(result)
         console.log(result)
     }
