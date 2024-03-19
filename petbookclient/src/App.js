@@ -27,6 +27,7 @@ function App() {
   const navigate = useNavigate();
   const [auth, setAuth] = useState({});
   const [pets, setPets] = useState([]);
+  const [image, setImage] = useState({});
   const authService = authServiceFactory(auth.accessToken);
   const petService = petServiceFactory(auth.accessToken);
   const profileService = profileServiceFactory(auth.accessToken);
@@ -108,7 +109,7 @@ function App() {
         <Route path ='/catalog/:petId' element={<PetAccount />} />
         <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} /> 
         <Route path ='/profile' element={<Profile pets={pets}/>} />
-        <Route path ='/profile/addphoto' element={<AddPhoto />} />
+        <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit}/>} />
         <Route path ='/advices' element={<AdvicesList />} />
         <Route path ='/about' element={<About />} />
         <Route path ='/terms' element={<Terms />} />
