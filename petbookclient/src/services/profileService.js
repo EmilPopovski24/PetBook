@@ -6,12 +6,12 @@ export const profileServiceFactory = (token) => {
     
     const request = requestFactory(token);
 
-    const addPhoto = async(photo) => {
-        const result = await request.post(`${profileUrl}/photo`, photo);
+    const addPhoto = (photo) => {
+        const result = request.post(`${profileUrl}/photo`, photo);
         return result
     }
     
     return {
-       addPhoto
+       addPhoto,
     }
 }
