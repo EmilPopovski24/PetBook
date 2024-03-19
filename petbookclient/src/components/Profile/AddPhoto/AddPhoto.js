@@ -1,13 +1,11 @@
-import { useState } from "react"
 import { useForm } from "../../../hooks/useForm";
-import { profileServiceFactory } from "../../../services/profileService";
-import { useService } from "../../../hooks/useService";
+
 
 export const AddPhoto = () => {
 
-        const { values, changeHandler, onSubmit } = useForm({
-        imageUrl:''
-    } )
+    //     const { values, changeHandler, onSubmit } = useForm({
+    //     imageUrl:''
+    // } )
 
         return(
         <>
