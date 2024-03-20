@@ -1,5 +1,5 @@
-import { useContext, useState, useParams, useEffect } from "react";
-import { ProfilePet } from "./ProfilePet/ProfilePet";
+import { useContext, useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import "./Profile.css"
@@ -10,7 +10,7 @@ export const Profile = () => {
     const profileService = useService(profileServiceFactory)
     const user = useContext(AuthContext);
     const [image, setImage] = useState();
-    // const { photoId } = useParams();
+    const imageUrl = useParams();
 
     useEffect(()=> {
         profileService.getOne(image)
@@ -24,7 +24,8 @@ export const Profile = () => {
             <div className="card">   
                 <h3>Personal Info</h3> 
                 <button><Link to={'/profile/addphoto'}>Add your Photo</Link></button>
-                <img src="{imageUrl}" alt="profile-pic" className="profile-pic"/>
+
+                <img src={image.imageUrl} alt="profile-pic" className="profile-pic"/>
                     <ul>
                         <li>Username: {user.username}</li>
                         <li>Email: {user.userEmail}</li>
