@@ -39,13 +39,17 @@ export const PetAccount = () => {
                 <h3>Type: {pet.type}</h3>
                 <h3>Breed: {pet.breed}</h3>
                 <h3>Age: {pet.age}</h3>
-                {isOwner && (
+                
                     <div className='actionsDiv'>
                         <button className='ownerBtn'><Link to="/catalog">Go to Catalog</Link></button>
+                    {isOwner && (
+                        <div>
                         <button className='ownerBtn'><Link to={`/catalog/${pet._id}/edit`}> Edit</ Link></button>
                         <button className='ownerBtn' id="delBtn" onClick={onDeletePet}>Delete</button>
+                        </div>
+                        )}
                     </div>
-                )}
+                
                 </div>
             </div>
         </>
