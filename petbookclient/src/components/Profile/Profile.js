@@ -18,14 +18,14 @@ export const Profile = () => {
             })
     }, []);
 
-    console.log(image)
+    console.log(image[0].imageUrl)
 
     return(
         <>
             <div className="card">   
                 <h3>Personal Info</h3> 
                 <button><Link to={'/profile/addphoto'}>Add your Photo</Link></button>
-                <img src={image[0].imageUrl} alt="profile-pic" className="profile-pic"/>
+                <img src={image.imageUrl} alt="profile-pic" className="profile-pic"/>
                     <ul>
                         <li>Username: {user.username}</li>
                         <li>Email: {user.userEmail}</li>

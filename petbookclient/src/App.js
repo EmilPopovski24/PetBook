@@ -27,7 +27,7 @@ function App() {
   const navigate = useNavigate();
   const [auth, setAuth] = useState({});
   const [pets, setPets] = useState([]);
-  const [image, setImage] = useState(0);
+  const [image, setImage] = useState({});
   const authService = authServiceFactory(auth.accessToken);
   const petService = petServiceFactory(auth.accessToken);
   const profileService = profileServiceFactory(auth.accessToken);
@@ -81,7 +81,6 @@ function App() {
   const onProfilePicSubmit = async(data) => {
     const result = await profileService.addPhoto(data)
     setImage(result)
-    console.log(result)
     navigate(`/profile`)
 }
 
