@@ -19,7 +19,7 @@ export const Profile = () => {
             })
     }, [imageUrl]);
 
-    // console.log(image[2].imageUrl)
+    console.log(image[2].imageUrl)
 
     return(
         <>
