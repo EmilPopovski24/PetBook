@@ -82,6 +82,7 @@ function App() {
     const result = await profileService.addPhoto(data)
     setImage(result)
     console.log(result)
+    navigate(`/profile`)
 }
 
   const contextValues = {
