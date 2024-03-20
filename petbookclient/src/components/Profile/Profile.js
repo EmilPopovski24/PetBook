@@ -8,7 +8,7 @@ import "./Profile.css"
 export const Profile = () => {
     const profileService = useService(profileServiceFactory)
     const user = useContext(AuthContext);
-    const [image, setImage] = useState(0);
+    const [image, setImage] = useState();
     // const { imageUrl } = useParams({});
 
     useEffect(()=> {
@@ -18,7 +18,7 @@ export const Profile = () => {
             })
     }, []);
 
-    console.log(image[0].imageUrl)
+    console.log(image)
 
     return(
         <>

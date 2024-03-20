@@ -27,7 +27,7 @@ function App() {
   const navigate = useNavigate();
   const [auth, setAuth] = useState({});
   const [pets, setPets] = useState([]);
-  const [image, setImage] = useState({});
+  const [image, setImage] = useState(0);
   const authService = authServiceFactory(auth.accessToken);
   const petService = petServiceFactory(auth.accessToken);
   const profileService = profileServiceFactory(auth.accessToken);
