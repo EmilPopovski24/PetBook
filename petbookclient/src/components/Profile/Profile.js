@@ -10,14 +10,14 @@ export const Profile = () => {
     const profileService = useService(profileServiceFactory)
     const user = useContext(AuthContext);
     const [image, setImage] = useState();
-    const imageUrl = useParams();
+    const imageUrl = useParams({});
 
     useEffect(()=> {
         profileService.getOne(image)
             .then(result => {
                 setImage(result)
             })
-    }, []);
+    }, [imageUrl]);
 
     return(
         <>
