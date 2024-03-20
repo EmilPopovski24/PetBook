@@ -39,6 +39,13 @@ function App() {
       })
   }, []);
 
+  useEffect(()=> {
+    profileService.getOne(image)
+        .then(result => {
+            setImage(result)
+        })
+}, []);
+
   const onAddPetSubmit = async(petData) => {
     const newPet = await petService.addPet(petData);
     setPets(state => [...state, newPet]);
