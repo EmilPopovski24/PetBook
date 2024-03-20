@@ -7,17 +7,17 @@ import "./Profile.css"
 
 export const Profile = () => {
 
-    // const profileService = useService(profileServiceFactory)
+    const profileService = useService(profileServiceFactory)
     const user = useContext(AuthContext);
     const [image, setImage] = useState(0);
-    // const { imageUrl } = useParams({});
+    const { imageUrl } = useParams({});
 
-    // useEffect(()=> {
-    //     profileService.getOne(image)
-    //         .then(result => {
-    //             setImage(result)
-    //         })
-    // }, [imageUrl]);
+    useEffect(()=> {
+        profileService.getOne(image)
+            .then(result => {
+                setImage(result)
+            })
+    }, [imageUrl]);
 
     console.log(image[2].imageUrl)
 
