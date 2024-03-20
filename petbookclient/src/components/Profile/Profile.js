@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import "./Profile.css"
@@ -9,15 +9,15 @@ import { useService } from "../../hooks/useService";
 export const Profile = () => {
     const profileService = useService(profileServiceFactory)
     const user = useContext(AuthContext);
-    const [image, setImage] = useState();
-    const imageUrl = useParams({});
+    const [imageUrl, setImage] = useState();
+    // const imageUrl = useParams({});
 
     useEffect(()=> {
-        profileService.getOne(image)
+        profileService.getOne(imageUrl)
             .then(result => {
                 setImage(result)
             })
-    }, [imageUrl]);
+    }, []);
 
     return(
         <>
@@ -25,7 +25,7 @@ export const Profile = () => {
                 <h3>Personal Info</h3> 
                 <button><Link to={'/profile/addphoto'}>Add your Photo</Link></button>
 
-                <img src={image.imageUrl} alt="profile-pic" className="profile-pic"/>
+                <img src={imageUrl} alt="profile-pic" className="profile-pic"/>
                     <ul>
                         <li>Username: {user.username}</li>
                         <li>Email: {user.userEmail}</li>
