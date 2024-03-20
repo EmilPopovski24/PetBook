@@ -40,6 +40,7 @@ export const Register = () => {
             </div>
             </form>
             </section> 
+            
             </> 
     )
 }
