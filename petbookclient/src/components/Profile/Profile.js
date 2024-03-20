@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import { profileServiceFactory } from "../../services/profileService";
 import { useService } from "../../hooks/useService";
@@ -17,16 +17,16 @@ export const Profile = () => {
             .then(result => {
                 setImage(result)
             })
-    }, []);
+    }, [imageUrl]);
 
-    console.log(image[0].imageUrl)
+    console.log(image[2].imageUrl)
 
     return(
         <>
             <div className="card">   
                 <h3>Personal Info</h3> 
                 <button><Link to={'/profile/addphoto'}>Add your Photo</Link></button>
-                <img src={image[0].imageUrl} alt="profile-pic" className="profile-pic"/>
+                <img src={image} alt="profile-pic" className="profile-pic"/>
                     <ul>
                         <li>Username: {user.username}</li>
                         <li>Email: {user.userEmail}</li>
