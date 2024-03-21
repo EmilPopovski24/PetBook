@@ -12,7 +12,7 @@ export const profileServiceFactory = (token) => {
     }
 
     const getOne = async(photoId) => {
-        const result = await request.get(`${profileUrl}`);
+        const result = await request.get(`${profileUrl}`, photoId);
         return result;
     }
     
