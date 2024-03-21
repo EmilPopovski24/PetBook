@@ -48,7 +48,8 @@ function App() {
   const onPetEditSubmit = async(values) => {
     const result = await petService.edit(values._id, values);
     setPets(state => state.map(x=> x._id === values._id ? result : x)) // to check this
-    navigate(`/catalog/${values._id}`);
+    navigate(`/c
+    atalog/${values._id}`);
   }
 
   const onLoginSubmit = async (data) => {
