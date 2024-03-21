@@ -9,7 +9,7 @@ export const Profile = () => {
 
     const profileService = useService(profileServiceFactory)
     const user = useContext(AuthContext);
-    const [image, setImage] = useState([]);
+    const [image, setImage] = useState({});
     const { imageUrl } = useParams({});
 
     useEffect(()=> {
@@ -20,7 +20,7 @@ export const Profile = () => {
             })
     }, []);
 
-    console.log(image)
+    // console.log(image)
 
     return(
         <>
