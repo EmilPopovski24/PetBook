@@ -14,6 +14,7 @@ export const Profile = () => {
 
     useEffect(()=> {
         profileService.getOne(image)
+            .then(res => res.json())
             .then(result => {
                 setImage(Object.values(result))
             })
