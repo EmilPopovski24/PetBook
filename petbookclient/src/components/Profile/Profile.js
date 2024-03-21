@@ -15,11 +15,11 @@ export const Profile = () => {
     useEffect(()=> {
         profileService.getOne(image)
             .then(result => {
-                setImage(result)
+                setImage(Object.values(result))
             })
     }, [imageUrl]);
 
-    console.log(image[2].imageUrl)
+    console.log(image)
 
     return(
         <>
