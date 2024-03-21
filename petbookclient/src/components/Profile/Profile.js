@@ -9,24 +9,24 @@ export const Profile = () => {
 
     const profileService = useService(profileServiceFactory)
     const user = useContext(AuthContext);
-    const [image, setImage] = useState(0);
-    const { imageUrl } = useParams({});
+    const [image, setImage] = useState([]);
+    // const { imageUrl } = useParams({});
 
     useEffect(()=> {
         profileService.getOne(image)
             .then(result => {
                 setImage(Object.values(result))
             })
-    }, [imageUrl]);
+    }, []);
 
-    console.log(image)
+    // console.log(image[0].imageUrl)
 
     return(
         <>
             <div className="card">   
                 <h3>Personal Info</h3> 
                 <button><Link to={'/profile/addphoto'}>Add your Photo</Link></button>
-                <img src={image} alt="profile-pic" className="profile-pic"/>
+                <img src={image.imageUrl} alt="profile-pic" className="profile-pic"/>
                     <ul>
                         <li>Username: {user.username}</li>
                         <li>Email: {user.userEmail}</li>
