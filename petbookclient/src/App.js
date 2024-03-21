@@ -38,7 +38,6 @@ function App() {
         setPets(result)
       })
   }, []);
-  
 
   const onAddPetSubmit = async(petData) => {
     const newPet = await petService.addPet(petData);
