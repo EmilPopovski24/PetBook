@@ -20,7 +20,7 @@ export const Profile = () => {
             })
     }, []);
 
-    // console.log(image)
+    console.log(image)
 
     return(
         <>
