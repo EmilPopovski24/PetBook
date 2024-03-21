@@ -16,10 +16,11 @@ export const Profile = () => {
         profileService.getOne(image)
             .then(result => {
                 setImage(Object.values(result))
+                console.log(result)
             })
     }, []);
 
-    // console.log(image[0].imageUrl)
+    console.log(image)
 
     return(
         <>
