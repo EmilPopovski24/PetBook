@@ -9,12 +9,8 @@ export const Profile = ({
     image
 }) => {
 
-    // const navigate = useNavigate()
-    // const profileService = useService(profileServiceFactory)
     const user = useContext(AuthContext);
-    // const [image, setImage] = useState([]);
     const { imageUrl } = useParams({});
-
 
     return(
         <>
