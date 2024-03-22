@@ -13,7 +13,7 @@ export const Profile = ({
     // const profileService = useService(profileServiceFactory)
     const user = useContext(AuthContext);
     // const [image, setImage] = useState([]);
-    // const { imageUrl } = useParams({});
+    const { imageUrl } = useParams({});
 
 
     return(
@@ -21,7 +21,7 @@ export const Profile = ({
             <div className="card">   
                 <h3>Personal Info</h3> 
                 <button><Link to={'/profile/addphoto'}>Add your Photo</Link></button>
-                <img src={image[image.length-1].imageUrl} alt="profile-pic" className="profile-pic"/>
+                <img src={image.imageUrl} alt="profile-pic" className="profile-pic"/>
                     <ul>
                         <li>Username: {user.username}</li>
                         <li>Email: {user.userEmail}</li>
