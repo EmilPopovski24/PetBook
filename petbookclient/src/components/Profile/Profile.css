@@ -11,3 +11,7 @@ li {
     border:none;
     border-radius: 5px;
 }
+
+.add-photo {
+    display: block;
+}
