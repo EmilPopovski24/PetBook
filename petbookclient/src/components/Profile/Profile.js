@@ -14,8 +14,8 @@ export const Profile = () => {
 
     useEffect(()=> {
         profileService.getOne(image)
-            .then(state => {
-                setImage(state)
+            .then(result => {
+                setImage(result)
                 
             })
     }, []);
