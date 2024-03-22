@@ -15,8 +15,8 @@ export const Profile = () => {
     useEffect(()=> {
         profileService.getOne(image)
             .then(result => {
-                setImage(Object.values(result))
-                console.log(result)
+                setImage(state => state)
+                
             })
     }, []);
 
@@ -27,7 +27,7 @@ export const Profile = () => {
             <div className="card">   
                 <h3>Personal Info</h3> 
                 <button><Link to={'/profile/addphoto'}>Add your Photo</Link></button>
-                <img src={image[image.length - 1].imageUrl} alt="profile-pic" className="profile-pic"/>
+                <img src={image.imageUrl} alt="profile-pic" className="profile-pic"/>
                     <ul>
                         <li>Username: {user.username}</li>
                         <li>Email: {user.userEmail}</li>
