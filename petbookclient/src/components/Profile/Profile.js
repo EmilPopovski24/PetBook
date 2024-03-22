@@ -1,5 +1,5 @@
-import { useContext, useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate, useParams,  } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import { profileServiceFactory } from "../../services/profileService";
 import { useService } from "../../hooks/useService";
@@ -7,17 +7,17 @@ import "./Profile.css"
 
 export const Profile = () => {
 
+    const navigate = useNavigate()
     const profileService = useService(profileServiceFactory)
     const user = useContext(AuthContext);
     const [image, setImage] = useState([]);
     const { imageUrl } = useParams({});
 
-    useEffect(()=> {
-        profileService.getOne(image)
-            .then(result => {
-                setImage(result)
-            })
-    }, []);
+    const onProfilePicSubmit = async(data) => {
+        const result = await profileService.addPhoto(data)
+        setImage(result)
+        navigate(`/catalog`)
+    }
 
     console.log(image)
 
