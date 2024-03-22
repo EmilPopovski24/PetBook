@@ -81,7 +81,7 @@ function App() {
   const onProfilePicSubmit = async(data) => {
     const result = await profileService.addPhoto(data)
     setImage(result)
-    navigate(`/catalog`)
+    navigate(`/profile`)
 }
 
   const contextValues = {
