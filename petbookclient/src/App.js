@@ -80,8 +80,7 @@ function App() {
 
   const onProfilePicSubmit = async(data) => {
     const result = await profileService.addPhoto(data)
-    return result
-    // setImage(result)
+    setImage(result)
     navigate(`/catalog`)
 }
 
