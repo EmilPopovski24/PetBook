@@ -27,7 +27,7 @@ export const Profile = () => {
             <div className="card">   
                 <h3>Personal Info</h3> 
                 <button><Link to={'/profile/addphoto'}>Add your Photo</Link></button>
-                <img src={imageUrl} alt="profile-pic" className="profile-pic"/>
+                <img src={image[image.length-1].imageUrl} alt="profile-pic" className="profile-pic"/>
                     <ul>
                         <li>Username: {user.username}</li>
                         <li>Email: {user.userEmail}</li>
