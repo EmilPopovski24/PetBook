@@ -7,7 +7,7 @@ li {
 }
 
 .profile-pic {
-    width:500px;
-    height:500px;
-
+    width:200px;
+    border:none;
+    border-radius: 5px;
 }
