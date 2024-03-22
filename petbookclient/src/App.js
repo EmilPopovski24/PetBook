@@ -78,11 +78,11 @@ function App() {
     setAuth({});
   };
 
-//   const onProfilePicSubmit = async(data) => {
-//     const result = await profileService.addPhoto(data)
-//     setImage(result)
-//     navigate(`/catalog`)
-// }
+  const onProfilePicSubmit = async(data) => {
+    const result = await profileService.addPhoto(data)
+    setImage(result)
+    navigate(`/catalog`)
+}
 
   const contextValues = {
     onLoginSubmit,
