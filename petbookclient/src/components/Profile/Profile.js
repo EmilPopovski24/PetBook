@@ -1,8 +1,6 @@
-import { useContext, useState } from "react";
-import { Link, useNavigate, useParams,  } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useParams } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
-import { profileServiceFactory } from "../../services/profileService";
-import { useService } from "../../hooks/useService";
 import "./Profile.css"
 
 export const Profile = ({
