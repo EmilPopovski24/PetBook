@@ -16,7 +16,6 @@ export const Profile = () => {
         profileService.getOne(image)
             .then(result => {
                 setImage(result)
-                
             })
     }, []);
 
