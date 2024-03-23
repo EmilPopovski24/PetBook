@@ -6,7 +6,9 @@ import { AuthContext } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 import './PetAccount.css';
 
-export const PetAccount = () => {
+export const PetAccount = ({
+    owner
+}) => {
     const { userId } = useContext(AuthContext);
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
@@ -26,7 +28,8 @@ export const PetAccount = () => {
     }
    
     const isOwner = pet._ownerId === userId;
-    
+    console.log(owner)
+
     return(
         <>
         <div className='pet-account'>     
@@ -39,7 +42,7 @@ export const PetAccount = () => {
                     <li><h3>Type: {pet.type}</h3></li>
                     <li><h3>Breed: {pet.breed}</h3></li>
                     <li><h3>Age: {pet.age}</h3></li>
-                    <li><h3>Owner: {pet._ownerId}</h3></li>
+                    <li><h3>Owner: {owner}</h3></li>
                         <div className='actionsDiv'>
                             <div className='go-back'>
                             <button className='ownerBtn'><Link to="/catalog">Go to Catalog</Link></button>
