@@ -9,6 +9,7 @@ import './PetAccount.css';
 export const PetAccount = ({
     owner
 }) => {
+    
     const { userId } = useContext(AuthContext);
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
