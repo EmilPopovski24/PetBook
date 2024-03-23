@@ -28,7 +28,7 @@ function App() {
   const [auth, setAuth] = useState({});
   const [pets, setPets] = useState([]);
   const [image, setImage] = useState({});
-  const [owner, setOwner] = useState([]);
+  const [petOwner, setPetOwner] = useState([]);
   const authService = authServiceFactory(auth.accessToken);
   const petService = petServiceFactory(auth.accessToken);
   const profileService = profileServiceFactory(auth.accessToken);
@@ -43,7 +43,7 @@ function App() {
   const onAddPetSubmit = async(petData) => {
     const newPet = await petService.addPet(petData);
     setPets(state => [...state, newPet]);
-    setOwner(auth.username)
+    setPetOwner(auth.username)
     navigate('/catalog')
   };
 
@@ -110,7 +110,7 @@ function App() {
         <Route path ='/logout' element={<Logout />} />
         <Route path ='/catalog' element={<Catalog pets={pets} />} />
         <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
-        <Route path ='/catalog/:petId' element={<PetAccount owner={owner}/>} />
+        <Route path ='/catalog/:petId' element={<PetAccount petOwner={petOwner}/>} />
         <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} /> 
         <Route path ='/profile' element={<Profile image={image} />} />
         <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
