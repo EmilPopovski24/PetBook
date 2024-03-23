@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
 import { useForm } from '../../hooks/useForm';
+import './Register.css';
 
 export const Register = () => {
     const { onRegisterSubmit } = useContext(AuthContext);
@@ -31,7 +32,7 @@ export const Register = () => {
                 <input type="password" placeholder="Enter Password" id="password" name="password" value={values.password} onChange={changeHandler} required />
                 <label htmlFor="confirmPassword" style={{display:"block"}}><b>Confirm Password</b></label>
                 <input type="password" placeholder="Re-enter Password" id="confirmPassword" name="confirmPassword" value={values.confirmPassword} onChange={changeHandler} required />
-            <button style={{display:"block", margin:"10px auto"}} type="submit">Register</button>
+            <button style={{display:"block", margin:"10px auto"}} className="register-btn" type="submit">Register</button>
             </div>
             <div className="container" style={{"backgroundColor":"#f1f1f1"}}>
                 <p className="registerOptionText" style={{textAlign:"center"}}>
