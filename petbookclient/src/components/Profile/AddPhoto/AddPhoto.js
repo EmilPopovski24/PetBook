@@ -1,4 +1,5 @@
 import { useForm } from "../../../hooks/useForm";
+import './AddPhoto.css';
 
 export const AddPhoto = ({
     onProfilePicSubmit 
