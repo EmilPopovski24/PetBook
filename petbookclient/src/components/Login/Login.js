@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm'
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
+import './Login.css';
 
 const LoginKeys = {
     Email: 'email',
@@ -30,7 +31,7 @@ export const Login = () => {
                
                 <label htmlFor="password" style={{display:"block"}}><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" id="password" name={LoginKeys.Password} value={values[LoginKeys.Password]} onChange={changeHandler} />
-            <button style={{display:"block", margin:"10px auto"}} type="submit">Login</button>
+            <button style={{display:"block", margin:"10px auto"}} className='login-btn' type="submit">Login</button>
             </div>
             <div className="container" style={{"backgroundColor":"#f1f1f1"}}>
                 <p className="registerOptionText" style={{textAlign:"center"}}>
