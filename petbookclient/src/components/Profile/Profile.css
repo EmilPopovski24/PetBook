@@ -14,4 +14,19 @@ li {
 
 .add-photo {
     display: block;
+    padding:10px;
+    border:none;
+    border-radius: 5px;
+    background-color: red;
+    margin-top: 5px;
+}
+
+.add-photo a {
+    text-decoration: none;
+    color: white;
+}
+
+.add-photo:hover {
+    cursor: pointer;
+    background-color: rgb(65, 1, 10);
 }
