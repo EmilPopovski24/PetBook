@@ -35,24 +35,25 @@ export const PetAccount = () => {
                 <img src={pet.imageUrl} alt={pet.name} className='petAccount-pic'/>
             </div>
             <div className='pet-details'>
-                <h3>Type: {pet.type}</h3>
-                <h3>Breed: {pet.breed}</h3>
-                <h3>Age: {pet.age}</h3>
-                
-                    <div className='actionsDiv'>
-                        <div className='go-back'>
-                        <button className='ownerBtn'><Link to="/catalog">Go to Catalog</Link></button>
+                <ul>
+                    <li><h3>Type: {pet.type}</h3></li>
+                    <li><h3>Breed: {pet.breed}</h3></li>
+                    <li><h3>Age: {pet.age}</h3></li>
+                    <li><h3>Owner: {pet._ownerId}</h3></li>
+                        <div className='actionsDiv'>
+                            <div className='go-back'>
+                            <button className='ownerBtn'><Link to="/catalog">Go to Catalog</Link></button>
                         </div>
-                    {isOwner && (
+                        {isOwner && (
                         <div className='owner-buttons'>
-                        <button className='ownerBtn'><Link to={`/catalog/${pet._id}/edit`}> Edit</ Link></button>
-                        <button className='ownerBtn' id="delBtn" onClick={onDeletePet}>Delete</button>
+                            <button className='ownerBtn'><Link to={`/catalog/${pet._id}/edit`}> Edit</ Link></button>
+                            <button className='ownerBtn' id="delBtn" onClick={onDeletePet}>Delete</button>
                         </div>
                         )}
                     </div>
-                
-                </div>
+                </ul>  
             </div>
+        </div>
         </>
     )
 }

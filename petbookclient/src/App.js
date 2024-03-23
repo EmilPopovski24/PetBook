@@ -97,8 +97,6 @@ function App() {
     isAuthenticated: !!auth.accessToken //truthy - false and vice versa
   };
 
-  console.log(auth.username)
-
   return (
     <AuthContext.Provider value={contextValues}>
     <Header />
@@ -108,12 +106,12 @@ function App() {
         <Route path ='/login' element={<Login />} />
         <Route path ='/register' element={<Register />} />
         <Route path ='/logout' element={<Logout />} />
-        <Route path ='/catalog' element={<Catalog pets={pets}/>} />
+        <Route path ='/catalog' element={<Catalog pets={pets} />} />
         <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
         <Route path ='/catalog/:petId' element={<PetAccount />} />
         <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} /> 
-        <Route path ='/profile' element={<Profile image={image}/>} />
-        <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit}/>} />
+        <Route path ='/profile' element={<Profile image={image} />} />
+        <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
         <Route path ='/advices' element={<AdvicesList />} />
         <Route path ='/about' element={<About />} />
         <Route path ='/terms' element={<Terms />} />
