@@ -69,7 +69,7 @@ function App() {
         setAuth(result);
         navigate('/catalog')
     } catch (error) {
-        alert("User with the same details already exists!")
+        alert("User with the same details (email or username) already exists!")
     }
   };
 
