@@ -55,6 +55,7 @@ function App() {
     const result = await authService.login(data);
     setAuth(result)
     navigate('/catalog')
+    alert("You are welcome!")
   };
 
   const onRegisterSubmit = async(values) => {
@@ -66,7 +67,8 @@ function App() {
 
     try {
         const result = await authService.register(values);
-        setAuth(result);
+        setAuth(result);     
+        alert("Successful registration") 
         navigate('/catalog')
     } catch (error) {
         alert("User with the same details (email or username) already exists!")
