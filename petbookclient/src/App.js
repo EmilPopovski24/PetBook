@@ -97,6 +97,8 @@ function App() {
     isAuthenticated: !!auth.accessToken //truthy - false and vice versa
   };
 
+  console.log(auth.username)
+
   return (
     <AuthContext.Provider value={contextValues}>
     <Header />
