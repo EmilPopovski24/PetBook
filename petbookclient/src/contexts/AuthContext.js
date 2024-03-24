@@ -44,7 +44,6 @@ export const AuthProvider = ({
         setAuth({});
     };
 
-
     const contextValues = {
         onLoginSubmit,
         onRegisterSubmit,
@@ -55,6 +54,7 @@ export const AuthProvider = ({
         username: auth.username,
         isAuthenticated: !!auth.accessToken //truthy - false and vice versa
       };
+      
     return (
         <AuthContext.Provider value={contextValues}>
             {children}
