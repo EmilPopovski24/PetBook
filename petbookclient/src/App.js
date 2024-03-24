@@ -29,7 +29,7 @@ function App() {
 
   const [pets, setPets] = useState([]);
   const [image, setImage] = useState({});
-  const [petOwner, setPetOwner] = useState([]);
+  // const [petOwner, setPetOwner] = useState([]);
 
   const petService = petServiceFactory(); // auth.accessToken
   const profileService = profileServiceFactory(); //auth.accessToken
