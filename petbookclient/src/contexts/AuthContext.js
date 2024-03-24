@@ -1,4 +1,4 @@
-import { createContext, useState } from "react"; 
+import { createContext, useContext, useState } from "react"; 
 import { authServiceFactory } from '../services/authService'
 import { useNavigate } from "react-router-dom";
 
@@ -54,10 +54,16 @@ export const AuthProvider = ({
         username: auth.username,
         isAuthenticated: !!auth.accessToken //truthy - false and vice versa
       };
-      
+
     return (
         <AuthContext.Provider value={contextValues}>
             {children}
         </AuthContext.Provider>
     )
+};
+
+export const useAuthProvider = () => {
+    const context = useContext(AuthContext);
+
+    return context;
 }
