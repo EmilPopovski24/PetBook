@@ -62,7 +62,7 @@ export const AuthProvider = ({
     )
 };
 
-export const useAuthProvider = () => {
+export const useAuthContext = () => {
     const context = useContext(AuthContext);
 
     return context;
