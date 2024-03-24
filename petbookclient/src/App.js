@@ -109,13 +109,15 @@ function App() {
         <Route path ='/login' element={<Login />} />
         <Route path ='/register' element={<Register />} />
         <Route path ='/logout' element={<Logout />} />
-        <Route path ='/catalog' element={<Catalog pets={pets} />} />        
+        <Route path ='/catalog' element={<Catalog pets={pets} />} />    
+        <Route element={<RouteGuard />}>  
           <Route path ='/catalog/:petId' element={<PetAccount petOwner={petOwner}/>} />
           <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} /> 
           <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
           <Route path ='/profile' element={<Profile image={image} />} />
           <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
           <Route path ='/advices' element={<AdvicesList />} />
+        </Route>
         <Route path ='/about' element={<About />} />
         <Route path ='/terms' element={<Terms />} />
         <Route path ='/faq' element={<FAQ />} />
