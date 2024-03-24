@@ -41,6 +41,7 @@ export const PetAccount = ({
                     <li><h3>Breed: {pet.breed}</h3></li>
                     <li><h3>Age: {pet.age}</h3></li>
                     <li><h3>Owner: {petOwner}</h3></li>
+                </ul> 
                         <div className='actionsDiv'>
                             <div className='go-back'>
                                 <button className='ownerBtn'><Link to="/catalog">Go to Catalog</Link></button>
@@ -52,7 +53,7 @@ export const PetAccount = ({
                             </div>
                         )}
                     </div>
-                </ul>  
+                 
             </div>
         </>
     )
