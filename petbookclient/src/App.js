@@ -14,7 +14,7 @@ import { About } from  './components/About/About';
 import { Terms } from  './components/Terms/Terms';
 import { FAQ } from  './components/FAQ/FAQ';
 import { Route, Routes} from 'react-router-dom';
-import { authServiceFactory } from './services/authService';
+import { AuthProvider } from './contexts/AuthContext';
 import { petServiceFactory } from './services/petService';
 import { PetAccount } from './components/PetAccount/PetAccount';
 import { EditPet } from './components/EditPet/EditPet';
@@ -26,12 +26,12 @@ import { RouteGuard } from './components/guards/RouteGuard';
 
 function App() {
   const navigate = useNavigate();
-  const [auth, setAuth] = useState({});
+
   const [pets, setPets] = useState([]);
   const [image, setImage] = useState({});
   const [petOwner, setPetOwner] = useState([]);
-  const authService = authServiceFactory(auth.accessToken);
-  const petService = petServiceFactory(auth.accessToken);
+
+  const petService = petServiceFactory(); // auth.accessToken
   const profileService = profileServiceFactory(auth.accessToken);
 
   useEffect(() => {
@@ -44,7 +44,6 @@ function App() {
   const onAddPetSubmit = async(petData) => {
     const newPet = await petService.addPet(petData);
     setPets(state => [...state, newPet]);
-    setPetOwner(auth.username)
     navigate('/catalog')
   };
 
@@ -54,54 +53,16 @@ function App() {
     navigate(`/catalog/${values._id}`);
   }
 
-  const onLoginSubmit = async (data) => {
-    const result = await authService.login(data);
-    setAuth(result)
-    navigate('/catalog')
-    alert("You are welcome!")
-  };
-
-  const onRegisterSubmit = async(values) => {
-    const { confirmPassword, ...registerData } = values;
-    if(confirmPassword !== registerData.password) {
-      alert("Both passwords do not match!")
-      return;
-    };
-
-    try {
-        const result = await authService.register(values);
-        setAuth(result);     
-        alert("Successful registration") 
-        navigate('/catalog')
-    } catch (error) {
-        alert("User with the same details (email or username) already exists!")
-    }
-  };
-
-  const onLogout = async () => {
-    await authService.logout();
-    setAuth({});
-  };
-
   const onProfilePicSubmit = async(data) => {
     const result = await profileService.addPhoto(data)
     setImage(result)
     navigate(`/profile`)
 }
 
-  const contextValues = {
-    onLoginSubmit,
-    onRegisterSubmit,
-    onLogout,
-    userId: auth._id,
-    token: auth.accessToken,
-    userEmail: auth.email,
-    username: auth.username,
-    isAuthenticated: !!auth.accessToken //truthy - false and vice versa
-  };
+
 
   return (
-    <AuthContext.Provider value={contextValues}>
+    <AuthProvider >
     <Header />
     <div className="main-content">
       <Routes>
@@ -124,7 +85,7 @@ function App() {
       </Routes>
     </div>
     <Footer />
-    </AuthContext.Provider>
+    </AuthProvider>
   );
 }
 
