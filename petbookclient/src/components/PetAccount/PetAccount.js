@@ -29,7 +29,6 @@ export const PetAccount = ({
     }
    
     const isOwner = pet._ownerId === userId;
-    console.log(petOwner)
 
     return(
         <>
@@ -40,6 +39,7 @@ export const PetAccount = ({
                     <li><h3>Type: {pet.type}</h3></li>
                     <li><h3>Breed: {pet.breed}</h3></li>
                     <li><h3>Age: {pet.age}</h3></li>
+                    <li><h3>Color: {pet.color}</h3></li>
                     <li><h3>Owner: {petOwner}</h3></li>
                 </ul> 
                         <div className='actionsDiv'>
