@@ -1,7 +1,7 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from './contexts/AuthContext';
+import { AuthProvider } from './contexts/AuthContext';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { Home } from  './components/Home/Home';
@@ -26,11 +26,9 @@ import { RouteGuard } from './components/guards/RouteGuard';
 
 function App() {
   const navigate = useNavigate();
-
   const [pets, setPets] = useState([]);
   const [image, setImage] = useState({});
   // const [petOwner, setPetOwner] = useState([]);
-
   const petService = petServiceFactory(); // auth.accessToken
   const profileService = profileServiceFactory(); //auth.accessToken
 
@@ -58,8 +56,6 @@ function App() {
     setImage(result)
     navigate(`/profile`)
 }
-
-
 
   return (
     <AuthProvider >
