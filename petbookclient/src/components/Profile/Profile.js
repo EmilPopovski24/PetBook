@@ -22,12 +22,12 @@ export const Profile = ({
                         <li>Email: {user.userEmail}</li>
                     </ul>   
                 </div>     
-                {/* {/* <h3>My pets</h3>
+                {/* <h3>My pets</h3>
                     {pets.map(x=> <ProfilePet key={x._id} {...x} />)}
                     {pets.length === 0 && (
                     <h1>No pet accounts for now</h1>
                 )} */}
-            </div> */}
+            </div>
         </>
     )
 }
