@@ -2,8 +2,6 @@ import { createContext, useContext, useState } from "react";
 import { authServiceFactory } from '../services/authService'
 import { useNavigate } from "react-router-dom";
 
-
-
 export const AuthContext = createContext();
 
 export const AuthProvider = ({
