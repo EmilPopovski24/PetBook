@@ -22,6 +22,7 @@ export const petServiceFactory = (token) => {
         return result;
     }
 
+    
     const edit = (petId, petData) => request.put(`${baseUrl}/${petId}`, petData);
 
     const deletePet = (petId) => request.del(`${baseUrl}/${petId}`);
