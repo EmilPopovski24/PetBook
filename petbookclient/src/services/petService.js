@@ -21,8 +21,7 @@ export const petServiceFactory = (token) => {
         const result = await request.get(`${baseUrl}/${petId}`);
         return result;
     }
-
-    
+  
     const edit = (petId, petData) => request.put(`${baseUrl}/${petId}`, petData);
 
     const deletePet = (petId) => request.del(`${baseUrl}/${petId}`);
