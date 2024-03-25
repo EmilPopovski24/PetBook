@@ -56,6 +56,7 @@ function App() {
     navigate(`/profile`)
 }
 
+
   return (
     <AuthProvider>
     <Header />
