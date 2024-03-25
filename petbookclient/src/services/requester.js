@@ -10,7 +10,7 @@ const request = async (method, token, url, data) => {
                 };
                 options.body = JSON.stringify(data);
             }   
-        };
+        }
     
         if(token) {
             options.headers = {
@@ -23,18 +23,18 @@ const request = async (method, token, url, data) => {
     
         if(response.status === 204) {
             return {};
-        };
+        }
     
         const result = await response.json();
     
         if(!response.ok) {
             throw result;
-        };
+        }
     
         return result
-};
+    };
     
-export const requestFactory = (token) => {
+    export const requestFactory = (token) => {
     if(!token) {
         const serializedAuth = localStorage.getItem('auth');
     
