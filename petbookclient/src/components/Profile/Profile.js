@@ -4,7 +4,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import "./Profile.css"
 
 export const Profile = ({
-    image
+
 }) => {
 
     const user = useContext(AuthContext);
