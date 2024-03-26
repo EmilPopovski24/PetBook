@@ -1,5 +1,3 @@
-import './App.css';
-
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
@@ -23,6 +21,7 @@ import { AdvicesList } from './components/AdvicesList/AdvicesList';
 import { AddPhoto } from './components/Profile/AddPhoto/AddPhoto';
 import { profileServiceFactory } from './services/profileService';
 import { RouteGuard } from './components/guards/RouteGuard';
+import './App.css';
 
 function App() {
   const navigate = useNavigate();
