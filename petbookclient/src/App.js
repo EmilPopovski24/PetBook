@@ -46,7 +46,7 @@ function App() {
         const result = await authService.login(data);
         setAuth(result)
         navigate('/catalog')
-        alert(`You are welcome, ${data.username}`)
+        alert(`You are welcome!`)
 };    
 
     const onRegisterSubmit = async(values) => {
