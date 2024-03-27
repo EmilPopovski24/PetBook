@@ -40,7 +40,7 @@ export const PetAccount = ({
                     <li><h3>Breed: {pet.breed}</h3></li>
                     <li><h3>Age: {pet.age}</h3></li>
                     <li><h3>Color: {pet.color}</h3></li>
-                    <li><h3>Owner: {petOwner}</h3></li>
+                    <li><h3>Owner: {pet._ownerId.username}</h3></li>
                 </ul> 
                         <div className='actionsDiv'>
                             <div className='go-back'>
