@@ -1,7 +1,8 @@
 import './Footer.css'
 
 export const Footer = () => {
-    return (
+
+    return (       
         <>
         <ul className="footer">          
             <h5 className='footer-logo'>© 2024 PetBook</h5>
