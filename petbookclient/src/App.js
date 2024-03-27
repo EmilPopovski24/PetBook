@@ -21,40 +21,39 @@ import { AdvicesList } from './components/AdvicesList/AdvicesList';
 import { AddPhoto } from './components/Profile/AddPhoto/AddPhoto';
 import { profileServiceFactory } from './services/profileService';
 import { RouteGuard } from './components/guards/RouteGuard';
-import './App.css';
 import { authServiceFactory } from './services/authService';
+import './App.css';
 
 function App() {
-  const navigate = useNavigate();
-  const [pets, setPets] = useState([]);
-  const [image, setImage] = useState({});
-  const [auth, setAuth] = useState({});
+    const navigate = useNavigate();
+    const [pets, setPets] = useState([]);
+    const [image, setImage] = useState({});
+    const [auth, setAuth] = useState({});
 // const [petOwner, setPetOwner] = useState([]);
-  const authService = authServiceFactory(auth.accessToken)
-  const petService = petServiceFactory(auth.accessToken); // auth.accessToken
-  const profileService = profileServiceFactory(auth.accessToken); //auth.accessToken
+    const authService = authServiceFactory(auth.accessToken)
+    const petService = petServiceFactory(auth.accessToken); // auth.accessToken
+    const profileService = profileServiceFactory(auth.accessToken); //auth.accessToken
 
-  useEffect(() => {
-    petService.getAll()
-      .then(result=> {
-        setPets(result)
+    useEffect(() => {
+      petService.getAll()
+        .then(result=> {
+          setPets(result)
       })
-  }, []);
+    }, []);
 
-  const onLoginSubmit = async (data) => {
+    const onLoginSubmit = async (data) => {
         const result = await authService.login(data);
         setAuth(result)
         navigate('/catalog')
         alert("You are welcome!")
-  };
-    
+};    
 
-  const onRegisterSubmit = async(values) => {
+    const onRegisterSubmit = async(values) => {
         const { confirmPassword, ...registerData } = values;
         if(confirmPassword !== registerData.password) {
           alert("Both passwords do not match!")
           return;
-  };
+        };
     
         try {
             const result = await authService.register(values);
@@ -64,43 +63,40 @@ function App() {
         } catch (error) {
             alert("User with the same details (email or username) already exists!")
         }
-    };
+};
 
     const onLogout = async () => {
         await authService.logout();
         setAuth({});
-    };
+};
 
- 
-
-
-  const onAddPetSubmit = async(petData) => {
+    const onAddPetSubmit = async(petData) => {
     const newPet = await petService.addPet(petData);
     setPets(state => [...state, newPet]);
     navigate('/catalog')
 };
 
-  const onPetEditSubmit = async(values) => {
-    const result = await petService.edit(values._id, values);
-    setPets(state => state.map(x=> x._id === values._id ? result : x)) // to check this
-    navigate(`/catalog/${values._id}`);
+    const onPetEditSubmit = async(values) => {
+        const result = await petService.edit(values._id, values);
+        setPets(state => state.map(x=> x._id === values._id ? result : x)) // to check this
+        navigate(`/catalog/${values._id}`);
 };
 
-  const onProfilePicSubmit = async(data) => {
-    const result = await profileService.addPhoto(data)
-    setImage(result)
-    navigate(`/profile`)
+    const onProfilePicSubmit = async(data) => {
+        const result = await profileService.addPhoto(data)
+        setImage(result)
+        navigate(`/profile`)
 };
 
-const contextValues = {
-  onLoginSubmit,
-  onRegisterSubmit,
-  onLogout,
-  userId: auth._id,
-  token: auth.accessToken,
-  userEmail: auth.email,
-  username: auth.username,
-  isAuthenticated: !!auth.accessToken //truthy - false and vice versa
+    const contextValues = {
+        onLoginSubmit,
+        onRegisterSubmit,
+        onLogout,
+        userId: auth._id,
+        token: auth.accessToken,
+        userEmail: auth.email,
+        username: auth.username,
+        isAuthenticated: !!auth.accessToken //truthy - false and vice versa
 };
 
   return (
