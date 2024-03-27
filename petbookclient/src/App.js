@@ -23,12 +23,14 @@ import { profileServiceFactory } from './services/profileService';
 import { RouteGuard } from './components/guards/RouteGuard';
 import { authServiceFactory } from './services/authService';
 import './App.css';
+import { useLocalStorage } from './hooks/useLocalStorage';
 
 function App() {
     const navigate = useNavigate();
+
+    const [auth, setAuth] = useLocalStorage('auth', {});
     const [pets, setPets] = useState([]);
-    const [image, setImage] = useState({});
-    const [auth, setAuth] = useState({});
+    const [image, setImage] = useState({}); 
 // const [petOwner, setPetOwner] = useState([]);
     const authService = authServiceFactory(auth.accessToken)
     const petService = petServiceFactory(auth.accessToken); // auth.accessToken
