@@ -59,7 +59,7 @@ function App() {
         try {
             const result = await authService.register(values);
             setAuth(result);     
-            alert("Successful registration") 
+            alert("Successful registration!") 
             navigate('/catalog')
         } catch (error) {
             alert("User with the same details (email or username) already exists!")
