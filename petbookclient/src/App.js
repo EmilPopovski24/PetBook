@@ -22,8 +22,8 @@ import { AddPhoto } from './components/Profile/AddPhoto/AddPhoto';
 import { profileServiceFactory } from './services/profileService';
 import { RouteGuard } from './components/guards/RouteGuard';
 import { authServiceFactory } from './services/authService';
-import './App.css';
 import { useLocalStorage } from './hooks/useLocalStorage';
+import './App.css';
 
 function App() {
     const navigate = useNavigate();
