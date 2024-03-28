@@ -32,8 +32,8 @@ function App() {
     const [image, setImage] = useState({}); 
 const [petOwner, setPetOwner] = useState([]);
     const authService = authServiceFactory(auth.accessToken)
-    const petService = petServiceFactory(auth.accessToken); // auth.accessToken
-    const profileService = profileServiceFactory(auth.accessToken); //auth.accessToken
+    const petService = petServiceFactory(); // auth.accessToken
+    const profileService = profileServiceFactory(); //auth.accessToken
 
     useEffect(() => {
       petService.getAll()
