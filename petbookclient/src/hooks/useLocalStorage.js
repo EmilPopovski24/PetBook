@@ -18,6 +18,6 @@ export const useLocalStorage = (key, initialValue) => {
 
     return [
         state,
-        setLocalStorage\
+        setLocalStorage
     ];
 }
