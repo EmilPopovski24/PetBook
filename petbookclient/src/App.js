@@ -27,7 +27,7 @@ import './App.css';
 
 function App() {
     const navigate = useNavigate();
-    const [auth, setAuth] = useLocalStorage('auth', {});
+    const [auth, setAuth] = useState({});
     const [pets, setPets] = useState([]);
     const [image, setImage] = useState({}); 
 // const [petOwner, setPetOwner] = useState([]);
