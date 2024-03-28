@@ -40,7 +40,7 @@ function App() {
         .then(result=> {
           setPets(result)
       })
-    }, []);
+    }, [result]);
 
     const onLoginSubmit = async (data) => {
         const result = await authService.login(data);
