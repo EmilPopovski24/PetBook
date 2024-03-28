@@ -30,7 +30,8 @@ function App() {
     const [auth, setAuth] = useLocalStorage('auth', {});
     const [pets, setPets] = useState([]);
     const [image, setImage] = useState({}); 
-// const [petOwner, setPetOwner] = useState([]);
+// const [petOwner, setPetOwner] = useState([]);\
+
     const authService = authServiceFactory(auth.accessToken)
     const petService = petServiceFactory(auth.accessToken); // auth.accessToken
     const profileService = profileServiceFactory(auth.accessToken); //auth.accessToken
