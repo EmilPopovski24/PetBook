@@ -100,7 +100,7 @@ function App() {
         isAuthenticated: !!auth.accessToken //truthy - false and vice versa
 };
 
-  return (
+return (
     <AuthContext.Provider value={contextValues} >
       <Header />
       <div className="main-content">
