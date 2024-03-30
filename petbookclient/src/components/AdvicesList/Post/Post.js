@@ -1,4 +1,4 @@
-
+import "./Post.css";
 
 export const Post = ({
     problem,
