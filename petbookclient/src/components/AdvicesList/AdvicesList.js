@@ -25,7 +25,7 @@ export const AdvicesList = ({
             )}
             {posts.map(x=> <Post key={x._id} {...x} />)}
             {posts.length === 0 && (
-                <h1 className="catalog-pets">No pet accounts for now</h1>
+                <h1 className="catalog-pets">No posts for now</h1>
             )}
         </div>
 
