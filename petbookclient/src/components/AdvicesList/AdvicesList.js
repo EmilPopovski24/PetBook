@@ -1,6 +1,7 @@
-import './AdvicesList.css';
+
 import { useForm } from '../../hooks/useForm';
 import { useState } from 'react';
+import './AdvicesList.css';
 
 export const AdvicesList = () => {
 
@@ -9,6 +10,10 @@ export const AdvicesList = () => {
     }, )
 
     const [posts, setPosts] = useState([]);
+
+    const onPostSubmit = (post) => {
+
+    }
 
     return(
         <>
