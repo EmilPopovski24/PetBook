@@ -92,7 +92,8 @@ function App() {
 
 const onPostSubmit = async (post) => {
   const newPost = await profileService.addPost(post);
-  setPosts(state => [...state, newPost])
+  // setPosts(state => [...state, newPost])
+  console.log(newPost)
   navigate(`/profile`)
 }
 
