@@ -4,6 +4,8 @@ export const Post = ({
     problem,
 }) => {
     return (
-        <b>{problem}</b>
+        <div className="post">
+            <b>{problem}</b>
+        </div>
     )
 }
