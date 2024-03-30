@@ -1,14 +1,18 @@
 import { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
+import { ProfilePet } from "./ProfilePet/ProfilePet";
 import "./Profile.css"
 
 export const Profile = ({
-    image
+    image,
+    pets
 }) => {
 
     const user = useContext(AuthContext);
     const { imageUrl } = useParams({});
+
+    console.log(user)
 
     return(
         <>
@@ -22,11 +26,11 @@ export const Profile = ({
                         <li>Email: {user.userEmail}</li>
                     </ul>   
                 </div>     
-                {/* <h3>My pets</h3>
-                    {pets.map(x=> <ProfilePet key={x._id} {...x} />)}
+                <h3>My pets</h3>
+                    {pets.map(x=> <ProfilePet key={x._ownerId} {...x} />)}
                     {pets.length === 0 && (
                     <h1>No pet accounts for now</h1>
-                )} */}
+                )}
             </div>
         </>
     )
