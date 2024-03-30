@@ -1,4 +1,5 @@
 import { useForm } from '../../hooks/useForm';
+import { Post } from './Post/Post';
 import './AdvicesList.css';
 
 export const AdvicesList = ({
