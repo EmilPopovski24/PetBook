@@ -1,0 +1,36 @@
+.adviceslist-header {
+    text-align: center;
+}
+
+.advisedlist-post {
+    margin-left: 40px;
+}
+
+.problem-form {
+    margin-left: 40px;
+}
+
+#problem {
+    width:40%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid red;
+    color: white;
+    background-color: grey;
+}
+
+.post-btn {
+    display:block;
+    padding:10px;
+    border:none;
+    border-radius: 5px;
+    background-color: red;
+    margin-top: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.post-btn:hover {
+    cursor: pointer;
+    background-color: rgb(65, 1, 10);
+}
