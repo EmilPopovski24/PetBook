@@ -1,11 +1,15 @@
 import './AdvicesList.css';
 import { useForm } from '../../hooks/useForm';
+import { useState } from 'react';
 
 export const AdvicesList = () => {
 
     const {values, changeHandler, onSubmit} = useForm({
         problem: '',
     }, )
+
+    const [posts, setPosts] = useState([]);
+
     return(
         <>
        <h1 className="adviceslist-header">AdvicesList</h1>       
