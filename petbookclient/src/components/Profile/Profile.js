@@ -1,18 +1,14 @@
 import { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
-import { ProfilePet } from "./ProfilePet/ProfilePet";
 import "./Profile.css"
 
 export const Profile = ({
-    image,
-    pets
+    image
 }) => {
 
     const user = useContext(AuthContext);
     const { imageUrl } = useParams({});
-
-    console.log(user)
 
     return(
         <>
