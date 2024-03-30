@@ -1,19 +1,13 @@
-
 import { useForm } from '../../hooks/useForm';
-import { useState } from 'react';
 import './AdvicesList.css';
 
-export const AdvicesList = () => {
+export const AdvicesList = ({
+    onPostSubmit
+}) => {
 
     const {values, changeHandler, onSubmit} = useForm({
         problem: '',
-    }, )
-
-    const [posts, setPosts] = useState([]);
-
-    const onPostSubmit = (post) => {
-
-    }
+    }, onPostSubmit)   
 
     return(
         <>
