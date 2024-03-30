@@ -2,7 +2,8 @@ import { useForm } from '../../hooks/useForm';
 import './AdvicesList.css';
 
 export const AdvicesList = ({
-    onPostSubmit
+    onPostSubmit,
+    posts
 }) => {
 
     const {values, changeHandler, onSubmit} = useForm({
@@ -17,6 +18,16 @@ export const AdvicesList = ({
             <textarea name="problem" id="problem" cols="30" rows="10" value={values.problem} onChange={changeHandler}></textarea>
             <button className='post-btn' type="submit">Post</button>
        </form>
+       <div id='advices-page'>
+            {posts.length > 0 && (
+                <h1 className="catalog-pets">Pet Accounts</h1>
+            )}
+            {posts.map(x=> <Post key={x._id} {...x} />)}
+            {posts.length === 0 && (
+                <h1 className="catalog-pets">No pet accounts for now</h1>
+            )}
+        </div>
+
        </>
     )
 }
