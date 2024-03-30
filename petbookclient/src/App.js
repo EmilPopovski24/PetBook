@@ -30,6 +30,7 @@ function App() {
     const [auth, setAuth] = useState({});
     const [pets, setPets] = useState([]);
     const [image, setImage] = useState({}); 
+    const [posts, setPosts] = useState([]);
 // const [petOwner, setPetOwner] = useState([]);
     const authService = authServiceFactory(auth.accessToken)
     const petService = petServiceFactory(auth.accessToken); // auth.accessToken
@@ -122,7 +123,7 @@ return (
               <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
               <Route path ='/profile' element={<Profile image={image} />} />
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
-              <Route path ='/advices' element={<AdvicesList />} />
+              <Route path ='/advices' element={<AdvicesList posts={posts}/>} />
             </Route>
           <Route path ='/about' element={<About />} />
           <Route path ='/terms' element={<Terms />} />
