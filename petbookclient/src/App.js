@@ -93,8 +93,6 @@ function App() {
 const onPostSubmit = async (post) => {
   const newPost = await profileService.addPost(post);
   setPosts(state => [...state, newPost]);
-  const postOwner = post._ownerId;
-  console.log(postOwner)
 }
 
     const contextValues = {
