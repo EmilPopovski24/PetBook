@@ -19,7 +19,7 @@ export const profileServiceFactory = (token) => {
     const addPost = (post) => {
         const result = request.post(`${profileUrl}/posts`, post)
         return result;
-    }
+    };
     
     return {
        addPhoto,
