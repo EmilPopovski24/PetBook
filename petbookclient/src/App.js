@@ -117,7 +117,7 @@ return (
           <Route path ='/logout' element={<Logout />} />
           <Route path ='/catalog' element={<Catalog pets={pets} />} />    
             <Route element={<RouteGuard />}>
-              <Route path ='/catalog/:petId' element={<PetAccount pets={pets}/>} />
+              <Route path ='/catalog/:petId' element={<PetAccount pets={pets} />} />
               <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} /> 
               <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
               <Route path ='/profile' element={<Profile image={image} />} />
