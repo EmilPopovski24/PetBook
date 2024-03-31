@@ -1,8 +1,7 @@
 import { useParams } from "react-router-dom";
-import "./Post.css";
 import { useForm } from "../../../hooks/useForm";
-import { useService } from "../../../hooks/useService";
-import { commentServiceFactory } from "../../../services/commentService";
+import "./Post.css";
+
 
 export const Post = ({
     problem,
