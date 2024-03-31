@@ -56,14 +56,21 @@
     border: none;
 }
 
-
-
 .owner-buttons {
     display:inline-block;
 }
 
 .go-back {
     display: inline;
+}
+
+.like-btn {
+    background-color: blue;
+    color: white;
+    padding:10px;
+    border: none;
+    border-radius: 5px;
+    margin:10px;
 }
 
 

@@ -41,6 +41,7 @@ export const PetAccount = ({
                     <li><h3>Age: {pet.age}</h3></li>
                     <li><h3>Color: {pet.color}</h3></li>
                     <li><h3>Owner: </h3></li>
+                    <button className='like-btn'>Like</button>
                 </ul> 
                         <div className='actionsDiv'>
                             <div className='go-back'>
