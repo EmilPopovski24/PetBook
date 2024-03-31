@@ -99,11 +99,11 @@ const onPostSubmit = async (post) => {
 };
 
 const onCommentSubmit = async(commentData) => {
+  console.log("da")
     const newComment = await commentService.addComment(commentData);
     setComments(state => [...state, newComment]);
     console.log(newComment)
-    } 
-
+}; 
 
     const contextValues = {
         onLoginSubmit,

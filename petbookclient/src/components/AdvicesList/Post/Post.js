@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { useForm } from "../../../hooks/useForm";
 import "./Post.css";
 
-
 export const Post = ({
     onCommentSubmit,
     problem,

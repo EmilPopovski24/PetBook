@@ -4,13 +4,14 @@ import './AdvicesList.css';
 
 export const AdvicesList = ({
     onPostSubmit,
+    onCommentSubmit,
     posts,
     username
 }) => {
 
     const {values, changeHandler, onSubmit} = useForm({
         problem: '',
-    }, onPostSubmit)   
+    }, onPostSubmit)  
 
     return(
         <>
