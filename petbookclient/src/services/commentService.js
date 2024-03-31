@@ -6,8 +6,8 @@ export const commentServiceFactory = (token) => {
 
     const request = requestFactory(token);
 
-    const addComment = async(postId, comment) => {
-        const result = await request.post(`${commentsUrl}`,{postId, comment} )
+    const addComment = (postId, comment) => {
+        const result = request.post(`${commentsUrl}`,{postId, comment} )
         return result
     }
 

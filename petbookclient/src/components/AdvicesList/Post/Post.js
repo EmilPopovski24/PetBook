@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import "./Post.css";
 import { useForm } from "../../../hooks/useForm";
+import { useService } from "../../../hooks/useService";
+import { commentServiceFactory } from "../../../services/commentService";
 
 export const Post = ({
     problem,
@@ -19,7 +21,7 @@ export const Post = ({
             <div className="addComment-div">
                 <form method="POST" className="addComment-form" onSubmit={onSubmit}>
                     <h5>Add a comment:</h5>
-                    <textarea name="comment" id="comment" cols="100" rows="2" value={values.comment} onChange={{changeHandler}}></textarea>
+                    <textarea name="comment" id="comment" cols="100" rows="2" value={values.comment} onChange={changeHandler}></textarea>
                     <button className='post-btn' type="submit">Post</button>
                 </form>
             </div>
