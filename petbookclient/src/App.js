@@ -37,7 +37,7 @@ function App() {
     const authService = authServiceFactory(auth.accessToken)
     const petService = petServiceFactory(auth.accessToken); // auth.accessToken
     const profileService = profileServiceFactory(auth.accessToken); //auth.accessToken
-    const commentService = commentServiceFactory(auth.accessToken);
+    const commentService = commentServiceFactory(auth.accessToken); //auth.accessToken
 
     useEffect(() => {
       petService.getAll()
