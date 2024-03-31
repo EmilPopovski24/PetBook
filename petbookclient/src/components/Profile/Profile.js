@@ -8,7 +8,7 @@ export const Profile = ({
 }) => {
 
     const user = useContext(AuthContext);
-    const { imageUrl } = useParams({});
+    // const { imageUrl } = useParams({});
 
     return(
         <>

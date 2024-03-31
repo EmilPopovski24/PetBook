@@ -15,8 +15,8 @@
     padding: 20px;
     border-radius: 10px;
     border: 2px solid red;
-    color: white;
-    background-color: grey;
+    color: black;
+    background-color: white;
 }
 
 .post-btn {
@@ -37,4 +37,9 @@
 
 .catalog-posts {
     text-align: center;
+    background-color: grey;
+}
+
+.advices-page {
+    background-color: black;
 }
