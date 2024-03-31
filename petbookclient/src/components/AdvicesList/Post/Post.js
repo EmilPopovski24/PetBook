@@ -6,12 +6,13 @@ import { commentServiceFactory } from "../../../services/commentService";
 
 export const Post = ({
     problem,
-    _ownerId 
+    _ownerId,
+    onCommentSubmit
 }) => {
 
     const {values, changeHandler, onSubmit} = useForm({
         comment:''
-    }, )
+    },onCommentSubmit)
     const postId = useParams();
 
     return (
