@@ -6,6 +6,8 @@ export const Post = ({
     _ownerId 
 }) => {
 
+    const postId = useParams();
+
     return (
         <div className="post">
             <h3 className="post-author">Author: {_ownerId}</h3>
