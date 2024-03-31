@@ -4,18 +4,19 @@ import "./Post.css";
 
 
 export const Post = ({
+    onCommentSubmit,
     problem,
-    _ownerId,
-    onCommentSubmit
+    _ownerId, 
 }) => {
 
     const {values, changeHandler, onSubmit} = useForm({
-        comment:''
-    },onCommentSubmit)
+        comment:'',
+    }, onCommentSubmit)
+
     const postId = useParams();
 
     return (
-        <div className="post">
+        <div className="post-comment">
             <h3 className="post-author">Author: {_ownerId}</h3>
             <p className="post-problem">{problem}</p>
             <div className="addComment-div">
