@@ -24,6 +24,7 @@ import { RouteGuard } from './components/guards/RouteGuard';
 import { authServiceFactory } from './services/authService';
 // import { useLocalStorage } from './hooks/useLocalStorage';
 import './App.css';
+import { commentServiceFactory } from './services/commentService';
 
 function App() {
     const navigate = useNavigate();
@@ -31,10 +32,12 @@ function App() {
     const [pets, setPets] = useState([]);
     const [image, setImage] = useState({}); 
     const [posts, setPosts] = useState([]);
+    const [comments, setComments] = useState([]);
 // const [petOwner, setPetOwner] = useState([]);
     const authService = authServiceFactory(auth.accessToken)
     const petService = petServiceFactory(auth.accessToken); // auth.accessToken
     const profileService = profileServiceFactory(auth.accessToken); //auth.accessToken
+    const commentService = commentServiceFactory(auth.accessToken);
 
     useEffect(() => {
       petService.getAll()
@@ -91,9 +94,15 @@ function App() {
 };
 
 const onPostSubmit = async (post) => {
-  const newPost = await profileService.addPost(post);
-  setPosts(state => [...state, newPost]);
-}
+    const newPost = await profileService.addPost(post);
+    setPosts(state => [...state, newPost]);
+};
+
+const onCommentSubmit = async(commentData) => {
+    const newComment = await commentService.addComment(commentData);
+    setComments(state => [...state, newComment]);
+    } 
+
 
     const contextValues = {
         onLoginSubmit,
@@ -122,7 +131,7 @@ return (
               <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
               <Route path ='/profile' element={<Profile image={image} />} />
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
-              <Route path ='/advices' element={<AdvicesList posts={posts} onPostSubmit={onPostSubmit}/>} />
+              <Route path ='/advices' element={<AdvicesList posts={posts} comments={comments} onPostSubmit={onPostSubmit} onCommentSubmit={onCommentSubmit} />} />
             </Route>
           <Route path ='/about' element={<About />} />
           <Route path ='/terms' element={<Terms />} />
