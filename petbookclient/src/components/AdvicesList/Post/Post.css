@@ -1,3 +1,13 @@
 .post {
     margin-left: 40px;
 }
+
+.post-problem {
+   color: white;
+   font-weight: 100;
+   padding:10px;
+   background-color: grey;
+   border: 2px solid red;
+   border-radius: 5px;
+   width: 40%;
+}

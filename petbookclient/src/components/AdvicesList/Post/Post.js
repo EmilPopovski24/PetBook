@@ -6,8 +6,8 @@ export const Post = ({
 }) => {
     return (
         <div className="post">
-            <h3>Author: {_ownerId}</h3>
-            <p>{problem}</p>
+            <h3 className="post-author">Author: {_ownerId}</h3>
+            <p className="post-problem">{problem}</p>
         </div>
     )
 }
