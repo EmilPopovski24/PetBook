@@ -13,8 +13,10 @@ export const PetAccount = ({
     const { userId } = useContext(AuthContext);
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
+    const [likes, setLikes] = useState(0);
     const petService = useService(petServiceFactory);
     const navigate = useNavigate();
+
     
     useEffect(()=> {
         petService.getOne(petId)
@@ -41,7 +43,8 @@ export const PetAccount = ({
                     <li><h3>Age: {pet.age}</h3></li>
                     <li><h3>Color: {pet.color}</h3></li>
                     <li><h3>Owner: </h3></li>
-                    <button className='like-btn'>Like</button>
+                    <li><h3>Likes: {likes}</h3></li>
+                    <button className='like-btn' onClick={()=> setLikes(likes + 1)}>Like</button>
                 </ul> 
                         <div className='actionsDiv'>
                             <div className='go-back'>
