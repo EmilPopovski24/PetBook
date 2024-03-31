@@ -11,7 +11,7 @@ export const AdvicesList = ({
 
     const {values, changeHandler, onSubmit} = useForm({
         problem: '',
-    }, onPostSubmit)  
+    }, onPostSubmit, onCommentSubmit)  
 
     return(
         <>
