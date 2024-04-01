@@ -22,9 +22,9 @@ import { AddPhoto } from './components/Profile/AddPhoto/AddPhoto';
 import { profileServiceFactory } from './services/profileService';
 import { RouteGuard } from './components/guards/RouteGuard';
 import { authServiceFactory } from './services/authService';
-import { useLocalStorage } from './hooks/useLocalStorage';
+// import { useLocalStorage } from './hooks/useLocalStorage';
 import './App.css';
-import { commentServiceFactory } from './services/commentService';
+// import { commentServiceFactory } from './services/commentService';
 
 function App() {
     const navigate = useNavigate();
