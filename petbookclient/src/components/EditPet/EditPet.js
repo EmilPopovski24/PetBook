@@ -30,7 +30,6 @@ export const EditPet = ({
 
     return(
         <>
-        
         <section className="edit-page">
             <h1 className='editPetHeader'>Edit Your Pet Details</h1>
                 <form id="edit" onSubmit={onSubmit}  method="POST">
@@ -58,4 +57,4 @@ export const EditPet = ({
             </section>
         </>
     )
-}
+};
