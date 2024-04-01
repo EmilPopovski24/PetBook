@@ -32,7 +32,7 @@ export const PetAccount = ({
 
     const onLikeSubmit = () => {
         setLikes(likes + 1)
-    }
+    };
 
     const isOwner = pet._ownerId === userId;
 
