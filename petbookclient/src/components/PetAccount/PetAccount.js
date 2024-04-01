@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import './PetAccount.css';
 
 export const PetAccount = ({
-    petOwner
 }) => {
 
     const { userId } = useContext(AuthContext);
