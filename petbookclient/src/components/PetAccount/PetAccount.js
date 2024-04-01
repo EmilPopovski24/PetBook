@@ -6,8 +6,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 import './PetAccount.css';
 
-export const PetAccount = ({
-}) => {
+export const PetAccount = () => {
 
     const { userId } = useContext(AuthContext);
     const { petId } = useParams({});//learn more about useParams
