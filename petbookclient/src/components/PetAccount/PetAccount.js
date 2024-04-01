@@ -17,7 +17,6 @@ export const PetAccount = ({
     const petService = useService(petServiceFactory);
     const navigate = useNavigate();
 
-    
     useEffect(()=> {
         petService.getOne(petId)
             .then(result => {
