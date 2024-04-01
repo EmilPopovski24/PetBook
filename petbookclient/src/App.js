@@ -93,9 +93,9 @@ function App() {
         navigate(`/profile`)
 };
 
-const onPostSubmit = async(post) => {
-    const newPost = await profileService.addPost(post);
-    setPosts(state => [...state, newPost]);
+    const onPostSubmit = async(post) => {
+        const newPost = await profileService.addPost(post);
+        setPosts(state => [...state, newPost]);
 };
 
 // const onCommentSubmit = async(commentData) => {
