@@ -50,7 +50,7 @@ export const EditPet = ({
                     <br />
                     <input type="text" id="color" name="color" value={values.color}  onChange={changeHandler} className='parameters' />
                     <hr />
-                    <label htmlFor="task-title">Image</label>
+                    <label htmlFor="task-title">Image URL</label>
                     <input type="text" id="imageUrl" name="imageUrl" value={values.imageUrl} onChange={changeHandler}  className='parameters'/>
                     <button className='ownerBtn'><Link to={`/catalog/${values._id}`}>Go back</Link></button>
                     <button type="submit" className="editPetBtn">Edit</button>           
