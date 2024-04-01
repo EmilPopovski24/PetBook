@@ -13,7 +13,7 @@ import { About } from  './components/About/About';
 import { Terms } from  './components/Terms/Terms';
 import { FAQ } from  './components/FAQ/FAQ';
 import { Route, Routes} from 'react-router-dom';
-import { petServiceFactory } from './services/petService';
+// import { petServiceFactory } from './services/petService';
 import { PetAccount } from './components/PetAccount/PetAccount';
 import { EditPet } from './components/EditPet/EditPet';
 import { Profile } from './components/Profile/Profile';
