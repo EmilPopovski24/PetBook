@@ -29,7 +29,11 @@ export const PetAccount = ({
         await petService.deletePet(pet._id);
         navigate('/catalog');
     }
-   
+
+    const onLikeSubmit = () => {
+        setLikes(likes + 1)
+    }
+
     const isOwner = pet._ownerId === userId;
 
     return(
@@ -44,7 +48,7 @@ export const PetAccount = ({
                     <li><h3>Color: {pet.color}</h3></li>
                     <li><h3>Owner: </h3></li>
                     <li><h3>Likes: {likes}</h3></li>
-                    <button className='like-btn' onClick={()=> setLikes(likes + 1)}>Like</button>
+                    <button className='like-btn' onClick={onLikeSubmit}>Like</button>
                 </ul> 
                         <div className='actionsDiv'>
                             <div className='go-back'>
