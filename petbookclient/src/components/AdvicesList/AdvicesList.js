@@ -2,7 +2,8 @@ import { Post } from './Post/Post';
 import './AdvicesList.css';
 
 export const AdvicesList = ({
-    posts
+    posts,
+    onCommentSubmit
 }) => {
 
     return(
