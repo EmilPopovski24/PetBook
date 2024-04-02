@@ -135,7 +135,7 @@ return (
               <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
               <Route path ='/profile' element={<Profile image={image} />} />
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
-              <Route path ='/advices' element={<AdvicesList posts={posts} onCommentSubmit={onCommentSubmit} comments={comments} />} />
+              <Route path ='/advices' element={<AdvicesList posts={posts} comments={comments} onCommentSubmit={onCommentSubmit} />} />
               <Route path ='/help' element={<AskForHelp onPostSubmit={onPostSubmit} />} />
             </Route>
           <Route path ='/about' element={<About />} />
