@@ -24,6 +24,7 @@ import { RouteGuard } from './components/guards/RouteGuard';
 import { authServiceFactory } from './services/authService';
 // import { useLocalStorage } from './hooks/useLocalStorage';
 import './App.css';
+import { AskForHelp } from './components/AskForHelp/AskForHelp';
 // import { commentServiceFactory } from './services/commentService';
 
 function App() {
@@ -125,7 +126,8 @@ return (
               <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
               <Route path ='/profile' element={<Profile image={image} />} />
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
-              <Route path ='/advices' element={<AdvicesList posts={posts} comments={comments} onPostSubmit={onPostSubmit} />} />
+              <Route path ='/advices' element={<AdvicesList posts={posts} />} />
+              <Route path ='/help' element={<AskForHelp onPostSubmit={onPostSubmit} />} />
             </Route>
           <Route path ='/about' element={<About />} />
           <Route path ='/terms' element={<Terms />} />
