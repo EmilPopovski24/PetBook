@@ -12,7 +12,7 @@ export const AdvicesList = ({
             {posts.length > 0 && (
                 <h1 className="catalog-posts">Please advise</h1>
             )}
-            {posts.map(x=> <Post key={x._id} {...x} />)}
+            {posts.map(x=> <Post key={x._id} {...x} onCommentSubmit={onCommentSubmit}/>)}
             {posts.length === 0 && (
                 <h1 className="catalog-posts">No posts for now</h1>
             )}
