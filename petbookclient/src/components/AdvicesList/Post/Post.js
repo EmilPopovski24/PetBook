@@ -8,7 +8,7 @@ export const Post = ({
     _ownerId, 
 }) => {
 
-    const {values, changeHandler, onSubmit} = useForm({
+    const {values, changeHandler} = useForm({
         comment:'',
     }, onCommentSubmit)
 
@@ -19,9 +19,9 @@ export const Post = ({
             <h3 className="post-author">Author: {_ownerId}</h3>
             <p className="post-problem">{problem}</p>
             <div className="addComment-div">
-                <form method="POST" className="addComment-form" onSubmit={onSubmit}>
+                <form method="POST" className="addComment-form" >
                     <textarea name="comment" cols="100" rows="2" value={values.comment} onChange={changeHandler}></textarea>
-                    <button className='post-btn' type="submit">Add comment</button>
+                    <button className='post-btn' type="submit" onClick={onCommentSubmit}>Add comment</button>
                 </form>
             </div>
             <div className="comments-div">

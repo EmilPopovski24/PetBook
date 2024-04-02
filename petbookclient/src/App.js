@@ -102,9 +102,10 @@ function App() {
         navigate('/advices')
 };
 
-    const onCommentSubmit = (commentData) => {
-      const result = commentService.addComment(commentData);
-      console.log(result)
+    const onCommentSubmit = async (commentData) => {
+      console.log(commentData)
+      const result = await commentService.addComment(commentData);
+      // console.log(result)
       return result
 };
 
