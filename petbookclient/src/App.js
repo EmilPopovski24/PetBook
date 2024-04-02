@@ -104,7 +104,7 @@ function App() {
       const result = commentService.addComment(commentData);
       console.log(result)
       return result
-    }
+};
 
     const contextValues = {
         onLoginSubmit,
