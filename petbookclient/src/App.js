@@ -25,9 +25,7 @@ import { profileServiceFactory } from './services/profileService';
 import { authServiceFactory } from './services/authService';
 import { commentServiceFactory } from './services/commentService';
 // import { useLocalStorage } from './hooks/useLocalStorage';
-import './App.css';
-
-
+import './App.css'
 
 function App() {
     const navigate = useNavigate();
@@ -102,10 +100,9 @@ function App() {
         navigate('/advices')
 };
 
-    const onCommentSubmit = async (commentData) => {
+    const onCommentSubmit = async(commentData) => {
       console.log(commentData)
       const result = await commentService.addComment(commentData);
-      // console.log(result)
       return result
 };
 
@@ -136,7 +133,7 @@ return (
               <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
               <Route path ='/profile' element={<Profile image={image} />} />
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
-              <Route path ='/advices' element={<AdvicesList posts={posts} comments={comments} onCommentSubmit={onCommentSubmit} />} />
+              <Route path ='/advices' element={<AdvicesList posts={posts} onCommentSubmit={onCommentSubmit} />} />
               <Route path ='/help' element={<AskForHelp onPostSubmit={onPostSubmit} />} />
             </Route>
           <Route path ='/about' element={<About />} />
