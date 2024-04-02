@@ -25,7 +25,7 @@ import { authServiceFactory } from './services/authService';
 // import { useLocalStorage } from './hooks/useLocalStorage';
 import './App.css';
 import { AskForHelp } from './components/AskForHelp/AskForHelp';
-// import { commentServiceFactory } from './services/commentService';
+import { commentServiceFactory } from './services/commentService';
 
 function App() {
     const navigate = useNavigate();
@@ -38,7 +38,7 @@ function App() {
     const authService = authServiceFactory(auth.accessToken)
     const petService = petServiceFactory(auth.accessToken); // auth.accessToken
     const profileService = profileServiceFactory(auth.accessToken); //auth.accessToken
-    // const commentService = commentServiceFactory(auth.accessToken); //auth.accessToken
+    const commentService = commentServiceFactory(auth.accessToken); //auth.accessToken
 
     useEffect(() => {
       petService.getAll()
@@ -100,6 +100,11 @@ function App() {
         navigate('/advices')
 };
 
+    const onCommentSubmit = async(commentData) => {
+      const result = await commentService.addComment(commentData);
+      console.log(result)
+    }
+
     const contextValues = {
         onLoginSubmit,
         onRegisterSubmit,
@@ -127,7 +132,7 @@ return (
               <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
               <Route path ='/profile' element={<Profile image={image} />} />
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
-              <Route path ='/advices' element={<AdvicesList posts={posts} />} />
+              <Route path ='/advices' element={<AdvicesList posts={posts} onCommentSubmit={onCommentSubmit} />} />
               <Route path ='/help' element={<AskForHelp onPostSubmit={onPostSubmit} />} />
             </Route>
           <Route path ='/about' element={<About />} />
