@@ -19,13 +19,15 @@ import { EditPet } from './components/EditPet/EditPet';
 import { Profile } from './components/Profile/Profile';
 import { AdvicesList } from './components/AdvicesList/AdvicesList';
 import { AddPhoto } from './components/Profile/AddPhoto/AddPhoto';
-import { profileServiceFactory } from './services/profileService';
+import { AskForHelp } from './components/AskForHelp/AskForHelp';
 import { RouteGuard } from './components/guards/RouteGuard';
+import { profileServiceFactory } from './services/profileService';
 import { authServiceFactory } from './services/authService';
+import { commentServiceFactory } from './services/commentService';
 // import { useLocalStorage } from './hooks/useLocalStorage';
 import './App.css';
-import { AskForHelp } from './components/AskForHelp/AskForHelp';
-import { commentServiceFactory } from './services/commentService';
+
+
 
 function App() {
     const navigate = useNavigate();
@@ -133,7 +135,7 @@ return (
               <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
               <Route path ='/profile' element={<Profile image={image} />} />
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
-              <Route path ='/advices' element={<AdvicesList posts={posts} onCommentSubmit={onCommentSubmit} />} />
+              <Route path ='/advices' element={<AdvicesList posts={posts} onCommentSubmit={onCommentSubmit} comments={comments} />} />
               <Route path ='/help' element={<AskForHelp onPostSubmit={onPostSubmit} />} />
             </Route>
           <Route path ='/about' element={<About />} />
