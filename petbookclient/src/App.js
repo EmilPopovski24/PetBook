@@ -101,7 +101,7 @@ function App() {
 };
 
     const onCommentSubmit = async(commentData) => {
-      console.log(commentData)
+      console.log("ai")
       const result = await commentService.addComment(commentData);
       return result
 };
