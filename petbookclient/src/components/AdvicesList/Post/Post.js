@@ -29,7 +29,7 @@ export const Post = ({
                 <ul className="comments-list"> 
                     {problem.comments && Object.values(problem.comments).map(x=> (
                         <li key={x._id} className="comment-li">
-                        <p>{postId.username}: {x.comment}</p>
+                        <p>{_ownerId}: {x.comment}</p>
                         </li>
                     ))} 
                 </ul>
