@@ -1,6 +1,6 @@
 import { requestFactory } from "./requester";
 
-const profileUrl = 'http://localhost:3030/data/';
+const profileUrl = 'http://localhost:3030/data';
 
 export const profileServiceFactory = (token) => {
     
