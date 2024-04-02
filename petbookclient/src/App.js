@@ -100,9 +100,10 @@ function App() {
         navigate('/advices')
 };
 
-    const onCommentSubmit = async(commentData) => {
-      const result = await commentService.addComment(commentData);
+    const onCommentSubmit = (commentData) => {
+      const result = commentService.addComment(commentData);
       console.log(result)
+      return result
     }
 
     const contextValues = {

@@ -6,10 +6,10 @@ export const commentServiceFactory = (token) => {
 
     const request = requestFactory(token);
 
-    const addComment = async (data) => {
+    const addComment = async(data) => {
         const result = await request.post(`${commentsUrl}`,data)
-        const comments = Object.values(result)
-        return comments;
+        const comment = Object.values(result)
+        return comment;
     }
 
     const getAllComments = async(postId) => {
