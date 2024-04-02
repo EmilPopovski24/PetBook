@@ -21,7 +21,7 @@ export const Post = ({
             <div className="addComment-div">
                 <form method="POST" className="addComment-form" onSubmit={onSubmit}>
                     <textarea name="comment" cols="100" rows="2" value={values.comment} onChange={changeHandler}></textarea>
-                    <button className='post-btn' type="submit" onClick={onCommentSubmit}>Add comment</button>
+                    <button className='post-btn' type="submit">Add comment</button>
                 </form>
             </div>
             <div className="comments-div">
