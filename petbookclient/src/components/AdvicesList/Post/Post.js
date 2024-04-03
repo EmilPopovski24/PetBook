@@ -12,7 +12,7 @@ export const Post = ({
         comment:'',
     }, onCommentSubmit)
 
-    const postId = useParams();
+    const postId = useParams();  
 
     return (
         <div className="post-comment">
