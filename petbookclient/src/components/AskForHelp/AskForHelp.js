@@ -10,9 +10,9 @@ export const AskForHelp = ({
         problem: '',
     }, onPostSubmit)  
 
-    const onPostSbnmit = () => {
-        return null
-        }
+    // const onPostSbnmit = () => {
+    //     return null
+    //     }
 
     return (
         <>
