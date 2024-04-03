@@ -13,7 +13,7 @@ export const Header = () => {
                 <li className='header-links' id="logo"><Link to="/">PetBook</Link></li>
                 <li className='header-links'><Link to="/">Home</Link></li>
             {!isAuthenticated && (
-                <div className='authenticateasded'>
+                <div className='authenticated'>
                     <li className='header-links'><Link to="/login">Login</Link></li>
                     <li className='header-links'><Link to="/register">Register</Link></li>
                 </div>
