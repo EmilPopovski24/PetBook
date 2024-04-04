@@ -35,6 +35,7 @@ export const PetAccount = () => {
                 <h1 className='petAccount-name'>{pet.name}</h1>
                 <img src={pet.imageUrl} alt={pet.name} className='petAccount-pic'/>           
                 <ul>
+                    
                     <li><h3>Type: {pet.type}</h3></li>
                     <li><h3>Breed: {pet.breed}</h3></li>
                     <li><h3>Age: {pet.age}</h3></li>
