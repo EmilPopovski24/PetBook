@@ -10,10 +10,6 @@ export const AskForHelp = ({
         problem: '',
     }, onPostSubmit)  
 
-    // const onPostSbnmit = () => {
-    //     return null
-    //     }
-
     return (
         <>
         <h1 className="help-header">Ask For Help</h1>
