@@ -29,6 +29,10 @@ export const Post = ({
             <div className="comments-div">
                 <h5>Comments:</h5>
                 <ul className="comments-list"> 
+                    {pets.map(x=> <PetItem key={x._id} {...x} />)}
+                    {pets.length === 0 && (
+                        <h1 className="catalog-pets">No pet accounts for now</h1>
+                    )}
                     {/* {problem.comments && Object.values(problem.comments).map(x=> (
                         <li key={x._id} className="comment-li">
                         <p>Comment: {problem}</p>                   
