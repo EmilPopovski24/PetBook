@@ -101,7 +101,6 @@ function App() {
 };
 
     const onCommentSubmit = async(commentData) => {
-      console.log("ai")
       const newComment = await commentService.addComment(commentData);
       setComments(state => [...state, newComment])
 };
