@@ -103,6 +103,7 @@ function App() {
     const onCommentSubmit = async(commentData) => {
       console.log("ai")
       const result = await commentService.addComment(commentData);
+      setComments(state => [...state, result])
       return result
 };
 
@@ -133,7 +134,7 @@ return (
               <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
               <Route path ='/profile' element={<Profile image={image} />} />
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
-              <Route path ='/advices' element={<AdvicesList posts={posts} onCommentSubmit={onCommentSubmit} />} />
+              <Route path ='/advices' element={<AdvicesList posts={posts} onCommentSubmit={onCommentSubmit} comments={comments} />} />
               <Route path ='/help' element={<AskForHelp onPostSubmit={onPostSubmit} />} />
             </Route>
           <Route path ='/about' element={<About />} />
