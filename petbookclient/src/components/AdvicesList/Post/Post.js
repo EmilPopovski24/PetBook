@@ -6,13 +6,14 @@ export const Post = ({
     onCommentSubmit,
     problem,
     _ownerId, 
+    comments
 }) => {
 
     const {values, changeHandler, onSubmit} = useForm({
         comment:'',
     }, onCommentSubmit)
 
-    console.log(problem.comment)
+    console.log(comments)
     
     const postId = useParams();  
 
@@ -29,10 +30,7 @@ export const Post = ({
             <div className="comments-div">
                 <h5>Comments:</h5>
                 <ul className="comments-list"> 
-                    {pets.map(x=> <PetItem key={x._id} {...x} />)}
-                    {pets.length === 0 && (
-                        <h1 className="catalog-pets">No pet accounts for now</h1>
-                    )}
+                    
                     {/* {problem.comments && Object.values(problem.comments).map(x=> (
                         <li key={x._id} className="comment-li">
                         <p>Comment: {problem}</p>                   
