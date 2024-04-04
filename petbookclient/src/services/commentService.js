@@ -17,6 +17,8 @@ export const commentServiceFactory = (token) => {
         const comments = Object.values(result)
         return comments
     };
+
+    console.log(comments)
     
     return {
         addComment,
