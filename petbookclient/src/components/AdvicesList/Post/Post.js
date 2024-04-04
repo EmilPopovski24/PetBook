@@ -29,11 +29,11 @@ export const Post = ({
             <div className="comments-div">
                 <h5>Comments:</h5>
                 <ul className="comments-list"> 
-                    {problem.comments && Object.values(problem.comments).map(x=> (
+                    {/* {problem.comments && Object.values(problem.comments).map(x=> (
                         <li key={x._id} className="comment-li">
                         <p>Comment: {problem}</p>                   
                         </li>
-                    ))} 
+                    ))}  */}
                 </ul>
             </div>
         </div>
