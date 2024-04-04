@@ -27,7 +27,6 @@ export const PetAccount = () => {
         navigate('/catalog');
     }
 
-    
     const isOwner = pet._ownerId === userId;
 
     return(
