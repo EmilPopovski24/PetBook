@@ -8,7 +8,6 @@ export const commentServiceFactory = (token) => {
 
     const addComment = async(data) => {
         const result = await request.post(`${commentsUrl}`,data)
-        console.log(result)
         return result;
     };
 
