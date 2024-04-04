@@ -12,7 +12,8 @@ export const Post = ({
         comment:'',
     }, onCommentSubmit)
 
-    console.log(problem)
+    console.log(problem.comment)
+    
     const postId = useParams();  
 
     return (
@@ -30,7 +31,7 @@ export const Post = ({
                 <ul className="comments-list"> 
                     {problem.comments && Object.values(problem.comments).map(x=> (
                         <li key={x._id} className="comment-li">
-                        <p>Comment: {x.problem}</p>                   
+                        <p>Comment: {problem}</p>                   
                         </li>
                     ))} 
                 </ul>
