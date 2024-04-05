@@ -20,7 +20,7 @@ export const Login = () => {
     return (     
         <>
         <section id = "login-page" className='auth'>
-        <form className='login-form' method="POST" onSubmit={onSubmit} onclickstyle={{width:"40%", margin:"80px auto" }}>
+        <form className='login-form' method="POST" onSubmit={onSubmit} style={{width:"40%", margin:"80px auto" }}>
         <h1 style={{textAlign:"center", fontFamily:"sans-serif"}}>Login form</h1>
             <div className="imgcontainer">
                 <img src="https://fetchpetcare.com/wp-content/uploads/2016/11/dreamstime_xxl_87694876-1024x293.jpg" alt="Avatar" className="avatar" />
