@@ -30,8 +30,7 @@ export const Login = () => {
                 <input type="email" placeholder="Enter Email" id="email" name={LoginKeys.Email} value={values[LoginKeys.Email]} onChange={changeHandler} />
                
                 <label htmlFor="password" style={{display:"block"}}><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" id="password" name={LoginK
-                    eys.Password} value={values[LoginKeys.Password]} onChange={changeHandler} />
+                <input type="password" placeholder="Enter Password" id="password" name={LoginKeys.Password} value={values[LoginKeys.Password]} onChange={changeHandler} />
             <button style={{display:"block", margin:"10px auto"}} className='login-btn' type="submit">Login</button>
             </div>
             <div className="container" style={{"backgroundColor":"#f1f1f1"}}>
