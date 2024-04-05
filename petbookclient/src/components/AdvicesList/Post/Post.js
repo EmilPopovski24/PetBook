@@ -20,12 +20,12 @@ export const Post = ({
     const postId = useParams();  
 
 
-    useEffect(()=> {
-    commentService.getAllComments()
-            .then(result => {
-                s(result)
-            })
-    }, [petId]);
+    // useEffect(()=> {
+    // commentService.getAllComments()
+    //         .then(result => {
+    //             s(result)
+    //         })
+    // }, [petId]);
 
     return (
         <div className="post-comment">
