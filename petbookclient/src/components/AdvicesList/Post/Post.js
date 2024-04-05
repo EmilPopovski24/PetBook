@@ -15,9 +15,9 @@ export const Post = ({
     }, onCommentSubmit)
 
     console.log(comments)
-    const commentService = commentServiceFactory()
+    // const commentService = commentServiceFactory()
     
-    const postId = useParams();  
+    // const postId = useParams();  
 
 
     // useEffect(()=> {
