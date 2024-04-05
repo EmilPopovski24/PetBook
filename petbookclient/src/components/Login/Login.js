@@ -18,7 +18,6 @@ export const Login = () => {
     }, onLoginSubmit)
 
     return (     
-        
         <>
         <section id = "login-page" className='auth'>
         <form className='login-form' method="POST" onSubmit={onSubmit} style={{width:"40%", margin:"80px auto" }}>
