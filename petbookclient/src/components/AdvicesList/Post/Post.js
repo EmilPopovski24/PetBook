@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
-import { useForm } from "../../../hooks/useForm";
+import { useForm, useEffect } from "../../../hooks/useForm";
 import "./Post.css";
+import { commentServiceFactory } from "../../../services/commentService";
 
 export const Post = ({
     onCommentSubmit,
@@ -14,8 +15,17 @@ export const Post = ({
     }, onCommentSubmit)
 
     console.log(comments)
+    const commentService = commentServiceFactory()
     
     const postId = useParams();  
+
+
+    useEffect(()=> {
+    commentService.getAllComments()
+            .then(result => {
+                s(result)
+            })
+    }, [petId]);
 
     return (
         <div className="post-comment">
