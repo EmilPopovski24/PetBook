@@ -8,6 +8,7 @@ import { commentServiceFactory } from '../../../../services/commentService';
 export const Post = () => {
 
     const [comment, setComment] = useState('');
+    const [comments, setComments] = useState([]);
     const [username, setUsername] = useState('');
     const [post, setPost] = useState({})
     const profileService = useService(profileServiceFactory);
@@ -18,15 +19,14 @@ export const Post = () => {
         profileService.getOnePost(postId)
             .then(result => {
                 setPost(result)
+                return commentService.getAllComments(postId)
+            })
+            .then(result => {
+                setComments(result)
             })
     }, [postId]);
 
-    useEffect(()=> {
-        commentService.getAllComments(postId)
-        .then(result => {
-            setComments
-        })
-    })
+   
     const onCommentSubmit = async (e) => {
         e.preventDefault();
         await commentService.addComment({
@@ -52,6 +52,14 @@ export const Post = () => {
             </div>
             <div className="comments-div">
                 <h5>Comments:</h5>
+                <ul>
+                    {comments.map(x=> (
+                        <li className='comment-li'>
+                            <p>{x.username}: {x.comment}</p>
+                            
+                        </li>
+                    ))}
+                </ul>
                 {/* <ul className="comments-list">          
                     {problem.comments && Object.values(problem.comments).map(x=> (
                         <li key={x._id} className="comment-li">
