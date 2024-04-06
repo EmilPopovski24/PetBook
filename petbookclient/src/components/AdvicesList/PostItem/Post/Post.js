@@ -1,26 +1,25 @@
-
 import { useParams } from 'react-router-dom';
 import './Post.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useService } from '../../../../hooks/useService';
+import { profileServiceFactory } from '../../../../services/profileService';
 import { commentServiceFactory } from '../../../../services/commentService';
 
-export const Post = ({
-    problem,
-    _ownerId
-}) => {
+export const Post = () => {
 
     const [comment, setComment] = useState('');
     const [username, setUsername] = useState('');
-    const commentService = useService(commentServiceFactory);
+    const [post, setPost] = useState({})
+    const profileService = useService(profileServiceFactory);
+    const commentService = useService(commentServiceFactory)
     const { postId } = useParams();
 
-    // useEffect(() => {
-    //     commentService.getAllComments(postId)
-    //         .then(result => {
-    //             setComments(result)
-    //         })
-    // }, [postId])
+    useEffect(() => {
+        profileService.getOnePost(postId)
+            .then(result => {
+                setPost(result)
+            })
+    }, [postId])
 
     const onCommentSubmit = async (e) => {
         e.preventDefault();
@@ -36,8 +35,8 @@ export const Post = ({
 
     return (
         <div className="post-comment">
-            <h3 className="post-author">Author: {_ownerId}</h3>
-            <p className="post-problem">{problem}</p>
+            <h3 className="post-author">Author: {postId._ownerId}</h3>
+            <p className="post-problem">{postId.problem}</p>
             <div className="addComment-div">
                 <form className="addComment-form" onSubmit={onCommentSubmit}>
                     <input type="text" name="username" placeholder="Your name..."  value={username} onChange={(e)=> setUsername(e.target.value)} />
