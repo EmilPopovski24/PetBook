@@ -1,11 +1,11 @@
 import { useForm } from "../../../hooks/useForm";
-import "./Post.css";
+import "./PostItem.css";
 import { commentServiceFactory } from "../../../services/commentService";
 import { useEffect, useState } from "react";
 import { useService } from "../../../hooks/useService";
 import { useParams } from "react-router-dom";
 
-export const Post = ({
+export const PostItem = ({
     problem,
     _ownerId }) => {
 

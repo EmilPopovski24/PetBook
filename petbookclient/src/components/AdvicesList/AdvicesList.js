@@ -1,6 +1,5 @@
-import { Post } from './Post/Post';
+import { PostItem } from './Post/PostItem';
 import './AdvicesList.css';
-import { Link } from 'react-router-dom';
 
 export const AdvicesList = ({
     posts,
@@ -12,7 +11,7 @@ export const AdvicesList = ({
             {posts.length > 0 && (
                 <h1 className="catalog-posts">Please advise</h1>
             )}
-            {posts}
+            {posts.map(x=> <PostItem key={x._id} {...x} />)}
             {posts.length === 0 && (
                 <h1 className="catalog-posts">No posts for now</h1>
             )}
