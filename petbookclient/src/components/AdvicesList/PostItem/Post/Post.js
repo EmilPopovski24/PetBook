@@ -5,14 +5,11 @@ import { useService } from '../../../../hooks/useService';
 import { profileServiceFactory } from '../../../../services/profileService';
 import { commentServiceFactory } from '../../../../services/commentService';
 
-export const Post = ({
-    _ownerId,
-    problem
-}) => {
+export const Post = () => {
 
     const [comment, setComment] = useState('');
-    const [comments, setComments] = useState([]);
     const [username, setUsername] = useState('');
+    const [comments, setComments] = useState([]);
     const [post, setPost] = useState({})
     const profileService = useService(profileServiceFactory);
     const commentService = useService(commentServiceFactory)
@@ -26,7 +23,7 @@ export const Post = ({
             })
             .then(result => {
                 setComments(result)
-            })
+        })
     }, [postId]);
    
     const onCommentSubmit = async (e) => {
@@ -34,17 +31,19 @@ export const Post = ({
         await commentService.addComment({
             postId,
             username,
-            comment
+            comment,
         })
         
         setUsername('');
         setComment('');
     };
+    console.log(post)
+
 
     return (
         <div className="post-comment">
-            <h3 className="post-author">Author: {_ownerId}</h3>
-            <p className="post-problem">{problem}</p>
+            <h3 className="post-author">Author: {post._ownerId}</h3>
+            <p className="post-problem">{post.problem}</p>
             <div className="addComment-div">
                 <form className="addComment-form" onSubmit={onCommentSubmit}>
                     <input type="text" name="username" placeholder="Your name..."  value={username} onChange={(e)=> setUsername(e.target.value)} />
@@ -54,21 +53,13 @@ export const Post = ({
             </div>
             <div className="comments-div">
                 <h5>Comments:</h5>
-                <ul>
+                <ul className='comments-ul'>
                     {comments.map(x=> (
-                        <li className='comment-li'>
-                            <p>{x.username}: {x.comment}</p>
-                            
+                        <li key={x._id} className='comment-li'>
+                            <p>{x.username}: {x.comment}</p>      
                         </li>
                     ))}
                 </ul>
-                {/* <ul className="comments-list">          
-                    {problem.comments && Object.values(problem.comments).map(x=> (
-                        <li key={x._id} className="comment-li">
-                        <p>Comment: {problem}</p>                   
-                        </li>
-                    ))} 
-                </ul> */}
             </div>
         </div>
     )

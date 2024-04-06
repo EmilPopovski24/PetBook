@@ -25,11 +25,17 @@ export const profileServiceFactory = (token) => {
         const result = await request.get(`${profileUrl}/posts`, postId)
         return result;
     }
+
+    // const addComment = async(postId, data) => {
+    //     const result = await request.post(`${profileUrl}/${postId}/comments`, data);
+    //     return result
+    // }
     
     return {
        addPhoto,
        getOnePhoto,
        addPost,
-       getOnePost
+       getOnePost,
+    //    addComment
     }
 }
