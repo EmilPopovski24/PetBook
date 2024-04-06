@@ -12,8 +12,8 @@ export const Post = ({
         comment:'',
     });
 
-    const onCommentSubmit = async(data) => {
-        
+    const onCommentSubmit = async(e) => {
+        e.preventDefault()
     }
 
 
@@ -30,8 +30,7 @@ export const Post = ({
             </div>
             <div className="comments-div">
                 <h5>Comments:</h5>
-                <ul className="comments-list"> 
-                    
+                <ul className="comments-list">          
                     {problem.comments && Object.values(problem.comments).map(x=> (
                         <li key={x._id} className="comment-li">
                         <p>Comment: {problem}</p>                   
