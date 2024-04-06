@@ -1,7 +1,7 @@
 import { useForm } from "../../../hooks/useForm";
 import "./Post.css";
 import { commentServiceFactory } from "../../../services/commentService";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useService } from "../../../hooks/useService";
 import { useParams } from "react-router-dom";
 
@@ -13,17 +13,28 @@ export const Post = ({
     const [username, setUsername] = useState();
     const commentService = useService(commentServiceFactory);
     const  { postId } = useParams();
-    const {values, changeHandler} = useForm({
-        comment:'',
-    });
+    // const {values, changeHandler} = useForm({
+    //     comment:'',
+    // });
 
-    const onCommentSubmit = (e) => {
+    useEffect(() => {
+        commentService.getAllComments(postId)
+            .then(result => {
+                setComment(result)
+            })
+    }, [postId])
+
+    const onCommentSubmit = async (e) => {
         e.preventDefault();
-        commentService.addComment({
+        await commentService.addComment({
             postId,
+            username,
+            comment
         })
-    }
-
+        
+        setUsername('');
+        setComment('');
+    };
 
 
     return (

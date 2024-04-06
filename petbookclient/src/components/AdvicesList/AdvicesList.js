@@ -3,7 +3,6 @@ import './AdvicesList.css';
 
 export const AdvicesList = ({
     posts,
-    onCommentSubmit
 }) => {
 
     return(
