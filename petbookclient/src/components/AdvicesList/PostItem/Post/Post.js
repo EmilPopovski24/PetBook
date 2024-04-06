@@ -5,7 +5,10 @@ import { useService } from '../../../../hooks/useService';
 import { profileServiceFactory } from '../../../../services/profileService';
 import { commentServiceFactory } from '../../../../services/commentService';
 
-export const Post = () => {
+export const Post = ({
+    _ownerId,
+    problem
+}) => {
 
     const [comment, setComment] = useState('');
     const [comments, setComments] = useState([]);
@@ -25,7 +28,6 @@ export const Post = () => {
                 setComments(result)
             })
     }, [postId]);
-
    
     const onCommentSubmit = async (e) => {
         e.preventDefault();
@@ -41,8 +43,8 @@ export const Post = () => {
 
     return (
         <div className="post-comment">
-            <h3 className="post-author">Author: {postId._ownerId}</h3>
-            <p className="post-problem">{postId.problem}</p>
+            <h3 className="post-author">Author: {_ownerId}</h3>
+            <p className="post-problem">{problem}</p>
             <div className="addComment-div">
                 <form className="addComment-form" onSubmit={onCommentSubmit}>
                     <input type="text" name="username" placeholder="Your name..."  value={username} onChange={(e)=> setUsername(e.target.value)} />
