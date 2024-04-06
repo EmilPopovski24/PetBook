@@ -11,7 +11,7 @@ export const profileServiceFactory = (token) => {
         return result
     };
 
-    const getOne = async(photoId) => {
+    const getOnePhoto = async(photoId) => {
         const result = await request.get(`${profileUrl}/pictures`, photoId);
         return result;
     };
@@ -20,10 +20,16 @@ export const profileServiceFactory = (token) => {
         const result = request.post(`${profileUrl}/posts`, post)
         return result;
     };
+
+    const getOnePost = async(postId) => {
+        const result = await request.get(`${profileUrl}/posts`, postId)
+        return result;
+    }
     
     return {
        addPhoto,
-       getOne,
+       getOnePhoto,
        addPost,
+       getOnePost
     }
 }

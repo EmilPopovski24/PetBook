@@ -26,6 +26,7 @@ import { authServiceFactory } from './services/authService';
 import { commentServiceFactory } from './services/commentService';
 // import { useLocalStorage } from './hooks/useLocalStorage';
 import './App.css'
+import { Post } from './components/Post/Post';
 
 function App() {
     const navigate = useNavigate();
@@ -33,7 +34,7 @@ function App() {
     const [pets, setPets] = useState([]);
     const [image, setImage] = useState({}); 
     const [posts, setPosts] = useState([]);
-    const [comments, setComments] = useState([]);
+
 // const [petOwner, setPetOwner] = useState([]);
     const authService = authServiceFactory(auth.accessToken)
     const petService = petServiceFactory(auth.accessToken); // auth.accessToken
@@ -134,6 +135,7 @@ return (
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
               <Route path ='/advices' element={<AdvicesList posts={posts} />} />
               <Route path ='/help' element={<AskForHelp onPostSubmit={onPostSubmit} />} />
+              <Route path ='/advices/:postId' element={<Post />} />
             </Route>
           <Route path ='/about' element={<About />} />
           <Route path ='/terms' element={<Terms />} />

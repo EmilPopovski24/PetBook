@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useService } from '../../hooks/useService';
 import { commentServiceFactory } from '../../services/commentService';
 import { useParams } from 'react-router-dom';
@@ -12,10 +12,7 @@ export const Post = ({
     const [comment, setComment] = useState('')
     const [username, setUsername] = useState('');
     const commentService = useService(commentServiceFactory);
-    const  { postId } = useParams();
-    // const {values, changeHandler} = useForm({
-    //     comment:'',
-    // });
+    const { postId } = useParams();
 
     useEffect(() => {
         commentService.getAllComments(postId)
@@ -49,13 +46,13 @@ export const Post = ({
             </div>
             <div className="comments-div">
                 <h5>Comments:</h5>
-                <ul className="comments-list">          
+                {/* <ul className="comments-list">          
                     {problem.comments && Object.values(problem.comments).map(x=> (
                         <li key={x._id} className="comment-li">
                         <p>Comment: {problem}</p>                   
                         </li>
                     ))} 
-                </ul>
+                </ul> */}
             </div>
         </div>
     )
