@@ -26,7 +26,7 @@ import { authServiceFactory } from './services/authService';
 import { commentServiceFactory } from './services/commentService';
 // import { useLocalStorage } from './hooks/useLocalStorage';
 import './App.css'
-import { Post } from './components/Post/Post';
+import { Post } from './components/AdvicesList/PostItem/Post/Post';
 
 function App() {
     const navigate = useNavigate();
@@ -133,8 +133,8 @@ return (
               <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
               <Route path ='/profile' element={<Profile image={image} />} />
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
-              <Route path ='/advices' element={<AdvicesList posts={posts} />} />
               <Route path ='/help' element={<AskForHelp onPostSubmit={onPostSubmit} />} />
+              <Route path ='/advices' element={<AdvicesList posts={posts} />} />
               <Route path ='/advices/:postId' element={<Post />} />
             </Route>
           <Route path ='/about' element={<About />} />
