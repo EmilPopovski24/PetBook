@@ -9,7 +9,7 @@ export const Post = ({
     problem,
     _ownerId }) => {
 
-    const [comments, setComments] = useState([]);
+    const [comment, setComment] = useState([]);
     const [username, setUsername] = useState();
     const commentService = useService(commentServiceFactory);
     const  { postId } = useParams();
@@ -33,7 +33,7 @@ export const Post = ({
             <div className="addComment-div">
                 <form className="addComment-form" onSubmit={onCommentSubmit}>
                     <input type="text" name="username" placeholder="Your name..." value={username} onChange={(e) => setUsername(e.target.value)} />
-                    <textarea name="comment" cols="100" rows="2" value={values.comment} onChange={changeHandler}></textarea>
+                    <textarea name="comment" cols="100" rows="2" value={comment} onChange={(e) => setComment(e.target.value)}></textarea>
                     <button className='post-btn' type="submit">Add comment</button>
                 </form>
             </div>
