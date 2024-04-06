@@ -22,7 +22,7 @@ export const profileServiceFactory = (token) => {
     };
 
     const getOnePost = async(postId) => {
-        const result = await request.get(`${profileUrl}/posts`, postId)
+        const result = await request.get(`${profileUrl}/posts/${postId}`, postId)
         return result;
     }
 

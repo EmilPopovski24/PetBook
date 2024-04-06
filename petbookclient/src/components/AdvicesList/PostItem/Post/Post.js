@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
-import './Post.css';
 import { useState, useEffect } from 'react';
 import { useService } from '../../../../hooks/useService';
 import { profileServiceFactory } from '../../../../services/profileService';
 import { commentServiceFactory } from '../../../../services/commentService';
+import './Post.css';
 
 export const Post = () => {
 
