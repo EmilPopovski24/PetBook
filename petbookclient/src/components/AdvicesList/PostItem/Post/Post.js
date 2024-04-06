@@ -46,8 +46,8 @@ export const Post = () => {
             <p className="post-problem">{post.problem}</p>
             <div className="addComment-div">
                 <form className="addComment-form" onSubmit={onCommentSubmit}>
-                    <input type="text" name="username" placeholder="Your name..."  value={username} onChange={(e)=> setUsername(e.target.value)} />
-                    <textarea name="comment" cols="100" rows="2" value={comment} onChange={(e)=> setComment(e.target.value)} ></textarea>
+                    <input type="text" id="comment-username" name="username" placeholder="Your name..."  value={username} onChange={(e)=> setUsername(e.target.value)} />
+                    <textarea name="comment" id="comment-text" cols="50" rows="3" value={comment} onChange={(e)=> setComment(e.target.value)} ></textarea>
                     <button className='post-btn' type="submit">Add comment</button>
                 </form>
             </div>
@@ -56,7 +56,7 @@ export const Post = () => {
                 <ul className='comments-ul'>
                     {comments.map(x=> (
                         <li key={x._id} className='comment-li'>
-                            <p>{x.username}: {x.comment}</p>      
+                            <p><b>{x.username}</b>: {x.comment}</p>      
                         </li>
                     ))}
                 </ul>

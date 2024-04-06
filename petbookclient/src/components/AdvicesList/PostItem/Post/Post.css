@@ -1,5 +1,18 @@
 .comment-li {
-    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#comment-username {
+    display: block;
+    margin-bottom: 5px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+#comment-text {
+    display: block;
+    border: 1px solid red;
+    border-radius: 5px;
 }
 
 
