@@ -1,4 +1,4 @@
-import { PostItem } from './Post/PostItem';
+import { PostItem } from './PostItem/PostItem';
 import './AdvicesList.css';
 
 export const AdvicesList = ({
