@@ -2,18 +2,26 @@ import { useForm } from "../../../hooks/useForm";
 import "./Post.css";
 import { commentServiceFactory } from "../../../services/commentService";
 import { useState } from "react";
+import { useService } from "../../../hooks/useService";
+import { useParams } from "react-router-dom";
 
 export const Post = ({
     problem,
     _ownerId }) => {
 
     const [comments, setComments] = useState([]);
+    const [username, setUsername] = useState();
+    const commentService = useService(commentServiceFactory);
+    const  { postId } = useParams();
     const {values, changeHandler} = useForm({
         comment:'',
     });
 
-    const onCommentSubmit = async(e) => {
-        e.preventDefault()
+    const onCommentSubmit = (e) => {
+        e.preventDefault();
+        commentService.addComment({
+            postId,
+        })
     }
 
 
@@ -24,6 +32,7 @@ export const Post = ({
             <p className="post-problem">{problem}</p>
             <div className="addComment-div">
                 <form className="addComment-form" onSubmit={onCommentSubmit}>
+                    <input type="text" name="username" placeholder="Your name..." value={username} onChange={(e) => setUsername(e.target.value)} />
                     <textarea name="comment" cols="100" rows="2" value={values.comment} onChange={changeHandler}></textarea>
                     <button className='post-btn' type="submit">Add comment</button>
                 </form>
