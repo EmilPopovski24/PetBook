@@ -19,8 +19,14 @@ export const Post = () => {
             .then(result => {
                 setPost(result)
             })
-    }, [postId])
+    }, [postId]);
 
+    useEffect(()=> {
+        commentService.getAllComments(postId)
+        .then(result => {
+            setComments
+        })
+    })
     const onCommentSubmit = async (e) => {
         e.preventDefault();
         await commentService.addComment({
