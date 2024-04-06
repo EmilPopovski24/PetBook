@@ -100,10 +100,10 @@ function App() {
         navigate('/advices')
 };
 
-    const onCommentSubmit = async(commentData) => {
-      const newComment = await commentService.addComment(commentData);
-      setComments(state => [...state, newComment])
-};
+//     const onCommentSubmit = async(commentData) => {
+//       const newComment = await commentService.addComment(commentData);
+//       setComments(state => [...state, newComment])
+// };
 
     const contextValues = {
         onLoginSubmit,
@@ -132,7 +132,7 @@ return (
               <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
               <Route path ='/profile' element={<Profile image={image} />} />
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
-              <Route path ='/advices' element={<AdvicesList posts={posts} onCommentSubmit={onCommentSubmit} comments={comments} />} />
+              <Route path ='/advices' element={<AdvicesList posts={posts} />} />
               <Route path ='/help' element={<AskForHelp onPostSubmit={onPostSubmit} />} />
             </Route>
           <Route path ='/about' element={<About />} />
