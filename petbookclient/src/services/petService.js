@@ -27,7 +27,7 @@ export const petServiceFactory = (token) => {
     const deletePet = (petId) => request.del(`${baseUrl}/${petId}`);
 
     const likePet = async(petId) => {
-        const result = await request.post(`${baseUrl}/pets/${petId}`)
+        const result = await request.post(`${baseUrl}/${petId}`)
         return result
     }
     

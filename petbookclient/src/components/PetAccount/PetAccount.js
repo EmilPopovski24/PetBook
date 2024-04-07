@@ -28,8 +28,8 @@ export const PetAccount = () => {
         navigate('/catalog');
     }
 
-    const onLikeSubmit = async(_ownerId) => {
-        const result = petService.likePet(pet._id);
+    const onLikeSubmit = async() => {
+        const result = await petService.likePet(pet._id);
         console.log(result)
         // if(_ownerId) {
         //     setLikes(likes)
