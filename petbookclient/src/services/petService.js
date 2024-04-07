@@ -31,12 +31,18 @@ export const petServiceFactory = (token) => {
         return result
     }
     
+    const addPetComment = async(petId, commentData) => {
+        const result = await request.post(`${baseUrl}/${petId}/comments`, commentData)
+        return result
+    }
+
     return {
         getAll, 
         addPet,
         getOne,
         edit,
         deletePet,
-        likePet
+        likePet,
+        addPetComment
     }
 }
