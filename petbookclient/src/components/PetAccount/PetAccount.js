@@ -41,7 +41,7 @@ export const PetAccount = () => {
             commentUsername,
             petComment,
         })
-        
+        console.log(petComment)
         setCommentUsername('');
         setPetComment('');
     };
