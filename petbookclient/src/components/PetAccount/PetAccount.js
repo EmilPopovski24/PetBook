@@ -40,7 +40,6 @@ export const PetAccount = () => {
 
     const isOwner = pet._ownerId === userId;
    
-        console.log(user)
 
 
     // console.log(pet)
