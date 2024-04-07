@@ -33,6 +33,7 @@ export const petServiceFactory = (token) => {
     
     const addPetComment = async(petId, commentData) => {
         const result = await request.post(`${baseUrl}/${petId}/comments`, commentData)
+        console.log(commentData)
         return result
     }
 
