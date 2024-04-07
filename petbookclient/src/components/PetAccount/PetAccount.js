@@ -33,7 +33,6 @@ export const PetAccount = () => {
 
     const isOwner = pet._ownerId === userId;
 
-
     return(
         <>
             <div className='pet-account'>     
