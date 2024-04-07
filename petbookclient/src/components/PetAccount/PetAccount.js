@@ -27,12 +27,13 @@ export const PetAccount = () => {
         navigate('/catalog');
     }
 
-    const onLikeSubmit = () => {
+    const onLikeSubmit = (_ownerId) => {
         const result = petService.likePet(pet._id);
-        if(result._ownerId) {
+        if(_ownerId) {
             setLikes(likes)
         }
         setLikes(likes + 1)
+        
     }
 
 
