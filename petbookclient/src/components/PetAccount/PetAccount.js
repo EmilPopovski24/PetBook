@@ -30,10 +30,11 @@ export const PetAccount = () => {
 
     const onLikeSubmit = async(_ownerId) => {
         const result = petService.likePet(pet._id);
-        if(_ownerId) {
-            setLikes(likes)
-        }
-        setLikes(likes + 1)
+        console.log(result)
+        // if(_ownerId) {
+        //     setLikes(likes)
+        // }
+        // setLikes(likes + 1)
 
     }
 
