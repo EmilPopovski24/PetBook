@@ -37,13 +37,12 @@ export const PetAccount = () => {
 
     const onPetCommentSubmit = async (e) => {
         e.preventDefault();
-        await commentService.addComment({
-            postId,
-            username,
-            comment,
+        await petService.addPetComment(petId,{ 
+            commentUsername,
+            petComment,
         })
         
-        setUsername('');
+        setCommentUsername('');
         setPetComment('');
     };
     
@@ -79,20 +78,20 @@ export const PetAccount = () => {
             <p className="post-problem">{problem}</p>
             <div className="addComment-div">
                 <form className="addComment-form" onSubmit={onPetCommentSubmit}>
-                    <input type="text" id="comment-username" name="username" placeholder="Your name..."  value={username} onChange={(e)=> setUsername(e.target.value)} />
-                    <textarea name="comment" id="comment-text" cols="50" rows="3" value={comment} onChange={(e)=> setComment(e.target.value)} ></textarea>
+                    <input type="text" id="comment-username" name="username" placeholder="Your name..."  value={commentUsername} onChange={(e)=> setCommentUsername(e.target.value)} />
+                    <textarea name="comment" id="comment-text" cols="50" rows="3" value={petComment} onChange={(e)=> setPetComment(e.target.value)} ></textarea>
                     <button className='post-btn' type="submit">Add comment</button>
                 </form>
             </div>
             <div className="comments-div">
                 <h5>Comments:</h5>
-                <ul className='comments-ul'>
+                {/* <ul className='comments-ul'>
                     {comments.map(x=> (
                         <li key={x._id} className='comment-li'>
                             <p><b>{x.username}</b>: {x.comment}</p>      
                         </li>
                     ))}
-                </ul>
+                </ul> */}
             </div>
         </div>
         </>
