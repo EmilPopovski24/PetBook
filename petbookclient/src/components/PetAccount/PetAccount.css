@@ -51,9 +51,8 @@
 }
 
 .petAccount-pic {
-    width:50%;
-    margin:auto auto;
-    max-height: 400px;
+    width:80%;
+    max-height: 300px;
     border: none;
 }
 
