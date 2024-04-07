@@ -9,7 +9,6 @@ import './PetAccount.css';
 export const PetAccount = () => {
 
     const { userId } = useContext(AuthContext);
-    const { user } = useContext(AuthContext);
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
     const [likes, setLikes] = useState(0);
@@ -28,7 +27,7 @@ export const PetAccount = () => {
         navigate('/catalog');
     }
 
-    const onLikeSubmit = (likes) => {
+    const onLikeSubmit = () => {
         setLikes(likes + 1)
     }
 
