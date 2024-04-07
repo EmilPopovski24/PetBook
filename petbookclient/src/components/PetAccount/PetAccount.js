@@ -27,7 +27,7 @@ export const PetAccount = () => {
         navigate('/catalog');
     }
 
-    const onLikeSubmit = (_ownerId) => {
+    const onLikeSubmit = async(_ownerId) => {
         const result = petService.likePet(pet._id);
         console.log(result)
         if(_ownerId) {
@@ -37,8 +37,9 @@ export const PetAccount = () => {
 
     }
 
-
     const isOwner = pet._ownerId === userId;
+
+    console.log(petId)
 
     return(
         <>
