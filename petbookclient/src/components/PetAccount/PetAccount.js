@@ -28,8 +28,8 @@ export const PetAccount = () => {
         navigate('/catalog');
     }
 
-    const onLikeSubmit = () => {
-
+    const onLikeSubmit = (likes) => {
+        setLikes(likes + 1)
     }
 
     const isOwner = pet._ownerId === userId;
