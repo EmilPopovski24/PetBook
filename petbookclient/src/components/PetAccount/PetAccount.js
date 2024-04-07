@@ -9,6 +9,7 @@ import './PetAccount.css';
 export const PetAccount = () => {
 
     const { userId } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
     const [likes, setLikes] = useState(0);
@@ -29,7 +30,6 @@ export const PetAccount = () => {
 
     const onLikeSubmit = async(_ownerId) => {
         const result = petService.likePet(pet._id);
-        console.log(result)
         if(_ownerId) {
             setLikes(likes)
         }
@@ -38,8 +38,11 @@ export const PetAccount = () => {
     }
 
     const isOwner = pet._ownerId === userId;
+   
+        console.log(user)
 
-    console.log(petId)
+
+    // console.log(pet)
 
     return(
         <>
