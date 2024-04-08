@@ -8,8 +8,6 @@ export const AddPet = ({
 
     const username = auth.username;
 
-
-
     const { values, changeHandler, onSubmit } = useForm({
         name: '',
         type: '',
