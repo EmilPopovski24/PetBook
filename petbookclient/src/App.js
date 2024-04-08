@@ -23,7 +23,6 @@ import { AskForHelp } from './components/AskForHelp/AskForHelp';
 import { RouteGuard } from './components/guards/RouteGuard';
 import { profileServiceFactory } from './services/profileService';
 import { authServiceFactory } from './services/authService';
-import { commentServiceFactory } from './services/commentService';
 // import { useLocalStorage } from './hooks/useLocalStorage';
 import './App.css'
 import { Post } from './components/AdvicesList/PostItem/Post/Post';
@@ -39,7 +38,6 @@ function App() {
     const authService = authServiceFactory(auth.accessToken)
     const petService = petServiceFactory(auth.accessToken); // auth.accessToken
     const profileService = profileServiceFactory(auth.accessToken); //auth.accessToken
-    const commentService = commentServiceFactory(auth.accessToken); //auth.accessToken
 
     useEffect(() => {
       petService.getAll()
