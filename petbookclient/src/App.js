@@ -49,7 +49,7 @@ function App() {
     const onLoginSubmit = async (data) => {
         const result = await authService.login(data);
         setAuth(result)
-        console.log(result)
+        const username = result.username
         navigate('/catalog')
         alert(`You are welcome!`)
 };    
