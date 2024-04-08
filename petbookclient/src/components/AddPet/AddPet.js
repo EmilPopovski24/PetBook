@@ -3,9 +3,8 @@ import { useForm } from '../../hooks/useForm';
 
 export const AddPet = ({
     onAddPetSubmit
-}) => 
-
-{
+}) => {
+    
     const { values, changeHandler, onSubmit } = useForm({
         name: '',
         type: '',
