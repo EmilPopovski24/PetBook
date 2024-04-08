@@ -49,7 +49,6 @@ function App() {
     const onLoginSubmit = async (data) => {
         const result = await authService.login(data);
         setAuth(result)
-        const username = result.username
         navigate('/catalog')
         alert(`You are welcome!`)
 };    
@@ -129,7 +128,7 @@ return (
             <Route element={<RouteGuard />}>
               <Route path ='/catalog/:petId' element={<PetAccount pets={pets} />} />
               <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} /> 
-              <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} />} />
+              <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} auth={auth}/>} />
               <Route path ='/profile' element={<Profile image={image} />} />
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
               <Route path ='/help' element={<AskForHelp onPostSubmit={onPostSubmit} />} />
