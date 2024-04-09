@@ -6,7 +6,6 @@ body {
   list-style-type: none;
   margin: auto auto;
   padding: 0;
-  overflow: hidden;
   background-color: #333;
   bottom: 0;
   position: fixed;
