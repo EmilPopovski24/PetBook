@@ -100,10 +100,10 @@ function App() {
         navigate('/advices')
 };
 
-//     const onCommentSubmit = async(commentData) => {
-//       const newComment = await commentService.addComment(commentData);
-//       setComments(state => [...state, newComment])
-// };
+    const onCommentSubmit = async(commentData) => {
+      const newComment = await commentService.addComment(commentData);
+      setComments(state => [...state, newComment])
+};
 
     const contextValues = {
         onLoginSubmit,
