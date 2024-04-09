@@ -39,6 +39,6 @@
     text-align: center;
 }
 
-.advices-page {
-    background-color: black;
+#advices-page {
+    margin:40px;
 }
