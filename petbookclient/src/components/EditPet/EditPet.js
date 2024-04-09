@@ -27,8 +27,7 @@ export const EditPet = ({
                 changeValues(result);
             })
     },[petId])
-
-    
+ 
     return(
         <>
         <section className="edit-page">
