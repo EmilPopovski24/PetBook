@@ -56,7 +56,7 @@ export const PetAccount = () => {
                     <li><h3>Breed: {pet.breed}</h3></li>
                     <li><h3>Age: {pet.age}</h3></li>
                     <li><h3>Color: {pet.color}</h3></li>
-                    <li><h3>Owner: {userId}</h3></li>
+                    {/* <li><h3>Owner: {userId}</h3></li> */}
                     <li><h3>Likes: {likes}</h3></li>
                     <button className='like-btn' onClick={onLikeSubmit}>Like</button>
                 </ul> 
