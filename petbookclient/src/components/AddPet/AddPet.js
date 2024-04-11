@@ -5,8 +5,6 @@ export const AddPet = ({
     onAddPetSubmit
 }) => {
 
-    const username = auth.username;
-
     const { values, changeHandler, onSubmit } = useForm({
         name: '',
         type: '',

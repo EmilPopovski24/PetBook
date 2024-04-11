@@ -75,10 +75,9 @@ function App() {
         setAuth({});
 };
 
-    const onAddPetSubmit = async(petData, username) => {
+    const onAddPetSubmit = async(petData) => {
     const newPet = await petService.addPet(petData);
     setPets(state => [...state, newPet]);
-    const username = auth.username;
     navigate('/catalog')
 };
 

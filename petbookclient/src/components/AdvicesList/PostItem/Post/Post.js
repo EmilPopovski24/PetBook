@@ -28,17 +28,20 @@ export const Post = () => {
    
     const onCommentSubmit = async (e) => {
         e.preventDefault();
-        await commentService.addComment({
+        const response = await commentService.addComment({
             postId,
             username,
             comment,
         })
+        setPost(state => ({
+            ...state, 
+            comments: [...state.comments, response]
+        }))
+
         
         setUsername('');
         setComment('');
     };
-    console.log(post)
-
 
     return (
         <div className="post-comment">
