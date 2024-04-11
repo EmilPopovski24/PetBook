@@ -35,7 +35,7 @@ export const Post = () => {
         })
         setPost(state => ({
             ...state, 
-            comments: [...state.comments, response]
+            comments: [...comments, response]
         }))
 
         
