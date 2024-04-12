@@ -1,3 +1,11 @@
 .help-header {
     text-align: center;
 }
+
+.post-btn {
+    background-color: greenyellow;
+}
+
+.problem-form {
+    border: 1px solid greenyellow;
+}
