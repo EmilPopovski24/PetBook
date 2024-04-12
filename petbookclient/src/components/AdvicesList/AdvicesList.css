@@ -14,7 +14,7 @@
     width:40%;
     padding: 20px;
     border-radius: 10px;
-    border: 2px solid red;
+    border: 2px solid greenyellow;
     color: black;
     background-color: white;
 }
@@ -24,7 +24,7 @@
     padding:10px;
     border:none;  
     border-radius: 5px;
-    background-color: red;
+    background-color: greenyellow;
     margin-top: 5px;
     color: white;
     text-decoration: none;
