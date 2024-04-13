@@ -1,7 +1,7 @@
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 
-export const PetOwner = () => {
-    const { petId } = useParams();
+// export const PetOwner = () => {
+//     const { petId } = useParams();
 
-    // console.log(petId)
-}
+//     // console.log(petId)
+// }
