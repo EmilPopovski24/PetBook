@@ -23,7 +23,6 @@ export const PetAccount = () => {
                 setPet(result)
             })
     }, [petId]);
-    
 
     const onDeletePet = async() => {
         await petService.deletePet(pet._id);
