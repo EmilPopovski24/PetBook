@@ -3,10 +3,10 @@
 }
 
 .post-btn {
-    background-color: greenyellow;
+    background-color: rgb(53, 189, 0);
 }
 
 .problem {
     font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }

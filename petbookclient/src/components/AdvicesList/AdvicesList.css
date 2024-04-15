@@ -14,7 +14,7 @@
     width:40%;
     padding: 20px;
     border-radius: 10px;
-    border: 2px solid greenyellow;
+    border: 2px solid rgb(53, 189, 0);;
     color: black;
     background-color: white;
 }
@@ -24,7 +24,7 @@
     padding:10px;
     border:none;  
     border-radius: 5px;
-    background-color: greenyellow;
+    background-color: rgb(53, 189, 0);;
     margin-top: 5px;
     color: white;
     text-decoration: none;
