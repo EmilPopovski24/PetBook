@@ -14,6 +14,7 @@ export const PetAccount = () => {
     const [likes, setLikes] = useState(0);
     const [petComment, setPetComment] = useState('');
     const [commentUsername, setCommentUsername] = useState('')
+    const [petComments, setPetComments] = useState([]);
     const petService = useService(petServiceFactory);
     const navigate = useNavigate();
 
@@ -35,7 +36,7 @@ export const PetAccount = () => {
 
     const isOwner = pet._ownerId === userId;
 
-    const onPetCommentSubmit = async (e) => {
+    const onPetCommentSubmit = async(e) => {
         e.preventDefault();
         await petService.addPetComment(petId,{ 
             commentUsername,
@@ -81,13 +82,13 @@ export const PetAccount = () => {
             </div>
             <div className="comments-div">
                 <h5>Comments:</h5>
-                {/* <ul className='comments-ul'>
-                    {comments.map(x=> (
+                <ul className='comments-ul'>
+                    {petComments.map(x=> (
                         <li key={x._id} className='comment-li'>
                             <p><b>{x.username}</b>: {x.comment}</p>      
                         </li>
                     ))}
-                </ul> */}
+                </ul>
             </div>
         </div>
         </>
