@@ -38,12 +38,12 @@ export const PetAccount = () => {
 
     const onPetCommentSubmit = async(e) => {
         e.preventDefault();
-        const result = await petService.addPetComment(petId,{ 
+        const response = await petService.addPetComment(petId,{ 
             commentUsername,
             petComment,
         })
-        console.log(result)
-        setPetComments(state => [...state, result])
+        console.log(response)
+        
         setCommentUsername('');
         setPetComment('');   
     };
