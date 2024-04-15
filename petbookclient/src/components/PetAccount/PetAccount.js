@@ -72,8 +72,6 @@ export const PetAccount = () => {
                     </div>
                 </div>
                <div className="post-comment">
-            {/* // <h3 className="post-author">Author: {_ownerId}</h3>
-            // <p className="post-problem">{problem}</p> */} 
             <div className="addComment-div">
                 <form className="addComment-form" onSubmit={onPetCommentSubmit}>
                     <input type="text" id="comment-username" name="username" placeholder="Your name..."  value={commentUsername} onChange={(e)=> setCommentUsername(e.target.value)} />
