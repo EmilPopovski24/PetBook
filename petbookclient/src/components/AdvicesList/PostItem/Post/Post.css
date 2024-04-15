@@ -5,13 +5,13 @@
 #comment-username {
     display: block;
     margin-bottom: 5px;
-    border: 1px solid greenyellow;
+    border: 1px solid rgb(53, 189, 0);
     border-radius: 5px;
 }
 
 #comment-text {
     display: block;
-    border: 1px solid greenyellow;
+    border: 1px solid rgb(53, 189, 0);
     border-radius: 5px;
 }
 
