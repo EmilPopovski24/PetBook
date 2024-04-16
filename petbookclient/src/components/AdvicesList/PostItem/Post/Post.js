@@ -55,7 +55,7 @@ export const Post = () => {
                 </form>
             </div>
             <div className="comments-div">
-                <h4>Comments:</h4>
+                <h3>Comments:</h3>
                 <ul className='comments-ul'>
                     {comments.map(x=> (
                         <li key={x._id} className='comment-li'>
