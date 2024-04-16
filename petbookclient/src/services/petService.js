@@ -37,6 +37,13 @@ export const petServiceFactory = (token) => {
         return result
     }
 
+    const getAllPetComments = async(postId) => {
+        const query = encodeURIComponent(`postId="${postId}"`);
+        const result = await request.get(`${commentsUrl}?where=${query}`);
+        const comments = Object.values(result)
+        return comments
+    };
+
     return {
         getAll, 
         addPet,
@@ -44,6 +51,7 @@ export const petServiceFactory = (token) => {
         edit,
         deletePet,
         likePet,
-        addPetComment
+        addPetComment,
+        getAllPetComments
     }
 }
