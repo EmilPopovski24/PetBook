@@ -43,7 +43,10 @@ export const PetAccount = () => {
             petComment,
         })
         console.log(response)
-        setPetComments(state => [...state, response])
+        setPet(state => ({
+            ...state, 
+            petComments: [...petComments, response]
+        }))
         setCommentUsername('');
         setPetComment('');   
     };
