@@ -43,6 +43,7 @@ const request = async (method, token, url, data) => {
             token = auth.accessToken
         }
     }
+    
         return {
         get: request.bind(null, "GET", token),
         post: request.bind(null, "POST", token),
