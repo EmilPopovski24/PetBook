@@ -78,7 +78,7 @@ export const PetAccount = () => {
                         )}
                     </div>
                 </div>
-               <div className="post-comment">
+               {/* <div className="post-comment">
             <div className="addComment-div">
                 <form className="addComment-form" onSubmit={onPetCommentSubmit}>
                     <input type="text" id="comment-username" name="username" placeholder="Your name..."  value={commentUsername} onChange={(e)=> setCommentUsername(e.target.value)} />
@@ -96,7 +96,7 @@ export const PetAccount = () => {
                     ))}
                 </ul>
             </div>
-        </div>
+        </div> */}
         </>
     )
 }
