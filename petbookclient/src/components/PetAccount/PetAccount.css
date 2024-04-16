@@ -72,4 +72,9 @@
     margin:10px;
 }
 
+.post-comment {
+    display: inline-block;
+    position:relative;
+}
+
 
