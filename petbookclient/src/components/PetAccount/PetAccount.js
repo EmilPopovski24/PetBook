@@ -11,7 +11,8 @@ export const PetAccount = () => {
     const { userId } = useContext(AuthContext);
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
-    const [likes, setLikes] = useState(0);
+    const [likes, setLikes] = useState([]);
+    const [like, setLike] = useState({})
     // const [petComment, setPetComment] = useState('');
     // const [commentUsername, setCommentUsername] = useState('')
     // const [petComments, setPetComments] = useState([]);
@@ -34,7 +35,6 @@ export const PetAccount = () => {
         e.preventDefault();
         const result = await petService.likePet(petId)
         console.log(result)
-        setLikes(likes + 1)
     }
 
     const isOwner = pet._ownerId === userId;
