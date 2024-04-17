@@ -5,6 +5,7 @@
 .post-problem {
    color: white;
    font-weight: 100;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    padding:10px;
    background-color:#333;
    border: 2px solid rgb(53, 189, 0);;

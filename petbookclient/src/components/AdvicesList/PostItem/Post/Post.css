@@ -6,7 +6,7 @@
     display: block;
     padding:5px;
     font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 5px;
     border: 1px solid rgb(53, 189, 0);
     border-radius: 5px;
@@ -15,7 +15,7 @@
 #comment-text {
     display: block;
     padding: 5px;
-
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: 1px solid rgb(53, 189, 0);
     border-radius: 5px;
 }
