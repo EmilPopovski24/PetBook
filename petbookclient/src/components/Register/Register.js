@@ -14,7 +14,6 @@ export const Register = () => {
         confirmPassword: '',
     }, onRegisterSubmit)
 
-
     return (
         <>
         <section id = "register-page" onSubmit={onSubmit} method="POST">
