@@ -37,8 +37,8 @@ export const Login = () => {
                     You don't have a profile? ... Come on... Go to the <Link to={"/register"}><b>Register page</b></Link>
                 </p>
             </div>
-            </form>
-            </section> 
-            </> 
+        </form>
+        </section> 
+        </> 
     );
 }
