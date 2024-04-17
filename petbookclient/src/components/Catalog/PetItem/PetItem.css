@@ -21,6 +21,7 @@
 
 .pet-item {
     margin: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .petitem-pic {
@@ -32,4 +33,8 @@
 .catalog-pic {
     border: none;
     border-radius: 5%;
+}
+
+#pet-name {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

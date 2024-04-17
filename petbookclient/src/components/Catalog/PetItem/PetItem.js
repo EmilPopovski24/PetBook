@@ -10,7 +10,7 @@ export const PetItem = ({
     return (
         <>
         <div className='pet-item'>
-            <h1>{name}</h1>
+            <h1 id="pet-name">{name}</h1>
             <h2>{}</h2>
             <div className='petitem-pic'>
                 <Link to={`/catalog/${_id}`}><img src={imageUrl} alt={name} className='catalog-pic'/></Link>
