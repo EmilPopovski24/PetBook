@@ -67,7 +67,9 @@ export const PetAccount = () => {
                     <li><h3>Age: {pet.age}</h3></li>
                     <li><h3>Color: {pet.color}</h3></li>
                     <li><h3>Likes: {likes}</h3></li>
-                    <button className='like-btn' onClick={onLikeSubmit}>Like</button>
+                    {!isOwner &&(
+                        <button className='like-btn' onClick={onLikeSubmit}>Like</button>
+                    )}
                 </ul> 
                         <div className='actionsDiv'>
                             <div className='go-back'>
