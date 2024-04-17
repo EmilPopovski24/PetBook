@@ -38,7 +38,6 @@ export const Post = () => {
             comments: [...comments, response]
         }))
 
-        
         setUsername('');
         setComment('');
     };
