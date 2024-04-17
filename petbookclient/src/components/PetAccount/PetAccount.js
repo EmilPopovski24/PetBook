@@ -34,8 +34,8 @@ export const PetAccount = () => {
     const onLikeSubmit = async(e) => {
         e.preventDefault();
         const result = await petService.likePet(petId)
-        setLike(result)
-        console.log(setLike)
+        setLikes(state => [...state, result])
+        console.log(setLikes)
     }
 
     const isOwner = pet._ownerId === userId;
