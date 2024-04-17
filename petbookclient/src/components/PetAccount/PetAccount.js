@@ -12,9 +12,9 @@ export const PetAccount = () => {
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
     const [likes, setLikes] = useState(0);
-    const [petComment, setPetComment] = useState('');
-    const [commentUsername, setCommentUsername] = useState('')
-    const [petComments, setPetComments] = useState([]);
+    // const [petComment, setPetComment] = useState('');
+    // const [commentUsername, setCommentUsername] = useState('')
+    // const [petComments, setPetComments] = useState([]);
     const petService = useService(petServiceFactory);
     const navigate = useNavigate();
 
@@ -30,7 +30,10 @@ export const PetAccount = () => {
         navigate('/catalog');
     }
 
-    const onLikeSubmit = () => {
+    const onLikeSubmit = async(e) => {
+        e.preventDefault();
+        const result = await petService.likePet(petId)
+        console.log(result)
         setLikes(likes + 1)
     }
 
