@@ -36,22 +36,22 @@ export const PetAccount = () => {
 
     const isOwner = pet._ownerId === userId;
 
-    const onPetCommentSubmit = async(e) => {
-        e.preventDefault();
-        const response = await petService.addPetComment( petId,{
-            commentUsername,
-            petComment,
-        })
-        console.log(response)
-        setPetComments(state => ({
-            ...state, 
-            petComments: [...petComments, response]
-        }))
-        setCommentUsername('');
-        setPetComment('');   
-    };
+    // const onPetCommentSubmit = async(e) => {
+    //     e.preventDefault();
+    //     const response = await petService.addPetComment( petId,{
+    //         commentUsername,
+    //         petComment,
+    //     })
+    //     console.log(response)
+    //     setPetComments(state => ({
+    //         ...state, 
+    //         petComments: [...petComments, response]
+    //     }))
+    //     setCommentUsername('');
+    //     setPetComment('');   
+    // };
 
-    console.log(petComments)
+   
 
     return(
         <>
