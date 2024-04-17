@@ -12,10 +12,6 @@ export const PetAccount = () => {
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
     const [likes, setLikes] = useState(0);
-    // const [like, setLike] = useState({})
-    // const [petComment, setPetComment] = useState('');
-    // const [commentUsername, setCommentUsername] = useState('')
-    // const [petComments, setPetComments] = useState([]);
     const petService = useService(petServiceFactory);
     const navigate = useNavigate();
 
@@ -33,24 +29,10 @@ export const PetAccount = () => {
 
     const onLikeSubmit = () => {
         setLikes(likes+1)
+
     }
 
     const isOwner = pet._ownerId === userId;
-
-    // const onPetCommentSubmit = async(e) => {
-    //     e.preventDefault();
-    //     const response = await petService.addPetComment( petId,{
-    //         commentUsername,
-    //         petComment,
-    //     })
-    //     console.log(response)
-    //     setPetComments(state => ({
-    //         ...state, 
-    //         petComments: [...petComments, response]
-    //     }))
-    //     setCommentUsername('');
-    //     setPetComment('');   
-    // };
 
     return(
         <>
