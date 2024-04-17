@@ -34,7 +34,8 @@ export const PetAccount = () => {
     const onLikeSubmit = async(e) => {
         e.preventDefault();
         const result = await petService.likePet(petId)
-        console.log(result)
+        setLike(result)
+        console.log(setLike)
     }
 
     const isOwner = pet._ownerId === userId;
@@ -53,8 +54,6 @@ export const PetAccount = () => {
     //     setCommentUsername('');
     //     setPetComment('');   
     // };
-
-   
 
     return(
         <>
