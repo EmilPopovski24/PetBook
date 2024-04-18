@@ -26,7 +26,8 @@
 }
 
 .petitem-pic {
-    width:10%;
+    width:100px;
+    
     border:none;
     border-radius: 5%;
 }
