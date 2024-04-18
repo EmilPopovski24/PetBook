@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import './PetItem.css';
 
@@ -11,7 +12,7 @@ export const PetItem = ({
         <>
         <div className='pet-item'>
             <h1 id="pet-name">{name}</h1>
-            <h2>{}</h2>
+            {/* <h2>{}</h2> */}
             <div className='petitem-pic'>
                 <Link to={`/catalog/${_id}`}><img src={imageUrl} alt={name} className='catalog-pic'/></Link>
             </div>
