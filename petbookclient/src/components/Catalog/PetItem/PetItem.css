@@ -20,7 +20,7 @@
 }
 
 .pet-item {
-    width: 20%;
+    width: 100%;
     margin: 10px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -31,6 +31,7 @@
 
 .catalog-pic {
     width:300px;
+    max-height: 200px;
     border: none;
     border-radius: 5%;
 }
