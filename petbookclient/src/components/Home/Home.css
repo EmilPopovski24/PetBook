@@ -3,12 +3,8 @@ body {
 }
 
 .image-box {
-    width:1500px;
-    height:800px;
+    /* width:1500px;
+    height:800px; */
     margin: auto auto;
 }
 
-#home-image {
-    width:100%;
-    height:100%;
-}
