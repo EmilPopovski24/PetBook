@@ -1,5 +1,5 @@
-import './PetItem.css';
 import { Link } from 'react-router-dom';
+import './PetItem.css';
 
 export const PetItem = ({
     name,
