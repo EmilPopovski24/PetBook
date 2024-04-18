@@ -8,7 +8,7 @@ export const Catalog = ({
         <>
         <div id='catalog-page'>
             {pets.length > 0 && (
-                <h1 className="catalog-pets">Pet Accounts</h1>
+                <h1 className="catalog-pets">Pets</h1>
             )}
             {pets.map(x=> <PetItem key={x._id} {...x} />)}
             {pets.length === 0 && (
