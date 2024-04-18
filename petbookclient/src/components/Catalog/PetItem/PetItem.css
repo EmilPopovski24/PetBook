@@ -26,12 +26,11 @@
 }
 
 .petitem-pic {
-    border:none;
-    border-radius: 5%;
+    width:100%;
 }
 
 .catalog-pic {
-    
+    width:300px;
     border: none;
     border-radius: 5%;
 }
