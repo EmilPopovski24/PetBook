@@ -50,6 +50,7 @@
 }
 
 .petAccount-pic {
+    margin: auto;
     width:80%;
     max-height: 300px;
     border: none;
