@@ -99,8 +99,8 @@ function App() {
         navigate('/advices')
 };
 
-const onDelete = () => {
-   console.log(pets)
+const onDelete = (_id) => {
+   setPets(pets.splice(_id, 1))
 }
 
     const contextValues = {
