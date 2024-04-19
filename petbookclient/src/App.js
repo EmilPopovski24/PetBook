@@ -100,7 +100,7 @@ function App() {
 };
 
 const onDelete = () => {
-    console.log()
+   console.log(setPets)
 }
 
     const contextValues = {
