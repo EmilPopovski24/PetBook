@@ -99,6 +99,10 @@ function App() {
         navigate('/advices')
 };
 
+const onDelete = () => {
+    setPets(state => [...state]);
+}
+
     const contextValues = {
         onLoginSubmit,
         onRegisterSubmit,
