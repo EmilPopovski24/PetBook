@@ -100,7 +100,8 @@ function App() {
 };
 
 const onDelete = (_id) => {
-   setPets(pets.splice(_id, 1))
+
+    pets.map(x => x._id)
 };
 
     const contextValues = {

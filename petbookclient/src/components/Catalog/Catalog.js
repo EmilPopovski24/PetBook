@@ -4,6 +4,8 @@ import './Catalog.css';
 export const Catalog = ({
     pets
 }) => {
+
+    console.log(pets)
     return (
         <>
         <div id='catalog-page'>
