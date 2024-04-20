@@ -25,8 +25,7 @@ export const PetAccount = ({
     }, [petId]);
 
     const onDeletePet = async() => {
-        const t = await petService.getOne(pet._id);
-        console.log(t)
+        const t = await petService.deletePet(pet._id);
         onDelete()
     }
 
