@@ -100,8 +100,9 @@ function App() {
 };
 
 const onDelete = (_id) => {
-
-    pets.map(x => x._id)
+    console.log(_id)
+    // const y = pets.map(x => x._id)
+    // console.log(y)
 };
 
     const contextValues = {
