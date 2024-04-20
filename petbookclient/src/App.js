@@ -100,8 +100,6 @@ function App() {
 };
 
 const onDelete = (_id) => {
-  console.log(_id)
-    // setPets(state => state.map(x => x._id !== _id))
     navigate('/catalog')
 };
 
