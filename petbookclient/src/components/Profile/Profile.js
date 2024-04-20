@@ -8,7 +8,7 @@ export const Profile = ({
 }) => {
 
     const user = useContext(AuthContext);
-    
+
     return(
         <>
             <div className="card">   
