@@ -99,10 +99,10 @@ function App() {
         navigate('/advices')
 };
 
-const onDelete = (_id) => {
-    pets.splice(_id, 1)
-    setPets(pets)
-};
+// const onDelete = (_id) => {
+//     pets.splice(_id, 1)
+//     setPets(pets)
+// };
 
     const contextValues = {
         onLoginSubmit,

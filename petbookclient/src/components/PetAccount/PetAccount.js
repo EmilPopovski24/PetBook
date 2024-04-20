@@ -26,9 +26,6 @@ export const PetAccount = ({
 
     const onDeletePet = async() => {
         await petService.deletePet(pet._id);
-    //    await petService.getOne(pet._id)
-        // console.log(theone)
-        onDelete()
         navigate('/catalog');
     }
 
