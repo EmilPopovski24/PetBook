@@ -6,7 +6,9 @@ import "./Profile.css"
 export const Profile = ({
     image
 }) => {
+
     const user = useContext(AuthContext);
+    
     return(
         <>
             <div className="card">   
