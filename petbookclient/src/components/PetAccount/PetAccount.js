@@ -38,6 +38,7 @@ export const PetAccount = ({
 
     return(
         <>
+        <div className='pet-account-page'>
             <div className='pet-account'>     
                 <h1 className='petAccount-name'>{pet.name}</h1>
                 <img src={pet.imageUrl} alt={pet.name} className='petAccount-pic'/>           
@@ -63,25 +64,26 @@ export const PetAccount = ({
                         )}
                     </div>
                 </div>
-               {/* <div className="post-comment">
+               <div className="post-comment">
             <div className="addComment-div">
-                <form className="addComment-form" onSubmit={onPetCommentSubmit}>
-                    <input type="text" id="comment-username" name="username" placeholder="Your name..."  value={commentUsername} onChange={(e)=> setCommentUsername(e.target.value)} />
-                    <textarea name="comment" id="comment-text" cols="50" rows="3" value={petComment} onChange={(e)=> setPetComment(e.target.value)} ></textarea>
+                <form className="addComment-form" >
+                    <input type="text" id="comment-username" name="username" placeholder="Your name..."  />
+                    <textarea name="comment" id="comment-text" cols="50" rows="3"></textarea>
                     <button className='post-btn' type="submit">Add comment</button>
                 </form>
             </div>
             <div className="comments-div">
                 <h5>Comments:</h5>
                 <ul className='comments-ul'>
-                    {petComments.map(x=> (
+                    {/* {petComments.map(x=> (
                         <li key={x._id} className='comment-li'>
                             <p><b>{x.username}</b>: {x.comment}</p>      
                         </li>
-                    ))}
+                    ))} */}
                 </ul>
             </div>
-        </div> */}
+        </div>
+        </div>
         </>
     )
 }

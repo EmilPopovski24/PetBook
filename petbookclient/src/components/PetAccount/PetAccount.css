@@ -1,3 +1,7 @@
+.pet-account-page {
+    display: flex;
+}
+
 .pet-account {
     margin:50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -68,9 +72,8 @@
     margin:10px;
 }
 
-.post-comment {
-    position: relative;
-    display: block;
+.addComment-div {
+    margin-top: 50px;
 }
 
 
