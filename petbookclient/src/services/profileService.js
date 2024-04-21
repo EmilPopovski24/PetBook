@@ -32,7 +32,7 @@ export const profileServiceFactory = (token) => {
     }
 
     const getAllPetComments =  async(petId) => {
-        const query = encodeURIComponent(`pettId="${petId}"`);
+        const query = encodeURIComponent(`petId="${petId}"`);
         const result = await request.get(`${profileUrl}?where=${query}`);
         const comments = Object.values(result)
         return comments

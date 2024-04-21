@@ -17,9 +17,11 @@ export const PetAccount = ({
     const [likes, setLikes] = useState(0);
     const petService = useService(petServiceFactory);
     const profileService = useService(profileServiceFactory);
-    const [petComments, setPetComments] = useState([]);
     const [petComment, setPetComment] = useState('')
     const [username, setUsername] = useState('');
+    const [petComments, setPetComments] = useState([]);
+
+    console.log(petComments)
 
     useEffect(()=> {
         petService.getOne(petId)
@@ -50,7 +52,7 @@ export const PetAccount = ({
             username,
             petComment,
         })
-        setPetComment(state => ({
+        setPetComments(state => ({
             ...state, 
             petComments: [...petComments, response]
         }))
@@ -58,7 +60,7 @@ export const PetAccount = ({
         setUsername('');
         setPetComment('');
     }
-
+    // console.log(petComments)
     const isOwner = pet._ownerId === userId;
 
     return(
@@ -97,12 +99,12 @@ export const PetAccount = ({
                     <button className='post-btn' type="submit">Add comment</button>
                 </form>
             </div>
-            <div className="comments-div">
+            <div className="petComments-div">
                 <h5>Comments:</h5>
-                <ul className='comments-ul'>
+                <ul className='petComments-ul'>
                     {petComments.map(x=> (
-                        <li key={x._id} className='comment-li'>
-                            <p><b>{x.username}</b>: {x.comment}</p>      
+                        <li key={x._id} className='petComment-li'>
+                            <p><b>{x.username}</b>: {x.petComment}</p>      
                         </li>
                     ))}
                 </ul>
