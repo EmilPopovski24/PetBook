@@ -26,10 +26,10 @@ export const petServiceFactory = (token) => {
 
     const deletePet = (petId) => request.del(`${baseUrl}/${petId}`);
 
-    const likePet = async(petId) => {
-        const result = await request.post(`${baseUrl}/${petId}`)
-        return result
-    }
+    // const likePet = async(petId) => {
+    //     const result = await request.post(`${baseUrl}/${petId}`)
+    //     return result
+    // }
     
     const addPetComment = async(petId, commentData) => {
         const result = await request.post(`${baseUrl}/${petId}/comments`, commentData)
@@ -49,7 +49,6 @@ export const petServiceFactory = (token) => {
         getOne,
         edit,
         deletePet,
-        likePet,
         addPetComment,
         // getAllPetComments
     }

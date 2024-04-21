@@ -15,9 +15,7 @@ export const PetAccount = ({
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
     const [likes, setLikes] = useState([]);
-    const [like, setLike] = useState({});
     const petService = useService(petServiceFactory);
-    const profileService = useService(profileServiceFactory);
 
     useEffect(()=> {
         petService.getOne(petId)
@@ -34,13 +32,7 @@ export const PetAccount = ({
 
     const onLikeSubmit = async(e) => {
         e.preventDefault();
-        const newLike = await profileService.likePet(pet._id)
-        console.log(newLike)
-        // setLikes(state =>[...state, newLike])
-        // setLikes(state =>({...state, [e.target.name]: e.target.value}))
-
-        // const newResult = likes + 1
-        // setLikes(newResult)
+        setLikes(likes + 1)
     }
 
     const isOwner = pet._ownerId === userId;

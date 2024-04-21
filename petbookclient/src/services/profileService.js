@@ -26,16 +26,15 @@ export const profileServiceFactory = (token) => {
         return result;
     }
 
-    const likePet = (petId) => {
-        const result = request.post(`${profileUrl}/likes`, petId)
-        return result;
-    }
+    // const likePet = (petId) => {
+    //     const result = request.post(`${profileUrl}/likes`, petId)
+    //     return result;
+    // }
     
     return {
        addPhoto,
        getOnePhoto,
        addPost,
        getOnePost,
-       likePet
     }
 }
