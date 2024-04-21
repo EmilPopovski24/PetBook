@@ -7,8 +7,7 @@ import { Link } from 'react-router-dom';
 import './PetAccount.css';
 
 export const PetAccount = ({
-    onDelete,
-    pets
+    onDelete
 }) => {
 
     const { userId } = useContext(AuthContext);
@@ -16,7 +15,6 @@ export const PetAccount = ({
     const [pet, setPet] = useState({});
     const [likes, setLikes] = useState(0);
     const petService = useService(petServiceFactory);
-    const navigate = useNavigate();
 
     useEffect(()=> {
         petService.getOne(petId)
