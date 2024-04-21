@@ -21,7 +21,6 @@ export const PetAccount = ({
         petService.getOne(petId)
             .then(result => {
                 setPet(result)
-                setLikes()
             })
     }, [petId]);
 
@@ -33,7 +32,10 @@ export const PetAccount = ({
 
     const onLikeSubmit = (e) => {
         e.preventDefault();
-        console.log(likes)
+        const newLike = petService.likePet(pet._id)
+        setLikes(state =>[...state, newLike])
+        // setLikes(state =>({...state, [e.target.name]: e.target.value}))
+
         // const newResult = likes + 1
         // setLikes(newResult)
     }
