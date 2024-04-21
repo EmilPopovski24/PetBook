@@ -26,6 +26,18 @@ export const profileServiceFactory = (token) => {
         return result;
     }
 
+    const addPetComment = async(commentData) => {
+        const result = await request.post(`${profileUrl}/petComments`, commentData)
+        return result
+    }
+
+    const getAllPetComments =  async(petId) => {
+        const query = encodeURIComponent(`pettId="${petId}"`);
+        const result = await request.get(`${profileUrl}?where=${query}`);
+        const comments = Object.values(result)
+        return comments
+    };
+
     // const likePet = (petId) => {
     //     const result = request.post(`${profileUrl}/likes`, petId)
     //     return result;
@@ -36,5 +48,7 @@ export const profileServiceFactory = (token) => {
        getOnePhoto,
        addPost,
        getOnePost,
+       addPetComment,
+       getAllPetComments
     }
 }

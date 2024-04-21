@@ -5,6 +5,7 @@ import { useEffect, useState, useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 import './PetAccount.css';
+import { profileServiceFactory } from '../../services/profileService';
 
 export const PetAccount = ({
     onDelete
@@ -15,6 +16,7 @@ export const PetAccount = ({
     const [pet, setPet] = useState({});
     const [likes, setLikes] = useState(0);
     const petService = useService(petServiceFactory);
+    const profileService = useService(profileServiceFactory);
     const [petComments, setPetComments] = useState([]);
     const [petComment, setPetComment] = useState('')
     const [username, setUsername] = useState('');
@@ -23,6 +25,10 @@ export const PetAccount = ({
         petService.getOne(petId)
             .then(result => {
                 setPet(result)
+                return profileService.getAllPetComments(petId)
+            })
+            .then(result => {
+                setPetComments(result)
             })
     }, [petId]);
 
@@ -39,7 +45,8 @@ export const PetAccount = ({
 
     const onPetCommentSubmit = async (e) => {
         e.preventDefault();
-        const response = await petService.addPetComment(petId,{
+        const response = await profileService.addPetComment({
+            petId,
             username,
             petComment,
         })
@@ -85,8 +92,8 @@ export const PetAccount = ({
                <div className="post-comment">
             <div className="addComment-div">
                 <form className="addComment-form" onSubmit={onPetCommentSubmit}>
-                    <input type="text" id="comment-username" name="username" placeholder="Your name..." value ={username} onChange={(e) => setPetComment(petComment)}/>
-                    <textarea name="comment" id="comment-text" cols="50" rows="3" value={petComment} onChange={(e) => setUsername(username) }></textarea>
+                    <input type="text" id="comment-username" name="username" placeholder="Your name..." value ={username} onChange={(e) => setUsername(e.target.value)}/>
+                    <textarea name="comment" id="comment-text" cols="50" rows="3" value={petComment} onChange={(e) => setPetComment(e.target.value) }></textarea>
                     <button className='post-btn' type="submit">Add comment</button>
                 </form>
             </div>

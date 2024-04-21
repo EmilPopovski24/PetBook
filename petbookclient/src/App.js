@@ -104,12 +104,6 @@ const onDelete = (values) => {
     navigate('/catalog')
 };
 
-// const onLike = async(id) => {
-//   const newLike = await profileService.likePet(id)
-//   setLikes(state => [...state, newLike])
-//   navigate('catalog')
-// }
-
     const contextValues = {
         onLoginSubmit,
         onRegisterSubmit,

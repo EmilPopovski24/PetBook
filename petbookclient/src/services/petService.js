@@ -31,10 +31,10 @@ export const petServiceFactory = (token) => {
     //     return result
     // }
     
-    const addPetComment = async(petId, commentData) => {
-        const result = await request.post(`${baseUrl}/${petId}/comments`, commentData)
-        return result
-    }
+    // const addPetComment = async(petId, commentData) => {
+    //     const result = await request.post(`${baseUrl}/${petId}/comments`, commentData)
+    //     return result
+    // }
 
     // const getAllPetComments = async(postId) => {
     //     const query = encodeURIComponent(`postId="${postId}"`);
@@ -49,7 +49,7 @@ export const petServiceFactory = (token) => {
         getOne,
         edit,
         deletePet,
-        addPetComment,
+        // addPetComment,
         // getAllPetComments
     }
 }
