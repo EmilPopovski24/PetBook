@@ -16,6 +16,8 @@ export const PetAccount = ({
     const [likes, setLikes] = useState(0);
     const petService = useService(petServiceFactory);
     const [petComments, setPetComments] = useState([]);
+    const [petComment, setPetComment] = useState('')
+    const [username, setUsername] = useState('');
 
     useEffect(()=> {
         petService.getOne(petId)
@@ -33,6 +35,21 @@ export const PetAccount = ({
     const onLikeSubmit = async(e) => {
         e.preventDefault();
         setLikes(likes + 1)
+    }
+
+    const onPetCommentSubmit = async (e) => {
+        e.preventDefault();
+        const response = await petService.addPetComment(petId,{
+            username,
+            petComment,
+        })
+        setPetComment(state => ({
+            ...state, 
+            petComments: [...petComments, response]
+        }))
+
+        setUsername('');
+        setPetComment('');
     }
 
     const isOwner = pet._ownerId === userId;
@@ -67,20 +84,20 @@ export const PetAccount = ({
                 </div>
                <div className="post-comment">
             <div className="addComment-div">
-                <form className="addComment-form" >
-                    <input type="text" id="comment-username" name="username" placeholder="Your name..."  />
-                    <textarea name="comment" id="comment-text" cols="50" rows="3"></textarea>
+                <form className="addComment-form" onSubmit={onPetCommentSubmit}>
+                    <input type="text" id="comment-username" name="username" placeholder="Your name..." value ={username} onChange={(e) => setPetComment(petComment)}/>
+                    <textarea name="comment" id="comment-text" cols="50" rows="3" value={petComment} onChange={(e) => setUsername(username) }></textarea>
                     <button className='post-btn' type="submit">Add comment</button>
                 </form>
             </div>
             <div className="comments-div">
                 <h5>Comments:</h5>
                 <ul className='comments-ul'>
-                    {/* {petComments.map(x=> (
+                    {petComments.map(x=> (
                         <li key={x._id} className='comment-li'>
                             <p><b>{x.username}</b>: {x.comment}</p>      
                         </li>
-                    ))} */}
+                    ))}
                 </ul>
             </div>
         </div>
