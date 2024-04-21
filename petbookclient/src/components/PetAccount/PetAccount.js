@@ -14,12 +14,14 @@ export const PetAccount = ({
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
     const [likes, setLikes] = useState(0);
+    const [like, setLike] = useState({});
     const petService = useService(petServiceFactory);
 
     useEffect(()=> {
         petService.getOne(petId)
             .then(result => {
                 setPet(result)
+                setLikes()
             })
     }, [petId]);
 
@@ -29,8 +31,11 @@ export const PetAccount = ({
         return res
     }
 
-    const onLikeSubmit = () => {
-        setLikes(likes+1)
+    const onLikeSubmit = (e) => {
+        e.preventDefault();
+        console.log(likes)
+        // const newResult = likes + 1
+        // setLikes(newResult)
     }
 
     const isOwner = pet._ownerId === userId;
