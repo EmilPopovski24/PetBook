@@ -5,6 +5,7 @@ import { useEffect, useState, useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 import './PetAccount.css';
+import { profileServiceFactory } from '../../services/profileService';
 
 export const PetAccount = ({
     onDelete
@@ -13,10 +14,10 @@ export const PetAccount = ({
     const { userId } = useContext(AuthContext);
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
-    const [likes, setLikes] = useState(0);
+    const [likes, setLikes] = useState([]);
     const [like, setLike] = useState({});
     const petService = useService(petServiceFactory);
-
+    const profileService = useService(profileServiceFactory);
 
     useEffect(()=> {
         petService.getOne(petId)
@@ -33,7 +34,7 @@ export const PetAccount = ({
 
     const onLikeSubmit = (e) => {
         e.preventDefault();
-        const newLike = petService.likePet(pet._id)
+        const newLike = profileService.likePet(pet._id)
         setLikes(state =>[...state, newLike])
         // setLikes(state =>({...state, [e.target.name]: e.target.value}))
 
