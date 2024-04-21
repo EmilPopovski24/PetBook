@@ -9,7 +9,6 @@
     align-items: center;
     align-content: space-between;
     flex-direction: row;
-    flex: 50%;
 }
 
 @media (max-width: 800px) {
