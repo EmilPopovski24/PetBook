@@ -26,8 +26,8 @@ export const profileServiceFactory = (token) => {
         return result;
     }
 
-    const likePet = async(petId) => {
-        const result = await request.post(`${profileUrl}/likes`)
+    const likePet = (petId) => {
+        const result = request.post(`${profileUrl}/likes`, petId)
         return result;
     }
     
