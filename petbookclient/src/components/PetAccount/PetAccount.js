@@ -1,11 +1,10 @@
 import { useService } from '../../hooks/useService'
 import { petServiceFactory } from "../../services/petService";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 import './PetAccount.css';
-import { profileServiceFactory } from '../../services/profileService';
 
 export const PetAccount = ({
     onDelete
@@ -14,7 +13,7 @@ export const PetAccount = ({
     const { userId } = useContext(AuthContext);
     const { petId } = useParams({});//learn more about useParams
     const [pet, setPet] = useState({});
-    const [likes, setLikes] = useState([]);
+    const [likes, setLikes] = useState(0);
     const petService = useService(petServiceFactory);
 
     useEffect(()=> {
