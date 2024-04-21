@@ -33,7 +33,7 @@ function App() {
     const [pets, setPets] = useState([]);
     const [image, setImage] = useState({}); 
     const [posts, setPosts] = useState([]);
-
+    const [likes, setLikes] = useState([]);
 // const [petOwner, setPetOwner] = useState([]);
     const authService = authServiceFactory(auth.accessToken)
     const petService = petServiceFactory(auth.accessToken); // auth.accessToken
@@ -103,6 +103,11 @@ const onDelete = (values) => {
     setPets(state => state.map(x=> x._id !== values._id))
     navigate('/catalog')
 };
+
+const onLike = async(id) => {
+  const newLike = await profileService.likePet(id)
+  setLikes(state => [...state, newLike])
+}
 
     const contextValues = {
         onLoginSubmit,
