@@ -99,9 +99,8 @@ function App() {
         navigate('/advices')
 };
 
-const onDelete = (_id) => { 
-    // const res = pets.filter
-    console.log(_id)
+const onDelete = (values) => { 
+    setPets(state => state.map(x=> x._id !== values._id))
     navigate('/catalog')
 };
 

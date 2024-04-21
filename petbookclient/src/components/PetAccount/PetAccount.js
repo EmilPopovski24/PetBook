@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 import './PetAccount.css';
 
 export const PetAccount = ({
-    onDelete
+    onDelete,
+    pets
 }) => {
 
     const { userId } = useContext(AuthContext);
@@ -25,9 +26,9 @@ export const PetAccount = ({
     }, [petId]);
 
     const onDeletePet = async() => {
-       const res = await petService.getOne(pet._id);
-       console.log(res)
+        const res = await petService.deletePet(pet._id);
         onDelete()
+        return res
     }
 
     const onLikeSubmit = () => {
