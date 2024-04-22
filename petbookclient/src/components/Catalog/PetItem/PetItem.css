@@ -20,10 +20,6 @@
 }
 
 .pet-item {
-    display: flex;
-    flex-direction: column;
-    flex: 50%;
-
     margin: 10px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
