@@ -20,9 +20,8 @@
 }
 
 .pet-item {
+    flex: 50%;
 
-
-    width: 100%;
     margin: 10px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
