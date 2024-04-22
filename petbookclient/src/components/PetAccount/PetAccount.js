@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
-import './PetAccount.css';
 import { profileServiceFactory } from '../../services/profileService';
+import './PetAccount.css';
 
 export const PetAccount = ({
     onDelete
@@ -56,7 +56,7 @@ export const PetAccount = ({
             ...state, 
             petComments: [...petComments, response]
         }))
-        
+
         setUsername('');
         setPetComment('');
     }
