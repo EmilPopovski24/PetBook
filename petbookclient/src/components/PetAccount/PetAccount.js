@@ -56,6 +56,7 @@ export const PetAccount = ({
             ...state, 
             petComments: [...petComments, response]
         }))
+        
         setUsername('');
         setPetComment('');
     }
