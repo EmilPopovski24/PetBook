@@ -20,6 +20,9 @@
 }
 
 .pet-item {
+    border: 2px solid rgb(53, 189, 0);
+    border-radius: 5px;
+    width: 100%;
     margin: 10px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
