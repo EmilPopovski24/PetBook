@@ -20,6 +20,8 @@
 }
 
 .pet-item {
+    display: flex;
+    flex-direction: column;
     flex: 50%;
 
     margin: 10px;
