@@ -5,7 +5,6 @@ export const Catalog = ({
     pets
 }) => {
 
-    console.log(pets)
     return (
         <>
             {pets.length > 0 && (
