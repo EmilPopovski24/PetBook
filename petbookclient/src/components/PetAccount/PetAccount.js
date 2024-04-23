@@ -7,10 +7,9 @@ import { Link } from 'react-router-dom';
 import { profileServiceFactory } from '../../services/profileService';
 import './PetAccount.css';
 
-export const PetAccount = ({
-    onDelete
-}) => {
+export const PetAccount = () => {
 
+    const navigate = useNavigate();
     const { userId } = useContext(AuthContext);
     const { petId } = useParams();//learn more about useParams
     const [pet, setPet] = useState({});
@@ -34,7 +33,7 @@ export const PetAccount = ({
 
     const onDeletePet = async() => {
         const res = await petService.deletePet(pet._id);
-        onDelete()
+        navigate("/catalog")
         return res
     }
 
