@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom';
 import { profileServiceFactory } from '../../services/profileService';
 import './PetAccount.css';
 
-export const PetAccount = () => {
+export const PetAccount = ({
+    onDelete
+}) => {
 
     const navigate = useNavigate();
     const { userId } = useContext(AuthContext);
