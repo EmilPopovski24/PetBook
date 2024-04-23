@@ -1,9 +1,8 @@
 import { useService } from '../../hooks/useService'
 import { petServiceFactory } from "../../services/petService";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContext';
-import { Link } from 'react-router-dom';
 import { profileServiceFactory } from '../../services/profileService';
 import './PetAccount.css';
 
