@@ -26,30 +26,11 @@ export const petServiceFactory = (token) => {
 
     const deletePet = (petId) => request.del(`${baseUrl}/${petId}`);
 
-    // const likePet = async(petId) => {
-    //     const result = await request.post(`${baseUrl}/${petId}`)
-    //     return result
-    // }
-    
-    // const addPetComment = async(petId, commentData) => {
-    //     const result = await request.post(`${baseUrl}/${petId}/comments`, commentData)
-    //     return result
-    // }
-
-    // const getAllPetComments = async(postId) => {
-    //     const query = encodeURIComponent(`postId="${postId}"`);
-    //     const result = await request.get(`${commentsUrl}?where=${query}`);
-    //     const comments = Object.values(result)
-    //     return comments
-    // };
-
     return {
         getAll, 
         addPet,
         getOne,
         edit,
-        deletePet,
-        // addPetComment,
-        // getAllPetComments
+        deletePet
     }
 }
