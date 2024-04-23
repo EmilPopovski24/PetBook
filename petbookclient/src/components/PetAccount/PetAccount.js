@@ -21,6 +21,8 @@ export const PetAccount = ({
     const [username, setUsername] = useState('');
     const [petComments, setPetComments] = useState([]);
 
+   
+
     useEffect(()=> {
         petService.getOne(petId)
             .then(result => {
@@ -58,6 +60,8 @@ export const PetAccount = ({
         setUsername('');
         setPetComment('');
     }
+
+    console.log(petComments)
 
     const isOwner = pet._ownerId === userId;
 
