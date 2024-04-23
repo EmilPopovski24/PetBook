@@ -22,11 +22,12 @@ export const Post = () => {
                 return commentService.getAllComments(postId)
             })
             .then(result => {
+                console.log(result)
                 setComments(result)
         })
     }, [postId]);
 
-    console.log(comments)
+
    
     const onCommentSubmit = async (e) => {
         e.preventDefault();
