@@ -23,9 +23,9 @@ import { AskForHelp } from './components/AskForHelp/AskForHelp';
 import { RouteGuard } from './components/guards/RouteGuard';
 import { profileServiceFactory } from './services/profileService';
 import { authServiceFactory } from './services/authService';
+import { Post } from './components/AdvicesList/PostItem/Post/Post';
 // import { useLocalStorage } from './hooks/useLocalStorage';
 import './App.css'
-import { Post } from './components/AdvicesList/PostItem/Post/Post';
 
 function App() {
     const navigate = useNavigate();
@@ -33,11 +33,10 @@ function App() {
     const [pets, setPets] = useState([]);
     const [image, setImage] = useState({}); 
     const [posts, setPosts] = useState([]);
-    const [likes, setLikes] = useState([]);
-// const [petOwner, setPetOwner] = useState([]);
+    // const [likes, setLikes] = useState([]);
     const authService = authServiceFactory(auth.accessToken)
-    const petService = petServiceFactory(auth.accessToken); // auth.accessToken
-    const profileService = profileServiceFactory(auth.accessToken); //auth.accessToken
+    const petService = petServiceFactory(auth.accessToken); 
+    const profileService = profileServiceFactory(auth.accessToken);
 
     useEffect(() => {
       petService.getAll()
