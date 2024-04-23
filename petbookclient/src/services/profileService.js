@@ -38,11 +38,6 @@ export const profileServiceFactory = (token) => {
         return comments
     };
 
-    // const likePet = (petId) => {
-    //     const result = request.post(`${profileUrl}/likes`, petId)
-    //     return result;
-    // }
-    
     return {
        addPhoto,
        getOnePhoto,
