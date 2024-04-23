@@ -21,8 +21,6 @@ export const PetAccount = ({
     const [username, setUsername] = useState('');
     const [petComments, setPetComments] = useState([]);
 
-   
-
     useEffect(()=> {
         petService.getOne(petId)
             .then(result => {
