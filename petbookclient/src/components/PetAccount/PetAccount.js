@@ -1,6 +1,6 @@
 import { useService } from '../../hooks/useService'
 import { petServiceFactory } from "../../services/petService";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
@@ -58,8 +58,6 @@ export const PetAccount = ({
         setUsername('');
         setPetComment('');
     }
-
-    console.log(petComments)
 
     const isOwner = pet._ownerId === userId;
 
