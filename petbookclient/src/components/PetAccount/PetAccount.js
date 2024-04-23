@@ -52,7 +52,7 @@ export const PetAccount = ({
             username,
             petComment,
         })
-        setPetComments(state => ({
+        setPet(state => ({
             ...state, 
             petComments: [...petComments, response]
         }))
