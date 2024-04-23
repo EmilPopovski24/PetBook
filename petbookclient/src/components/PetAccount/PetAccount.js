@@ -12,7 +12,7 @@ export const PetAccount = ({
 }) => {
 
     const { userId } = useContext(AuthContext);
-    const { petId } = useParams({});//learn more about useParams
+    const { petId } = useParams();//learn more about useParams
     const [pet, setPet] = useState({});
     const [likes, setLikes] = useState(0);
     const petService = useService(petServiceFactory);
@@ -20,8 +20,6 @@ export const PetAccount = ({
     const [petComment, setPetComment] = useState('')
     const [username, setUsername] = useState('');
     const [petComments, setPetComments] = useState([]);
-
-    console.log(petComments)
 
     useEffect(()=> {
         petService.getOne(petId)
