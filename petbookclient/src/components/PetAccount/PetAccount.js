@@ -63,8 +63,8 @@ export const PetAccount = ({
     const isOwner = pet._ownerId === userId;
 
     return(
-        <>
-        <div className='pet-account-page'>
+    <>
+    <div className='pet-account-page'>
             <div className='pet-account'>     
                 <h1 className='petAccount-name'>{pet.name}</h1>
                 <img src={pet.imageUrl} alt={pet.name} className='petAccount-pic'/>           
@@ -78,15 +78,15 @@ export const PetAccount = ({
                         <button className='like-btn' onClick={onLikeSubmit}>Like</button>
                     )}
                 </ul> 
-                        <div className='actionsDiv'>
-                            <div className='go-back'>
-                                <button className='ownerBtn'><Link to="/catalog">Go to Catalog</Link></button>
-                            </div>
+                    <div className='actionsDiv'>
+                        <div className='go-back'>
+                            <button className='ownerBtn'><Link to="/catalog">Go to Catalog</Link></button>
+                        </div>
                         {isOwner && (
                             <div className='owner-buttons'>
                             <button className='ownerBtn'><Link to={`/catalog/${pet._id}/edit`}> Edit</ Link></button>
                             <button className='ownerBtn' id="delBtn" onClick={onDeletePet}>Delete</button>
-                            </div>
+                        </div>
                         )}
                     </div>
                 </div>
@@ -109,7 +109,7 @@ export const PetAccount = ({
                 </ul>
             </div>
         </div>
-        </div>
-        </>
+    </div>
+    </>
     )
 }
