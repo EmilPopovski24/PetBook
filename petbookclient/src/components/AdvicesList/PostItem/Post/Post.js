@@ -25,6 +25,8 @@ export const Post = () => {
                 setComments(result)
         })
     }, [postId]);
+
+    console.log(comments)
    
     const onCommentSubmit = async (e) => {
         e.preventDefault();
