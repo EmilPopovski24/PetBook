@@ -41,7 +41,9 @@ export const PetAccount = ({
 
     const onLikeSubmit = async(e) => {
         e.preventDefault();
-        setLikes(likes + 1)
+        const newLike = 
+        setLikes(state => [...state, ])
+
     }
 
     const onPetCommentSubmit = async (e) => {
@@ -55,7 +57,7 @@ export const PetAccount = ({
             ...state, 
             petComments: [...petComments, response]
         }))
-        
+
         setUsername('');
         setPetComment('');
     }
