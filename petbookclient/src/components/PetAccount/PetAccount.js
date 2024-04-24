@@ -9,7 +9,6 @@ import './PetAccount.css';
 export const PetAccount = ({
     onDelete
 }) => {
-
     const navigate = useNavigate();
     const { userId } = useContext(AuthContext);
     const { petId } = useParams();//learn more about useParams
