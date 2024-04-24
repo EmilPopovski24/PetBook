@@ -9,7 +9,7 @@ import './PetAccount.css';
 export const PetAccount = ({
     onDelete
 }) => {
-    
+
     const navigate = useNavigate();
     const { userId } = useContext(AuthContext);
     const { petId } = useParams();//learn more about useParams
@@ -26,7 +26,6 @@ export const PetAccount = ({
             .then(result => {
                 setPet(result)
                return profileService.getAllPetComments(petId)
-                // petService.getAllLikes(petId)
             })
             .then(result => {
                 setPetComments(result)
