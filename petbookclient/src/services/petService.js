@@ -28,12 +28,15 @@ export const petServiceFactory = (token) => {
 
     const likePet = (petId) => request.post(`${baseUrl}/${petId}`);
 
+    const getAllLikes = (petId) => request.get(`${baseUrl}/${petId}`)
+
     return {
         getAll, 
         addPet,
         getOne,
         edit,
         deletePet,
-        likePet
+        likePet, 
+        getAllLikes
     }
 }
