@@ -41,7 +41,8 @@ export const PetAccount = ({
     }
 
     const onLikeSubmit = async(e) => {
-        const newLike = await petService.likePet(data)
+        e.preventDefaut();
+        const newLike = await petService.likePet()
         setLikes(state => [...state, newLike])
     }
 
