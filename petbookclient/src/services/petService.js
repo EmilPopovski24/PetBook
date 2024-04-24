@@ -28,7 +28,7 @@ export const petServiceFactory = (token) => {
 
     const likePet = (petId) => request.post(`${baseUrl}/${petId}`);
 
-    const getAllLikes = (petId) => request.get(`${baseUrl}/${petId}`)
+    // const getAllLikes = (petId) => request.get(`${baseUrl}/${petId}`)
 
     return {
         getAll, 
@@ -37,6 +37,6 @@ export const petServiceFactory = (token) => {
         edit,
         deletePet,
         likePet, 
-        getAllLikes
+        // getAllLikes
     }
 }
