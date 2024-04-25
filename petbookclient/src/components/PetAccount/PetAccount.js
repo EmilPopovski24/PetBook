@@ -25,7 +25,8 @@ export const PetAccount = ({
         petService.getOne(petId)
             .then(result => {
                 setPet(result)
-               return profileService.getAllPetComments(petId)
+                profileService.getAllPetComments(petId)
+                petService.getAllLikes(petId)
             })
             .then(result => {
                 setPetComments(result)
