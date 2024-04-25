@@ -30,7 +30,7 @@ export const petServiceFactory = (token) => {
 
     const getAllLikes =  async(petId) => {
         const query = encodeURIComponent(`petId="${petId}"`);
-        const result = await request.get(`${profileUrl}/petComments/?where=${query}`);
+        const result = await request.get(`http://localhost:3030/data/petComments/?where=${query}`);
         const comments = Object.values(result)
         return comments
     };
