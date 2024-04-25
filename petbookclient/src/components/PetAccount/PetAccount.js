@@ -12,7 +12,7 @@ export const PetAccount = ({
 
     const navigate = useNavigate();
     const { userId } = useContext(AuthContext);
-    const { petId } = useParams();//learn more about useParams
+    const { petId } = useParams();
     const [pet, setPet] = useState({});
     const [likes, setLikes] = useState(0);
     const petService = useService(petServiceFactory);
@@ -42,8 +42,7 @@ export const PetAccount = ({
 
     const onLikeSubmit = async(e) => {
         e.preventDefault();
-        const newLike = await petService.likePet()
-        setLikes(state => [...state, newLike])
+        setLikes(likes +1)
     }
 
     const onPetCommentSubmit = async (e) => {
