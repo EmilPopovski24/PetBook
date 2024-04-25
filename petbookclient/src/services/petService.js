@@ -42,6 +42,6 @@ export const petServiceFactory = (token) => {
         edit,
         deletePet,
         likePet, 
-        // getAllLikes
+        getAllLikes
     }
 }
