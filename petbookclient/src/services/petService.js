@@ -28,12 +28,12 @@ export const petServiceFactory = (token) => {
 
     const likePet = (petId) => request.post(`${baseUrl}/${petId}`);
 
-    const getAllLikes =  async(petId) => {
-        const query = encodeURIComponent(`petId="${petId}"`);
-        const result = await request.get(`http://localhost:3030/data/petComments/?where=${query}`);
-        const comments = Object.values(result)
-        return comments
-    };
+    // const getAllLikes =  async(petId) => {
+    //     const query = encodeURIComponent(`petId="${petId}"`);
+    //     const result = await request.get(`http://localhost:3030/data/petComments/?where=${query}`);
+    //     const comments = Object.values(result)
+    //     return comments
+    // };
 
     return {
         getAll, 
@@ -42,6 +42,6 @@ export const petServiceFactory = (token) => {
         edit,
         deletePet,
         likePet, 
-        getAllLikes
+        // getAllLikes
     }
 }
