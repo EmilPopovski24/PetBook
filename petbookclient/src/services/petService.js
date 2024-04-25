@@ -28,7 +28,12 @@ export const petServiceFactory = (token) => {
 
     const likePet = (petId) => request.post(`${baseUrl}/${petId}`);
 
-    // const getAllLikes = (petId) => request.get(`${baseUrl}/${petId}`)
+    const getAllLikes =  async(petId) => {
+        const query = encodeURIComponent(`petId="${petId}"`);
+        const result = await request.get(`${profileUrl}/petComments/?where=${query}`);
+        const comments = Object.values(result)
+        return comments
+    };
 
     return {
         getAll, 
