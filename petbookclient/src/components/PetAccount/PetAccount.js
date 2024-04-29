@@ -25,11 +25,14 @@ export const PetAccount = ({
         Promise.all([
             petService.getOne(petId),
             profileService.getAllPetComments(petId)
-        ]).then(([petData, petComments]) => {
-                setPet({
-                    ...petData,
-                    petComments
-                });
+        ])
+            .then(result => {
+                setPet(result)
+                return 
+                // profileService.getAllLikes(petId)
+            })
+            .then(result => {
+                setPetComments(result)
             })
     }, [petId]);
 
