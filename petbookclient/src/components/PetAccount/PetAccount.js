@@ -57,8 +57,8 @@ export const PetAccount = ({
             petComments: [...petComments, response]
         }))
 
-        // setUsername('');
-        // setPetComment('');
+        setUsername('');
+        setPetComment('');
     }
 
     const isOwner = pet._ownerId === userId;
