@@ -26,8 +26,8 @@ export const profileServiceFactory = (token) => {
         return result;
     }
 
-    const addPetComment = async(commentData) => {
-        const result = await request.post(`${profileUrl}/petComments`, commentData)
+    const addPetComment = async(petId, commentData) => {
+        const result = await request.post(`${profileUrl}/petComments`, petId, commentData)
         return result
     }
 
