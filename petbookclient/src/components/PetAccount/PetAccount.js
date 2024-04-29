@@ -52,13 +52,13 @@ export const PetAccount = ({
             username,
             petComment,
         })
-        setPet(state => ({
-            ...state, 
-            petComments: [...petComments, response]
-        }))
+        // setPet(state => ({
+        //     ...state, 
+        //     petComments: [...petComments, response]
+        // }))
 
-        setUsername('');
-        setPetComment('');
+        // setUsername('');
+        // setPetComment('');
     }
 
     const isOwner = pet._ownerId === userId;
