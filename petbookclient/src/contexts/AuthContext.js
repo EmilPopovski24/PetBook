@@ -38,10 +38,10 @@ export const AuthProvider = ({
 //         }
 //     };
 
-//     const onLogout = async () => {
-//         await authService.logout();
-//         setAuth({});
-//     };
+    const onLogout = async () => {
+        await authService.logout();
+        setAuth({});
+    };
 
     const contextValues = {
         onLoginSubmit,
