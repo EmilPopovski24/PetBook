@@ -47,8 +47,8 @@ export const PetAccount = ({
 
     const onPetCommentSubmit = async (e) => {
         e.preventDefault();
-        const response = await profileService.addPetComment({
-            petId,
+        const response = await profileService.addPetComment(petId,{
+            
             username,
             petComment,
         })
