@@ -5,9 +5,9 @@ import { createContext } from "react";
 
 export const AuthContext = createContext();
 
-// export const AuthProvider = ({
-//     children
-// }) => {
+export const AuthProvider = ({
+    children,
+}) => {
 
 //     const [auth, setAuth] = useLocalStorage('auth', {});
 //     const authService = authServiceFactory(auth.accessToken);
@@ -43,23 +43,23 @@ export const AuthContext = createContext();
 //         setAuth({});
 //     };
 
-//     const contextValues = {
-//         onLoginSubmit,
-//         onRegisterSubmit,
-//         onLogout,
-//         userId: auth._id,
-//         token: auth.accessToken,
-//         userEmail: auth.email,
-//         username: auth.username,
-//         isAuthenticated: !!auth.accessToken //truthy - false and vice versa
-//       };
+    const contextValues = {
+        onLoginSubmit,
+        onRegisterSubmit,
+        onLogout,
+        userId: auth._id,
+        token: auth.accessToken,
+        userEmail: auth.email,
+        username: auth.username,
+        isAuthenticated: !!auth.accessToken //truthy - false and vice versa
+      };
 
-//     return (
-//         <AuthContext.Provider value={contextValues}>
-//             {children}
-//         </AuthContext.Provider>
-//     )
-// };
+    return (
+        <AuthContext.Provider value={contextValues}>
+            {children}
+        </AuthContext.Provider>
+    )
+};
 
 // export const useAuthContext = () => {
 //     const context = useContext(AuthContext);
