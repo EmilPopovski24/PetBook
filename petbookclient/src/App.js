@@ -29,14 +29,14 @@ import './App.css'
 
 function App() {
     const navigate = useNavigate();
-    const [auth, setAuth] = useState({});
+    // const [auth, setAuth] = useState({});
     const [pets, setPets] = useState([]);
     const [image, setImage] = useState({}); 
     const [posts, setPosts] = useState([]);
     // const [likes, setLikes] = useState([]);
-    const authService = authServiceFactory(auth.accessToken)
-    const petService = petServiceFactory(auth.accessToken); 
-    const profileService = profileServiceFactory(auth.accessToken);
+    // const authService = authServiceFactory(auth.accessToken)
+    const petService = petServiceFactory(); //auth.accessToken  
+    const profileService = profileServiceFactory(); //auth.accessToken
 
     useEffect(() => {
       petService.getAll()
@@ -45,34 +45,34 @@ function App() {
       })
     }, []);
 
-    const onLoginSubmit = async (data) => {
-        const result = await authService.login(data);
-        setAuth(result)
-        navigate('/catalog')
-        alert(`You are welcome!`)
-};    
+//     const onLoginSubmit = async (data) => {
+//         const result = await authService.login(data);
+//         setAuth(result)
+//         navigate('/catalog')
+//         alert(`You are welcome!`)
+// };    
 
-    const onRegisterSubmit = async(values) => {
-        const { confirmPassword, ...registerData } = values;
-        if(confirmPassword !== registerData.password) {
-          alert("Both passwords do not match!")
-          return;
-        };
+//     const onRegisterSubmit = async(values) => {
+//         const { confirmPassword, ...registerData } = values;
+//         if(confirmPassword !== registerData.password) {
+//           alert("Both passwords do not match!")
+//           return;
+//         };
     
-        try {
-            const result = await authService.register(values);
-            setAuth(result);     
-            alert("Successful registration!") 
-            navigate('/catalog')
-        } catch (error) {
-            alert("User with the same details (email or username) already exists!")
-        }
-};
+//         try {
+//             const result = await authService.register(values);
+//             setAuth(result);     
+//             alert("Successful registration!") 
+//             navigate('/catalog')
+//         } catch (error) {
+//             alert("User with the same details (email or username) already exists!")
+//         }
+// };
 
-    const onLogout = async () => {
-        await authService.logout();
-        setAuth({});
-};
+//     const onLogout = async () => {
+//         await authService.logout();
+//         setAuth({});
+// };
 
     const onAddPetSubmit = async(petData) => {
         const newPet = await petService.addPet(petData);
@@ -102,19 +102,19 @@ const onDelete = (res) => {
     setPets(state => state.map(x=> x._id !== res._id))
 };
 
-    const contextValues = {
-        onLoginSubmit,
-        onRegisterSubmit,
-        onLogout,
-        userId: auth._id,
-        token: auth.accessToken,
-        userEmail: auth.email,
-        username: auth.username,
-        isAuthenticated: !!auth.accessToken //truthy - false and vice versa
-};
+//     const contextValues = {
+//         onLoginSubmit,
+//         onRegisterSubmit,
+//         onLogout,
+//         userId: auth._id,
+//         token: auth.accessToken,
+//         userEmail: auth.email,
+//         username: auth.username,
+//         isAuthenticated: !!auth.accessToken //truthy - false and vice versa
+// };
 
 return (
-    <AuthContext.Provider value={contextValues} >
+    <AuthProvider>
       <Header />
       <div className="main-content">
         <Routes>
@@ -126,7 +126,7 @@ return (
             <Route element={<RouteGuard />}>
               <Route path ='/catalog/:petId' element={<PetAccount pets={pets} onAddPetSubmit={onAddPetSubmit} onDelete={onDelete} />} />
               <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} /> 
-              <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} auth={auth} />} />
+              <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit}  />} />
               <Route path ='/profile' element={<Profile image={image} />} />
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
               <Route path ='/help' element={<AskForHelp onPostSubmit={onPostSubmit} />} />
@@ -139,7 +139,7 @@ return (
         </Routes>
       </div>
       <Footer />
-    </AuthContext.Provider>
+    </AuthProvider>
   );
 }
 
