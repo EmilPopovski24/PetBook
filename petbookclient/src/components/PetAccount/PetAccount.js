@@ -22,13 +22,10 @@ export const PetAccount = ({
     const [petComments, setPetComments] = useState([]);
 
     useEffect(()=> {
-        Promise.all([
-            petService.getOne(petId), 
-            profileService.getAllPetComments(petId)
-        ])   
+        petService.getOne(petId)
             .then(result => {
                 setPet(result)
-                // return profileService.getAllPetComments(petId)
+                return profileService.getAllPetComments(petId)
                 // profileService.getAllLikes(petId)
             })
             .then(result => {
