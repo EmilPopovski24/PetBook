@@ -22,7 +22,7 @@ import { AddPhoto } from './components/Profile/AddPhoto/AddPhoto';
 import { AskForHelp } from './components/AskForHelp/AskForHelp';
 import { RouteGuard } from './components/guards/RouteGuard';
 import { profileServiceFactory } from './services/profileService';
-import { authServiceFactory } from './services/authService';
+// import { authServiceFactory } from './services/authService';
 import { Post } from './components/AdvicesList/PostItem/Post/Post';
 // import { useLocalStorage } from './hooks/useLocalStorage';
 import './App.css'
