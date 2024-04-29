@@ -52,10 +52,10 @@ export const PetAccount = ({
             username,
             petComment,
         })
-        // setPet(state => ({
-        //     ...state, 
-        //     petComments: [...petComments, response]
-        // }))
+        setPet(state => ({
+            ...state, 
+            petComments: [...petComments, response]
+        }))
 
         // setUsername('');
         // setPetComment('');
@@ -102,7 +102,7 @@ export const PetAccount = ({
             <div className="petComments-div">
                 <h5>Comments:</h5>
                 <ul className='petComments-ul'>
-                    {petComments & petComments.map(x=> (
+                    {petComments.map(x=> (
                         <li key={x._id} className='petComment-li'>
                             <p><b>{x.username}</b>: {x.petComment}</p>      
                         </li>
