@@ -36,7 +36,7 @@ function App() {
     const [posts, setPosts] = useState([]);
     // const [likes, setLikes] = useState([]);
     // const authService = authServiceFactory(auth.accessToken)
-    const petService = petServiceFactory(); //auth.accessToken  
+    const petService = useService(petServiceFactory); //auth.accessToken  
     const profileService = profileServiceFactory(); //auth.accessToken
 
     useEffect(() => {
@@ -116,6 +116,7 @@ const onDelete = (res) => {
 
 
 const EnhancedLogin = withAuth(Login)
+
 return (
     <AuthProvider>
       <Header />
