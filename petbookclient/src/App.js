@@ -26,6 +26,7 @@ import { profileServiceFactory } from './services/profileService';
 import { Post } from './components/AdvicesList/PostItem/Post/Post';
 // import { useLocalStorage } from './hooks/useLocalStorage';
 import './App.css'
+import { withAuth } from './components/hoc/withAuth';
 
 function App() {
     const navigate = useNavigate();
@@ -113,13 +114,15 @@ const onDelete = (res) => {
 //         isAuthenticated: !!auth.accessToken //truthy - false and vice versa
 // };
 
+
+const EnhancedLogin = withAuth(Login)
 return (
     <AuthProvider>
       <Header />
       <div className="main-content">
         <Routes>
           <Route path ='/' element={<Home />} />
-          <Route path ='/login' element={<Login />} />
+          <Route path ='/login' element={<EnhancedLogin />} />
           <Route path ='/register' element={<Register />} />
           <Route path ='/logout' element={<Logout />} />
           <Route path ='/catalog' element={<Catalog pets={pets} />} />    
