@@ -9,7 +9,7 @@ export const AuthProvider = ({
     children,
 }) => {
 
-    const [auth, setAuth] = useState({});
+    const [auth, setAuth] = useLocalStorage( auth, {});
     const authService = authServiceFactory(auth.accessToken);
     const navigate = useNavigate();
 
