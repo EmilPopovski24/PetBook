@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 import { authServiceFactory } from '../services/authService'
 import { useNavigate } from "react-router-dom";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useContext } from "react";
 
 export const AuthContext = createContext();
 
@@ -61,8 +62,8 @@ export const AuthProvider = ({
     )
 };
 
-// export const useAuthContext = () => {
-//     const context = useContext(AuthContext);
+export const useAuthContext = () => {
+    const context = useContext(AuthContext);
 
-//     return context;
-// }
+    return context;
+}
