@@ -1,6 +1,4 @@
 
-
-
 export const withAuth = (Component) => {
     const WrapperComponent = (props) => {
         return (
