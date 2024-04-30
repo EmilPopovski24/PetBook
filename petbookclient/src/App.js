@@ -26,12 +26,12 @@ import { profileServiceFactory } from './services/profileService';
 import { Post } from './components/AdvicesList/PostItem/Post/Post';
 import { withAuth } from './components/hoc/withAuth';
 import './App.css'
-import { useLocalStorage } from './hooks/useLocalStorage';
+// import { useLocalStorage } from './hooks/useLocalStorage';
 
 function App() {
     const navigate = useNavigate();
     // const [auth, setAuth] = useState({});
-    const [pets, setPets] = useLocalStorage('auth', [])
+    const [pets, setPets] = useState([]);
     const [image, setImage] = useState({}); 
     const [posts, setPosts] = useState([]);
     // const [likes, setLikes] = useState([]);
