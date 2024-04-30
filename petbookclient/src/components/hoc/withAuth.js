@@ -7,4 +7,6 @@ export const withAuth = (Component) => {
             <Component {...props} />
         )
     }
+
+    return WrapperComponent
 }
