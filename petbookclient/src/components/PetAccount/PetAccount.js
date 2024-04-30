@@ -18,7 +18,7 @@ export const PetAccount = ({
     const petService = useService(petServiceFactory);
     const profileService = useService(profileServiceFactory);
     const [petComment, setPetComment] = useState('')
-    const [username, setUsername] = useState('');
+    const [username, setUsername] = useState(''); 
     const [petComments, setPetComments] = useState([]);
 
     useEffect(()=> {
