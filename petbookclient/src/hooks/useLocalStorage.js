@@ -10,7 +10,7 @@ export const useLocalStorage = (key, initialValue) => {
             return persistedState;
         }
 
-    return initialValue
+    return initialValue;
     });
 
     const setLocalStorage = (value) => {
