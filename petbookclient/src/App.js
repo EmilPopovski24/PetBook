@@ -36,8 +36,8 @@ function App() {
     const [posts, setPosts] = useState([]);
     // const [likes, setLikes] = useState([]);
     // const authService = authServiceFactory(auth.accessToken)
-    const petService = petServiceFactory(auth.accessToken ); //auth.accessToken  
-    const profileService = profileServiceFactory(auth.accessToken ); //auth.accessToken
+    const petService = petServiceFactory(); //auth.accessToken  
+    const profileService = profileServiceFactory(); //auth.accessToken
 
     useEffect(() => {
       petService.getAll()
