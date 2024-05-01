@@ -31,7 +31,7 @@ import { useLocalStorage } from './hooks/useLocalStorage';
 function App() {
     const navigate = useNavigate();
     // const [auth, setAuth] = useState({});
-    const [pets, setPets] = useState([]);
+    const [pets, setPets] = useLocalStorage('auth', []);
     const [image, setImage] = useState({}); 
     const [posts, setPosts] = useState([]);
     // const [likes, setLikes] = useState([]);
