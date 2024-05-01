@@ -116,6 +116,7 @@ const onDelete = (res) => {
 
 
 const EnhancedLogin = withAuth(Login);
+
 return (
     <AuthProvider>
       <Header />
