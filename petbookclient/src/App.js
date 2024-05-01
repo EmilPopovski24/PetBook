@@ -115,14 +115,14 @@ const onDelete = (res) => {
 // };
 
 
-// const EnhancedLogin = withAuth(Login);
+const EnhancedLogin = withAuth(Login);
 return (
     <AuthProvider>
       <Header />
       <div className="main-content">
         <Routes>
           <Route path ='/' element={<Home />} />
-          <Route path ='/login' element={<Login />} />
+          <Route path ='/login' element={<Login auth={withAuth}/>} />
           <Route path ='/register' element={<Register />} />
           <Route path ='/logout' element={<Logout />} />
           <Route path ='/catalog' element={<Catalog pets={pets} />} />    
