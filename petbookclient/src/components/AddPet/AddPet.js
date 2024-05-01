@@ -2,8 +2,7 @@ import './AddPet.css';
 import { useForm } from '../../hooks/useForm';
 
 export const AddPet = ({
-    onAddPetSubmit,
-    auth
+    onAddPetSubmit
 }) => {
 
     const { values, changeHandler, onSubmit } = useForm({
