@@ -122,7 +122,7 @@ return (
       <div className="main-content">
         <Routes>
           <Route path ='/' element={<Home />} />
-          <Route path ='/login' element={<Login auth={withAuth}/>} />
+          <Route path ='/login' element={<EnhancedLogin auth={withAuth}/>} />
           <Route path ='/register' element={<Register />} />
           <Route path ='/logout' element={<Logout />} />
           <Route path ='/catalog' element={<Catalog pets={pets} />} />    
