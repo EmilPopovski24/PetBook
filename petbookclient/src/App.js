@@ -134,7 +134,7 @@ return (
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
               <Route path ='/help' element={<AskForHelp onPostSubmit={onPostSubmit} />} />
               <Route path ='/advices' element={<AdvicesList posts={posts} />} />
-              <Route path ='/advices/:postId' element={<Post auth={withAuth}/>} />
+              <Route path ='/advices/:postId' element={<Post />} />
             </Route>
           <Route path ='/about' element={<About />} />
           <Route path ='/terms' element={<Terms />} />
