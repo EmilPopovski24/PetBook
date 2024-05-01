@@ -27,7 +27,6 @@ import { Post } from './components/AdvicesList/PostItem/Post/Post';
 import { withAuth } from './components/hoc/withAuth';
 import './App.css'
 import { useLocalStorage } from './hooks/useLocalStorage';
-import { auth } from "./services/requester";
 
 function App() {
     const navigate = useNavigate();
@@ -37,8 +36,8 @@ function App() {
     const [posts, setPosts] = useState([]);
     // const [likes, setLikes] = useState([]);
     // const authService = authServiceFactory(auth.accessToken)
-    const petService = petServiceFactory(auth.accessToken); //  auth.accessToken
-    const profileService = profileServiceFactory(auth.accessToken); //auth.accessToken
+    const petService = petServiceFactory(); //  auth.accessToken
+    const profileService = profileServiceFactory(); //auth.accessToken
 
     useEffect(() => {
       petService.getAll()
