@@ -51,5 +51,5 @@ const request = async (method, token, url, data) => {
         del: request.bind(null, "DELETE", token),
         patch: request.bind(null, "PATCH", token),
         }
-    }
+    };
     
