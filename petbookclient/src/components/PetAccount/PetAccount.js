@@ -94,7 +94,7 @@ export const PetAccount = ({
                <div className="post-comment">
             <div className="addComment-div">
                 <form className="addComment-form" onSubmit={onPetCommentSubmit}>
-                    <input type="text" id="comment-username" name="username" placeholder="Your name..." value ={username} onChange={(e) => setUsername(e.target.value)}/>
+                    {/* <input type="text" id="comment-username" name="username" placeholder="Your name..." value ={username} onChange={(e) => setUsername(e.target.value)}/> */}
                     <textarea name="comment" id="comment-text" cols="50" rows="3" value={petComment} onChange={(e) => setPetComment(e.target.value) }></textarea>
                     <button className='post-btn' type="submit">Add comment</button>
                 </form>
@@ -104,7 +104,7 @@ export const PetAccount = ({
                 <ul className='petComments-ul'>
                     {petComments.map(x=> (
                         <li key={x._id} className='petComment-li'>
-                            <p><b>{x.username}</b>: {x.petComment}</p>      
+                            <p><b>{x.author.username}</b>: {x.petComment}</p>      
                         </li>
                     ))}
                 </ul>
