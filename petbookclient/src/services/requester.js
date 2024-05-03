@@ -39,7 +39,7 @@ const request = async (method, token, url, data) => {
         const serializedAuth = localStorage.getItem('auth');
     
         if(serializedAuth) {
-            const auth = JSON.parse(serializedAuth);
+            const auth = JSON.stringify(serializedAuth);
             token = auth.accessToken
         }
     }
