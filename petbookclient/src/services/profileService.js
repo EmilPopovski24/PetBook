@@ -27,13 +27,15 @@ export const profileServiceFactory = (token) => {
     }
 
     const addPetComment = async(petId, commentData) => {
+
         const result = await request.post(`${profileUrl}/petComments`, petId, commentData)
         return result
     }
 
     const getAllPetComments =  async(petId) => {
         const query = encodeURIComponent(`petId="${petId}"`);
-        const result = await request.get(`${profileUrl}/petComments/?where=${query}`);
+        const author = encodeURIComponent(`author=_ownerId:users`);
+        const result = await request.get(`${profileUrl}/petComments/?where=${query}&load=${author}`);
         const comments = Object.values(result)
         return comments
     };
