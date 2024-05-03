@@ -25,10 +25,12 @@ export const PetAccount = ({
         Promise.all([
             petService.getOne(petId), 
             profileService.getAllPetComments(petId)
-        ])
-        .then(values => {
-            console.log(values)
-        })
+        ]).then(([petData, comments]) => {
+            setPet({
+                ...petData,
+                comments
+            });
+        });
         
             // .then(result => {
             //     setPet(result)
