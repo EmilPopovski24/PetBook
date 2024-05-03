@@ -22,24 +22,15 @@ export const PetAccount = ({
     const [petComments, setPetComments] = useState([]);
 
     useEffect(()=> {
-        Promise.all([
-            petService.getOne(petId), 
-            profileService.getAllPetComments(petId)
-        ]).then(([petData, comments]) => {
-            setPet({
-                ...petData,
-                comments
-            });
-        });
-        
-            // .then(result => {
-            //     setPet(result)
-            //     return 
-            //     // 
-            // })
-            // .then(result => {
-            //     setPetComments(result)
-            // })
+        petService.getOne(petId)
+            .then(result => {
+                setPet(result)
+                return profileService.getAllPetComments(petId)
+                // profileService.getAllLikes(petId)
+            })
+            .then(result => {
+                setPetComments(result)
+            })
     }, [petId]);
 
     const onDeletePet = async() => {
