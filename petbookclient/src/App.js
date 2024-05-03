@@ -114,7 +114,6 @@ const onDelete = (res) => {
 //         isAuthenticated: !!auth.accessToken //truthy - false and vice versa
 // };
 
-
 const EnhancedLogin = withAuth(Login);
 
 return (
