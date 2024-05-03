@@ -54,7 +54,7 @@ export const PetAccount = ({
         })
         setPet(state => ({
             ...state, 
-            petComments: [...petComments, response]
+            petComments: [...state.petComments, response]
         }))
 
         setUsername('');
