@@ -7,6 +7,7 @@ export const PetProvider = ({
     auth,
     children
 }) => {
+
     const petService = petServiceFactory(auth.accessToken);
     const [pets, setPets] = useLocalStorage('auth', []);
     const navigate = useNavigate();
@@ -33,7 +34,6 @@ export const PetProvider = ({
 const onDelete = (res) => { 
     setPets(state => state.map(x=> x._id !== res._id))
 };
-
 
 const contextValues = {
     onAddPetSubmit,

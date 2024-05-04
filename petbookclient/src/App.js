@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import { PetProvider } from './contexts/PetContext';
@@ -14,7 +14,7 @@ import { About } from  './components/About/About';
 import { Terms } from  './components/Terms/Terms';
 import { FAQ } from  './components/FAQ/FAQ';
 import { Route, Routes} from 'react-router-dom';
-import { petServiceFactory } from './services/petService';
+// import { petServiceFactory } from './services/petService';
 import { PetAccount } from './components/PetAccount/PetAccount';
 import { EditPet } from './components/EditPet/EditPet';
 import { Profile } from './components/Profile/Profile';
@@ -27,7 +27,7 @@ import { profileServiceFactory } from './services/profileService';
 import { Post } from './components/AdvicesList/PostItem/Post/Post';
 import { withAuth } from './components/hoc/withAuth';
 import './App.css'
-import { useLocalStorage } from './hooks/useLocalStorage';
+// import { useLocalStorage } from './hooks/useLocalStorage';
 
 function App() {
     const navigate = useNavigate();
@@ -37,7 +37,7 @@ function App() {
     const [posts, setPosts] = useState([]);
     // const [likes, setLikes] = useState([]);
     // const authService = authServiceFactory(auth.accessToken)
-    const petService = petServiceFactory(); //  auth.accessToken
+    // const petService = petServiceFactory(); //  auth.accessToken
     const profileService = profileServiceFactory(); //auth.accessToken
 
     // useEffect(() => {
@@ -100,9 +100,9 @@ function App() {
         navigate('/advices')
 };
 
-const onDelete = (res) => { 
-    setPets(state => state.map(x=> x._id !== res._id))
-};
+// const onDelete = (res) => { 
+//     setPets(state => state.map(x=> x._id !== res._id))
+// };
 
 //     const contextValues = {
 //         onLoginSubmit,
