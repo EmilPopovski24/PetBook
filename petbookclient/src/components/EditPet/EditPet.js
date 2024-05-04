@@ -2,14 +2,14 @@ import { useParams } from "react-router-dom"
 import { useForm } from "../../hooks/useForm";
 import { useService } from "../../hooks/useService";
 import { petServiceFactory } from "../../services/petService";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import './EditPet.css';
+import { PetContext } from "../../contexts/PetContext";
 
-export const EditPet = ({
-    onPetEditSubmit
-}) => {  
+export const EditPet = () => {  
     
+    const { onPetEditSubmit } = useContext(PetContext);
     const { petId } = useParams();
     const petService = useService(petServiceFactory);
     const {values, changeHandler, onSubmit, changeValues} = useForm({

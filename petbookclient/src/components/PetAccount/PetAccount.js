@@ -5,11 +5,11 @@ import { useEffect, useState, useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContext';
 import { profileServiceFactory } from '../../services/profileService';
 import './PetAccount.css';
+import { usePetContext } from '../../contexts/PetContext';
 
-export const PetAccount = ({
-    onDelete
-}) => {
+export const PetAccount = () => {
 
+    const { onDelete } = usePetContext();
     const navigate = useNavigate();
     const { userId } = useContext(AuthContext);
     const { petId } = useParams();

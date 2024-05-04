@@ -1,9 +1,10 @@
 import { PetItem } from "./PetItem/PetItem";
 import './Catalog.css';
+import { usePetContext } from "../../contexts/PetContext";
 
-export const Catalog = ({
-    pets
-}) => {
+export const Catalog = () => {
+
+    const { pets } = usePetContext();
 
     return (
         <>

@@ -1,10 +1,11 @@
 import './AddPet.css';
 import { useForm } from '../../hooks/useForm';
+import { useContext } from 'react';
+import { PetContext } from '../../contexts/PetContext';
 
-export const AddPet = ({
-    onAddPetSubmit
-}) => {
-
+export const AddPet = () => {
+    
+    const { onAddPetSubmit } = useContext(PetContext);
     const { values, changeHandler, onSubmit } = useForm({
         name: '',
         type: '',
