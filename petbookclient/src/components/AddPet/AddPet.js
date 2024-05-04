@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { PetContext } from '../../contexts/PetContext';
 
 export const AddPet = () => {
-    
+
     const { onAddPetSubmit } = useContext(PetContext);
     const { values, changeHandler, onSubmit } = useForm({
         name: '',
@@ -42,6 +42,5 @@ export const AddPet = () => {
                 </form>
             </section>
         </>
-
     )
 }

@@ -38,8 +38,8 @@ export const Register = () => {
                     You have a profile? ... Come on... Go to the <Link to={"/login"}><b>Login page</b></Link>
                 </p>
             </div>
-            </form>
-            </section> 
-            </> 
+        </form>
+        </section> 
+        </> 
     )
 }

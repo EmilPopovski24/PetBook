@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import { PetContext } from "../../contexts/PetContext";
 import './EditPet.css';
 
-
 export const EditPet = () => {  
     
     const { onPetEditSubmit } = useContext(PetContext);
