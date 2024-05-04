@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { petServiceFactory } from "../services/petService";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 export const PetContext = createContext();
 
@@ -49,4 +49,9 @@ return (
     </PetContext.Provider>
 )
 
+}
+
+export const usePetContext = () => {
+    const context = useContext(PetContext);
+    return context
 }
