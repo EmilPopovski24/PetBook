@@ -1,16 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import { petServiceFactory } from "../services/petService";
-import { useLocalStorage } from "../hooks/useLocalStorage";
-import { createContext, useEffect } from "react";
+import { createContext, useEffect, useState } from "react";
 
-const PetContext = createContext();
+export const PetContext = createContext();
 
 export const PetProvider = ({
-    auth,
     children
 }) => {
-    const petService = petServiceFactory(auth.accessToken);
-    const [pets, setPets] = useLocalStorage('auth', []);
+
+    const petService = petServiceFactory();
+    const [pets, setPets] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -40,7 +39,8 @@ const onDelete = (res) => {
 const contextValues = {
     onAddPetSubmit,
     onPetEditSubmit,
-    onDelete
+    onDelete,
+    pets
 }
 
 return (
