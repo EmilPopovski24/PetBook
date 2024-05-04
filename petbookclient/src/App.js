@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
+import { PetProvider } from './contexts/PetContext';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { Home } from  './components/Home/Home';
@@ -31,7 +32,7 @@ import { useLocalStorage } from './hooks/useLocalStorage';
 function App() {
     const navigate = useNavigate();
     // const [auth, setAuth] = useState({});
-    const [pets, setPets] = useLocalStorage('auth', []);
+    // const [pets, setPets] = useLocalStorage('auth', []);
     const [image, setImage] = useState({}); 
     const [posts, setPosts] = useState([]);
     // const [likes, setLikes] = useState([]);
@@ -39,12 +40,12 @@ function App() {
     const petService = petServiceFactory(); //  auth.accessToken
     const profileService = profileServiceFactory(); //auth.accessToken
 
-    useEffect(() => {
-      petService.getAll()
-        .then(result=> {
-          setPets(result)
-      })
-    }, []);
+    // useEffect(() => {
+    //   petService.getAll()
+    //     .then(result=> {
+    //       setPets(result)
+    //   })
+    // }, []);
 
 //     const onLoginSubmit = async (data) => {
 //         const result = await authService.login(data);
@@ -127,6 +128,7 @@ return (
           <Route path ='/logout' element={<Logout />} />
           <Route path ='/catalog' element={<Catalog pets={pets} />} />    
             <Route element={<RouteGuard />}>
+            <PetProvider>
               <Route path ='/catalog/:petId' element={<PetAccount pets={pets} onAddPetSubmit={onAddPetSubmit} onDelete={onDelete} />} />
               <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} /> 
               <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} auth={withAuth} />} />
@@ -135,6 +137,7 @@ return (
               <Route path ='/help' element={<AskForHelp onPostSubmit={onPostSubmit} />} />
               <Route path ='/advices' element={<AdvicesList posts={posts} />} />
               <Route path ='/advices/:postId' element={<Post />} />
+              </PetProvider>
             </Route>
           <Route path ='/about' element={<About />} />
           <Route path ='/terms' element={<Terms />} />

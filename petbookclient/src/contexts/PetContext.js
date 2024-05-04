@@ -1,10 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { petServiceFactory } from "../services/petService";
 import { useLocalStorage } from "../hooks/useLocalStorage";
-
-
-
-
+import { useEffect } from "react";
 
 export const PetProvider = ({
     auth,
@@ -12,7 +9,14 @@ export const PetProvider = ({
 }) => {
     const petService = petServiceFactory(auth.accessToken);
     const [pets, setPets] = useLocalStorage('auth', []);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        petService.getAll()
+          .then(result=> {
+            setPets(result)
+        })
+      }, []);
 
     const onAddPetSubmit = async(petData) => {
         const newPet = await petService.addPet(petData);
@@ -26,9 +30,15 @@ export const PetProvider = ({
         navigate(`/catalog/${values._id}`);
 };
 
+const onDelete = (res) => { 
+    setPets(state => state.map(x=> x._id !== res._id))
+};
+
+
 const contextValues = {
     onAddPetSubmit,
-    onPetEditSubmit
+    onPetEditSubmit,
+    onDelete
 }
 
 return (
