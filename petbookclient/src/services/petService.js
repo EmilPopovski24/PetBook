@@ -27,7 +27,7 @@ export const petServiceFactory = (token) => {
 
     const deletePet = (petId) => request.del(`${baseUrl}/${petId}`);
 
-    const likePet = (petId) => request.post(`${baseUrl}/${petId}`);
+    // const likePet = (petId) => request.post(`${baseUrl}/${petId}`);
 
     // const getAllLikes =  async(petId) => {
     //     const query = encodeURIComponent(`petId="${petId}"`);
@@ -42,7 +42,7 @@ export const petServiceFactory = (token) => {
         getOne,
         edit,
         deletePet,
-        likePet, 
+        // likePet, 
         // getAllLikes
     }
 }

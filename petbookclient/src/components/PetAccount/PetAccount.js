@@ -14,6 +14,7 @@ export const PetAccount = () => {
     const { userId } = useContext(AuthContext);
     const { petId } = useParams();
     const [pet, setPet] = useState({});
+    const [like, setLike] = useState({});
     const [likes, setLikes] = useState(0);
     const petService = useService(petServiceFactory);
     const profileService = useService(profileServiceFactory);

@@ -27,7 +27,6 @@ export const profileServiceFactory = (token) => {
     }
 
     const addPetComment = async(petId, commentData) => {
-
         const result = await request.post(`${profileUrl}/petComments`, petId, commentData)
         return result
     }
@@ -39,6 +38,8 @@ export const profileServiceFactory = (token) => {
         const comments = Object.values(result)
         return comments
     };
+
+
 
     const getAllLikes =  async(petId) => {
         const query = encodeURIComponent(`petId="${petId}"`);
