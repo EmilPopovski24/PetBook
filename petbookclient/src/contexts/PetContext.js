@@ -7,7 +7,8 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 
 
 export const PetProvider = ({
-    auth
+    auth,
+    children
 }) => {
     const petService = petServiceFactory(auth.accessToken);
     const [pets, setPets] = useLocalStorage('auth', []);
@@ -29,5 +30,11 @@ const contextValues = {
     onAddPetSubmit,
     onPetEditSubmit
 }
+
+return (
+    <PetProvider value={contextValues}>
+        {children}
+    </PetProvider>
+)
 
 }
