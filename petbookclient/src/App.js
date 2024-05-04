@@ -130,7 +130,7 @@ return (
           <Route path ='/catalog' element={<Catalog />} />    
             <Route element={<RouteGuard />}>
               <Route path ='/catalog/:petId' element={<PetAccount />} />
-              <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} /> 
+              <Route path ='/catalog/:petId/edit' element={<EditPet />} /> 
               <Route path ='/addpet' element={<AddPet auth={withAuth} />} />
               <Route path ='/profile' element={<Profile image={image} />} />
               <Route path ='/profile/addphoto' element={<AddPhoto onProfilePicSubmit={onProfilePicSubmit} />} />
