@@ -6,6 +6,7 @@ export const PostItem = ({
     _ownerId,
     _id
 }) => {
+    
     return(
         <div className='post-item'>
             <h3>Author:{_ownerId}</h3>
