@@ -13,8 +13,8 @@ export const petServiceFactory = (token) => {
     };
 
     const addPet = async(data) => {
-        const author = encodeURIComponent(`author=_ownerId:users`);
-        const result = await request.post(`${baseUrl}&load=${author}`, data);
+        // const author = encodeURIComponent(`author=_ownerId:users`);
+        const result = await request.post(baseUrl, data);
         return result
     };
 
