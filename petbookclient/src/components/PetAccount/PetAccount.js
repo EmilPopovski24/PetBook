@@ -41,10 +41,11 @@ export const PetAccount = () => {
         return res
     }
 
-    const onLikeSubmit = async(e) => {
-        e.preventDefault();
-        setLikes(likes +1)
-    }
+    // const onLikeSubmit = async(e) => {
+    //     e.preventDefault();
+    //     const res = petService.likePet(petId);
+    //     setLike(state => [...state, res])
+    // }
 
     const onPetCommentSubmit = async (e) => {
         e.preventDefault();
@@ -75,11 +76,11 @@ export const PetAccount = () => {
                     <li><h3>Breed: {pet.breed}</h3></li>
                     <li><h3>Age: {pet.age}</h3></li>
                     <li><h3>Color: {pet.color}</h3></li>
-                    <li><h3>Likes: {likes.length}</h3></li>
+                    <li><h3>Likes: {likes}</h3></li>
                     {/* <li><h3>Owner: {pet.author.username}</h3></li> */}
-                    {!isOwner &&(
+                    {/* {!isOwner &&(
                         <button className='like-btn' onClick={onLikeSubmit}>Like</button>
-                    )}
+                    )} */}
                 </ul> 
                     <div className='actionsDiv'>
                         <div className='go-back'>

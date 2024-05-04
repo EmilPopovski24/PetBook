@@ -27,8 +27,11 @@ export const petServiceFactory = (token) => {
 
     const deletePet = (petId) => request.del(`${baseUrl}/${petId}`);
 
-    // const likePet = (petId) => request.post(`${baseUrl}/${petId}`);
-
+    // const likePet = (petId) => {
+    //     const author = encodeURIComponent(`author=_ownerId:users`);
+    //     const res = request.post(`${baseUrl}/${petId}&load=${author}`);
+    //     return res
+    // }
     // const getAllLikes =  async(petId) => {
     //     const query = encodeURIComponent(`petId="${petId}"`);
     //     const result = await request.get(`http://localhost:3030/data/petComments/?where=${query}`);
