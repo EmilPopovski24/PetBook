@@ -35,10 +35,15 @@ const onDelete = (res) => {
     setPets(state => state.map(x=> x._id !== res._id))
 };
 
+const getPet = (petId) => {
+    return pets.find(pet=> pet._id === petId)
+}
+
 const contextValues = {
     onAddPetSubmit,
     onPetEditSubmit,
     onDelete,
+    getPet,
     pets
 }
 

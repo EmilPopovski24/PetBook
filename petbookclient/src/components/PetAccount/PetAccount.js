@@ -14,12 +14,11 @@ export const PetAccount = () => {
     const { userId } = useContext(AuthContext);
     const { petId } = useParams();
     const [pet, setPet] = useState({});
-    const [like, setLike] = useState({});
-    const [likes, setLikes] = useState(0);
+    const { username } = useParams();
     const petService = useService(petServiceFactory);
     const profileService = useService(profileServiceFactory);
     const [petComment, setPetComment] = useState('')
-    const [username, setUsername] = useState(''); 
+    // const [username, setUsername] = useState(''); 
     const [petComments, setPetComments] = useState([]);
 
     useEffect(()=> {
@@ -41,17 +40,10 @@ export const PetAccount = () => {
         return res
     }
 
-    // const onLikeSubmit = async(e) => {
-    //     e.preventDefault();
-    //     const res = petService.likePet(petId);
-    //     setLike(state => [...state, res])
-    // }
-
     const onPetCommentSubmit = async (e) => {
         e.preventDefault();
         const response = await profileService.addPetComment({
             petId,
-            username,
             petComment,
         })
         setPet(state => ({
@@ -59,7 +51,6 @@ export const PetAccount = () => {
             petComments: [...petComments, response]
         }))
 
-        setUsername('');
         setPetComment('');
     }
 
@@ -76,7 +67,7 @@ export const PetAccount = () => {
                     <li><h3>Breed: {pet.breed}</h3></li>
                     <li><h3>Age: {pet.age}</h3></li>
                     <li><h3>Color: {pet.color}</h3></li>
-                    <li><h3>Owner: </h3></li>
+                    <li><h3>Owner: {pet.username}</h3></li>
                     {/* <li><h3>Likes: {likes}</h3></li> */}
                     {/* {!isOwner &&(
                         <button className='like-btn' onClick={onLikeSubmit}>Like</button>

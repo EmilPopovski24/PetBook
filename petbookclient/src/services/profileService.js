@@ -39,8 +39,6 @@ export const profileServiceFactory = (token) => {
         return comments
     };
 
-
-
     const getAllLikes =  async(petId) => {
         const query = encodeURIComponent(`petId="${petId}"`);
         const result = await request.get(`${profileUrl}/likes/?where=${query}`);

@@ -21,7 +21,7 @@ import { Profile } from './components/Profile/Profile';
 import { AdvicesList } from './components/AdvicesList/AdvicesList';
 import { AddPhoto } from './components/Profile/AddPhoto/AddPhoto';
 import { AskForHelp } from './components/AskForHelp/AskForHelp';
-import { RouteGuard } from './components/guards/RouteGuard';
+import { RouteGuard } from './components/common/RouteGuard';
 import { profileServiceFactory } from './services/profileService';
 // import { authServiceFactory } from './services/authService';
 import { Post } from './components/AdvicesList/PostItem/Post/Post';
