@@ -75,17 +75,17 @@ function App() {
 //         setAuth({});
 // };
 
-    const onAddPetSubmit = async(petData) => {
-        const newPet = await petService.addPet(petData);
-        setPets(state => [...state, newPet]);
-        navigate('/catalog')
-};
+//     const onAddPetSubmit = async(petData) => {
+//         const newPet = await petService.addPet(petData);
+//         setPets(state => [...state, newPet]);
+//         navigate('/catalog')
+// };
 
-    const onPetEditSubmit = async(values) => {
-        const result = await petService.edit(values._id, values);
-        setPets(state => state.map(x => x._id === values._id ? result : x)) // to check this
-        navigate(`/catalog/${values._id}`);
-};
+//     const onPetEditSubmit = async(values) => {
+//         const result = await petService.edit(values._id, values);
+//         setPets(state => state.map(x => x._id === values._id ? result : x)) // to check this
+//         navigate(`/catalog/${values._id}`);
+// };
 
     const onProfilePicSubmit = async(data) => {
         const result = await profileService.addPhoto(data)
