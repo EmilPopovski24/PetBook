@@ -76,8 +76,8 @@ export const PetAccount = () => {
                     <li><h3>Breed: {pet.breed}</h3></li>
                     <li><h3>Age: {pet.age}</h3></li>
                     <li><h3>Color: {pet.color}</h3></li>
-                    <li><h3>Likes: {likes}</h3></li>
-                    {/* <li><h3>Owner: {pet.author.username}</h3></li> */}
+                    <li><h3>Owner: </h3></li>
+                    {/* <li><h3>Likes: {likes}</h3></li> */}
                     {/* {!isOwner &&(
                         <button className='like-btn' onClick={onLikeSubmit}>Like</button>
                     )} */}
