@@ -4,8 +4,9 @@ import { useService } from "../../hooks/useService";
 import { petServiceFactory } from "../../services/petService";
 import { useContext, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import './EditPet.css';
 import { PetContext } from "../../contexts/PetContext";
+import './EditPet.css';
+
 
 export const EditPet = () => {  
     
