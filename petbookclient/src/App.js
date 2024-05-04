@@ -1,4 +1,4 @@
-import {  useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import { PetProvider } from './contexts/PetContext';
@@ -119,6 +119,7 @@ const EnhancedLogin = withAuth(Login);
 
 return (
     <AuthProvider>
+      <PetProvider>
       <Header />
       <div className="main-content">
         <Routes>
@@ -128,7 +129,6 @@ return (
           <Route path ='/logout' element={<Logout />} />
           <Route path ='/catalog' element={<Catalog pets={pets} />} />    
             <Route element={<RouteGuard />}>
-            <PetProvider>
               <Route path ='/catalog/:petId' element={<PetAccount pets={pets} onAddPetSubmit={onAddPetSubmit} onDelete={onDelete} />} />
               <Route path ='/catalog/:petId/edit' element={<EditPet onPetEditSubmit={onPetEditSubmit} />} /> 
               <Route path ='/addpet' element={<AddPet onAddPetSubmit={onAddPetSubmit} auth={withAuth} />} />
@@ -137,7 +137,6 @@ return (
               <Route path ='/help' element={<AskForHelp onPostSubmit={onPostSubmit} />} />
               <Route path ='/advices' element={<AdvicesList posts={posts} />} />
               <Route path ='/advices/:postId' element={<Post />} />
-              </PetProvider>
             </Route>
           <Route path ='/about' element={<About />} />
           <Route path ='/terms' element={<Terms />} />
@@ -145,6 +144,7 @@ return (
         </Routes>
       </div>
       <Footer />
+      </PetProvider>
     </AuthProvider>
   );
 }

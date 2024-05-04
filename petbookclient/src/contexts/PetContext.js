@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { petServiceFactory } from "../services/petService";
 import { useLocalStorage } from "../hooks/useLocalStorage";
-import { useEffect } from "react";
+import { createContext, useEffect } from "react";
+
+const PetContext = createContext();
 
 export const PetProvider = ({
     auth,
@@ -42,9 +44,9 @@ const contextValues = {
 }
 
 return (
-    <PetProvider value={contextValues}>
+    <PetContext.Provider value={contextValues}>
         {children}
-    </PetProvider>
+    </PetContext.Provider>
 )
 
 }
