@@ -14,11 +14,9 @@ export const PetAccount = () => {
     const { userId } = useContext(AuthContext);
     const { petId } = useParams();
     const [pet, setPet] = useState({});
-    const { username } = useParams();
     const petService = useService(petServiceFactory);
     const profileService = useService(profileServiceFactory);
-    const [petComment, setPetComment] = useState('')
-    // const [username, setUsername] = useState(''); 
+    const [petComment, setPetComment] = useState('');
     const [petComments, setPetComments] = useState([]);
 
     useEffect(()=> {
@@ -26,7 +24,6 @@ export const PetAccount = () => {
             .then(result => {
                 setPet(result)
                 return profileService.getAllPetComments(petId)
-                // profileService.getAllLikes(petId)
             })
             .then(result => {
                 setPetComments(result)
