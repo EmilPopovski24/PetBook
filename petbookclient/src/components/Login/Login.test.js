@@ -3,6 +3,6 @@ import { Login } from './Login';
 
 test('check if header is visible', () => {
     render(<Login />);
-    const h1 = screen.findAllByText('Login form')
-    expect(h1).toBeTruthy();
+    const { pic }  = screen.findByAltText("Avatar")
+    expect(pic).toBeTruthy();
   });
