@@ -10,9 +10,9 @@ test('renders learn react link', () => {
 });
 
 describe("Test App component", () => {
-  it("renders home page with picture", () => {
-    const { logo } = render(<Header />)
-    const headerlogo = screen.getbyText(/PetBook/i);
-    expect(headerlogo).toBeInTheDocument();
+  it("renders logo on the header", () => {
+    const { isAuhenticated } = render(<Header />)
+    const logo = screen.getbyText(/PetBook/i);
+    expect(logo).toBeInTheDocument();
   });
 })
