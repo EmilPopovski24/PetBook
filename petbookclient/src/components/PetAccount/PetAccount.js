@@ -29,8 +29,10 @@ export const PetAccount = () => {
     }, [petId]);
 
     const onDeletePet = async() => {
-
+        // eslint-disable-next-line max-len 
+        const result = confirm((`Are you sire you want to delete ${pet.name}`))
         const res = await petService.deletePet(pet._id);
+        console.log(result)
         navigate("/catalog")
         return res
     }
