@@ -39,20 +39,12 @@ export const profileServiceFactory = (token) => {
         return comments
     };
 
-    const getAllLikes =  async(petId) => {
-        const query = encodeURIComponent(`petId="${petId}"`);
-        const result = await request.get(`${profileUrl}/likes/?where=${query}`);
-        const likes = Object.values(result)
-        return likes
-    };
-
     return {
        addPhoto,
        getOnePhoto,
        addPost,
        getOnePost,
        addPetComment,
-       getAllPetComments,
-       getAllLikes
+       getAllPetComments
     }
 }

@@ -18,6 +18,7 @@ export const PetAccount = () => {
     const profileService = useService(profileServiceFactory);
     const [petComment, setPetComment] = useState('');
     const [petComments, setPetComments] = useState([]);
+    const [like, setLike] = useState([]);
 
     useEffect(()=> {
         petService.getOne(petId)
