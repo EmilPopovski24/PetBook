@@ -18,9 +18,7 @@ export const petServiceFactory = (token) => {
     };
 
     const getOne = async(petId) => {
-        const query = encodeURIComponent(`petId="${petId}"`);
-        const author = encodeURIComponent(`author=_ownerId:users`);
-        const result = await request.get(`${baseUrl}/${query}${petId}&load=${author}`);
+        const result = await request.get(`${baseUrl}/${petId}`);
         return result;
     }
   
