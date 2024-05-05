@@ -13,6 +13,6 @@ describe("Test App component", () => {
   it("renders home page with picture", () => {
     const { logo } = render(<Header />)
     const headerlogo = screen.getbyText(/PetBook/i);
-    expect(headerlogo).toVeTruthy();
+    expect(headerlogo).toBeInTheDocument();
   });
 })
