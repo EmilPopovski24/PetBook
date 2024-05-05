@@ -14,7 +14,6 @@ import { About } from  './components/About/About';
 import { Terms } from  './components/Terms/Terms';
 import { FAQ } from  './components/FAQ/FAQ';
 import { Route, Routes} from 'react-router-dom';
-// import { petServiceFactory } from './services/petService';
 import { PetAccount } from './components/PetAccount/PetAccount';
 import { EditPet } from './components/EditPet/EditPet';
 import { Profile } from './components/Profile/Profile';
@@ -23,11 +22,9 @@ import { AddPhoto } from './components/Profile/AddPhoto/AddPhoto';
 import { AskForHelp } from './components/AskForHelp/AskForHelp';
 import { RouteGuard } from './components/common/RouteGuard';
 import { profileServiceFactory } from './services/profileService';
-// import { authServiceFactory } from './services/authService';
 import { Post } from './components/AdvicesList/PostItem/Post/Post';
 import { withAuth } from './components/hoc/withAuth';
 import './App.css'
-// import { useLocalStorage } from './hooks/useLocalStorage';
 
 function App() {
     const navigate = useNavigate();

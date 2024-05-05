@@ -31,10 +31,6 @@ export const PetProvider = ({
         navigate(`/catalog/${values._id}`);
 };
 
-const onDelete = (res) => { 
-    setPets(state => state.map(x=> x._id !== res._id))
-};
-
 const getPet = (petId) => {
     return pets.find(pet=> pet._id === petId)
 }
@@ -42,7 +38,6 @@ const getPet = (petId) => {
 const contextValues = {
     onAddPetSubmit,
     onPetEditSubmit,
-    onDelete,
     getPet,
     pets
 }

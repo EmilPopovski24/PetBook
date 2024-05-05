@@ -4,12 +4,10 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContext';
 import { profileServiceFactory } from '../../services/profileService';
-import { usePetContext } from '../../contexts/PetContext';
 import './PetAccount.css';
 
 export const PetAccount = () => {
 
-    const { onDelete } = usePetContext();
     const navigate = useNavigate();
     const { userId } = useContext(AuthContext);
     const { petId } = useParams();
@@ -18,7 +16,6 @@ export const PetAccount = () => {
     const profileService = useService(profileServiceFactory);
     const [petComment, setPetComment] = useState('');
     const [petComments, setPetComments] = useState([]);
-    const [like, setLike] = useState([]);
 
     useEffect(()=> {
         petService.getOne(petId)
@@ -32,9 +29,9 @@ export const PetAccount = () => {
     }, [petId]);
 
     const onDeletePet = async() => {
+
         const res = await petService.deletePet(pet._id);
         navigate("/catalog")
-        onDelete()
         return res
     }
 
