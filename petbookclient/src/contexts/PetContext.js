@@ -35,6 +35,10 @@ const getPet = (petId) => {
     return pets.find(pet=> pet._id === petId)
 }
 
+const deleteP = (petId) => {
+    setPets(state => state.filter(pet => pet._id !== petId))
+}
+
 const contextValues = {
     onAddPetSubmit,
     onPetEditSubmit,
