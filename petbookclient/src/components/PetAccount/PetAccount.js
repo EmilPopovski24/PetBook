@@ -36,7 +36,6 @@ export const PetAccount = () => {
 
         if(result) {
             await petService.deletePet(pet._id);
-
         }
         
         console.log(result)
