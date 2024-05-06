@@ -41,7 +41,6 @@ export const PetAccount = () => {
         
         console.log(result)
         navigate("/catalog")
-        return res
     }
 
     const onPetCommentSubmit = async (e) => {
