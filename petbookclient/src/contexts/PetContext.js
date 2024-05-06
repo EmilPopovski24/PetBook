@@ -43,6 +43,7 @@ const contextValues = {
     onAddPetSubmit,
     onPetEditSubmit,
     getPet,
+    deleteP,
     pets
 }
 
