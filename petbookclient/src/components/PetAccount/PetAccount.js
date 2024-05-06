@@ -35,7 +35,7 @@ export const PetAccount = () => {
         const result = confirm((`Are you sire you want to delete ${pet.name}`))
 
         if(result) {
-            await petService.deleteP(pet._id);
+            await petService.deletePet(pet._id);
         }
         
         navigate("/catalog")
