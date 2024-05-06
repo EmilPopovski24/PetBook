@@ -17,7 +17,7 @@ export const PetAccount = () => {
     const profileService = useService(profileServiceFactory);
     const [petComment, setPetComment] = useState('');
     const [petComments, setPetComments] = useState([]);
-    const { deleteP } = usePetContext();
+    const { deletePet } = usePetContext();
 
     useEffect(()=> {
         petService.getOne(petId)
@@ -35,7 +35,7 @@ export const PetAccount = () => {
         const result = confirm((`Are you sire you want to delete ${pet.name}`))
 
         if(result) {
-            await petService.deletePet(pet._id);
+            await deletePet(pet._id);
         }
         
         navigate("/catalog")
