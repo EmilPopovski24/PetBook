@@ -38,7 +38,6 @@ export const PetAccount = () => {
             await petService.deletePet(pet._id);
         }
         
-        console.log(result)
         navigate("/catalog")
     }
 
