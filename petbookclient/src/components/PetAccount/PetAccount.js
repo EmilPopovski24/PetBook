@@ -31,11 +31,11 @@ export const PetAccount = () => {
     }, [petId]);
 
     const onDeletePet = async() => {
-        // eslint-disable-next-line max-len 
+        // eslint-disable-next-line
         const result = confirm((`Are you sire you want to delete ${pet.name}`))
 
         if(result) {
-            await petService.deletePet(pet._id);
+            await petService.deleteP(pet._id);
         }
         
         navigate("/catalog")
