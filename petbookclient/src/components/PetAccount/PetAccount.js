@@ -24,7 +24,7 @@ export const PetAccount = () => {
         petService.getOne(petId)
             .then(result => {
                 setPet(result)
-                profileService.getAllLikes(petId)
+                // profileService.getAllLikes(petId)
                 return profileService.getAllPetComments(petId)
             })
             .then(result => {
@@ -59,7 +59,6 @@ export const PetAccount = () => {
         e.preventDefault();
         const response = await profileService.likePet(petId);
         setLikes(state => [...state, response])
-
     }
 
     const isOwner = pet._ownerId === userId;
