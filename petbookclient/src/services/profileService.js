@@ -36,9 +36,15 @@ export const profileServiceFactory = (token) => {
         const author = encodeURIComponent(`author=_ownerId:users`);
         const result = await request.get(`${profileUrl}/petComments/?where=${query}&load=${author}`);
         // const comments = Object.values(result)
-
         return result
     };
+
+    const likePet = async(petId) => {
+        const query = encodeURIComponent(`petId="${petId}"`);
+        const author = encodeURIComponent(`author=_ownerId:users`);
+        const result = await request.get(`${profileUrl}/likes/?where=${query}&load=${author}`);
+        return result
+    }
 
     return {
        addPhoto,
@@ -46,6 +52,7 @@ export const profileServiceFactory = (token) => {
        addPost,
        getOnePost,
        addPetComment,
-       getAllPetComments
+       getAllPetComments,
+       likePet
     }
 }
