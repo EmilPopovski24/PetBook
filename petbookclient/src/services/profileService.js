@@ -35,11 +35,11 @@ export const profileServiceFactory = (token) => {
         const query = encodeURIComponent(`petId="${petId}"`);
         const author = encodeURIComponent(`author=_ownerId:users`);
         const result = await request.get(`${profileUrl}/petComments/?where=${query}&load=${author}`);
-        const comments = Object.values(result)
-        if(comments.length === 0) {
-            return
-        }
-        return comments
+        // const comments = Object.values(result)
+        // if(comments.length === 0) {
+        //     return
+        // }
+        return result
     };
 
     return {
