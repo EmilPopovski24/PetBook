@@ -15,7 +15,6 @@ export const useLocalStorage = (key, initialValue) => {
 
     const setLocalStorageState = (value) => {
         setState(value);
-        console.log(value)
         localStorage.setItem(key, JSON.stringify(value))
     };
 
