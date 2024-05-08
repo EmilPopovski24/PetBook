@@ -15,8 +15,8 @@ export const commentServiceFactory = (token) => {
         const query = encodeURIComponent(`postId="${postId}"`);
         const author = encodeURIComponent(`author=_ownerId:users`);
         const result = await request.get(`${commentsUrl}?where=${query}&load=${author}`);
-        const comments = Object.values(result)
-        return comments
+        // const comments = Object.values(result)
+        return result
     };
     
     return {
