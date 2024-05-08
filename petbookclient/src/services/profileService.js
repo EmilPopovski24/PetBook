@@ -40,6 +40,11 @@ export const profileServiceFactory = (token) => {
     };
 
     const likePet = async(petId) => {
+        const result = await request.post(`${profileUrl}/likes`, petId)
+        return result
+    }
+
+    const getAllLikes = async(petId) => {
         const query = encodeURIComponent(`petId="${petId}"`);
         const author = encodeURIComponent(`author=_ownerId:users`);
         const result = await request.get(`${profileUrl}/likes/?where=${query}&load=${author}`);
@@ -53,6 +58,7 @@ export const profileServiceFactory = (token) => {
        getOnePost,
        addPetComment,
        getAllPetComments,
-       likePet
+       likePet,
+       getAllLikes
     }
 }
