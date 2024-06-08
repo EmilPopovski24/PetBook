@@ -3,7 +3,7 @@ import './AskForHelp.css';
 
 export const AskForHelp = ({
     onPostSubmit, 
-    username,
+    username
 }) => {
 
     const {values, changeHandler, onSubmit} = useForm({
