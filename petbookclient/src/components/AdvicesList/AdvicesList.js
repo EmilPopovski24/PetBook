@@ -2,7 +2,7 @@ import { PostItem } from './PostItem/PostItem';
 import './AdvicesList.css';
 
 export const AdvicesList = ({
-    posts,
+    posts
 }) => {
 
     return(
