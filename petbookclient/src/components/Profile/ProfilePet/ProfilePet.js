@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const ProfilePet = ({
     name,
-    _id,
+    _id
 }) => {
 
     return(
