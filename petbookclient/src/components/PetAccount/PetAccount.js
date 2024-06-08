@@ -4,8 +4,8 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContext';
 import { profileServiceFactory } from '../../services/profileService';
-import './PetAccount.css';
 import { usePetContext } from '../../contexts/PetContext';
+import './PetAccount.css';
 
 export const PetAccount = () => {
 
