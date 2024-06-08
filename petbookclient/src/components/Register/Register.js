@@ -11,7 +11,7 @@ export const Register = () => {
         username: '',
         email: '',
         password: '',
-        confirmPassword: '',
+        confirmPassword: ''
     }, onRegisterSubmit)
 
     return (
