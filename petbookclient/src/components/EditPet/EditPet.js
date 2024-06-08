@@ -19,7 +19,7 @@ export const EditPet = () => {
         breed: '',
         age: '',
         color: '',
-        imageUrl:'',
+        imageUrl:''
     }, onPetEditSubmit)
 
     useEffect(()=> {
