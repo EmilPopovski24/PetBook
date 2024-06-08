@@ -7,7 +7,7 @@ import { useContext } from "react";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({
-    children,
+    children
 }) => {
 
     const [auth, setAuth] = useLocalStorage('auth',{});
