@@ -8,7 +8,7 @@ const LoginKeys = {
 };
 
 export const Login = ({
-    auth,
+    auth
 }) => {
     const { onLoginSubmit } = auth;
     // const { onLoginSubmit } = useAuthContext();
