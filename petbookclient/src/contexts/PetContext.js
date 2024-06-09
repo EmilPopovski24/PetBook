@@ -27,7 +27,7 @@ export const PetProvider = ({
 
     const onPetEditSubmit = async(values) => {
         const result = await petService.edit(values._id, values);
-        setPets(state => state.map(x => x._id === values._id ? result : x)) // to check this
+        setPets(state => state.map(x => x._id === values._id ? result : x)) 
         navigate(`/catalog/${values._id}`);
 };
 
