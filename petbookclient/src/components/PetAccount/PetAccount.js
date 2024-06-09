@@ -99,15 +99,7 @@ export const PetAccount = () => {
             <div className="petComments-div">
                 <h5>Comments:</h5>
                 <ul className='petComments-ul'>  
-                /* {pets.length > 0 && (
-                <h1 className="catalog-pets">Pets</h1>
-            )}
-            <div id='catalog-page'>
-                {pets.map(x=> <PetItem key={x._id} {...x} />)}
-            </div>
-            {pets.length === 0 && (
-                <h1 className="catalog-pets">No pet accounts for now</h1>
-            )} */
+
 
                     {petComments?.map(x=> (
                         <li key={x._id} className='petComment-li'>
