@@ -51,8 +51,8 @@ return (
     <PetContext.Provider value={contextValues}>
         {children}
     </PetContext.Provider>
-)
-}
+    )
+};
 
 export const usePetContext = () => {
     const context = useContext(PetContext);
