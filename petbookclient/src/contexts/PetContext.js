@@ -31,13 +31,13 @@ export const PetProvider = ({
         navigate(`/catalog/${values._id}`);
 };
 
-const getPet = (petId) => {
-    return pets.find(pet=> pet._id === petId)
-}
+    const getPet = (petId) => {
+        return pets.find(pet=> pet._id === petId)
+};
 
-const deletePet = (petId) => {
-    setPets(state => state.filter(pet => pet._id !== petId))
-}
+    const deletePet = (petId) => {
+        setPets(state => state.filter(pet => pet._id !== petId))
+};
 
 const contextValues = {
     onAddPetSubmit,
@@ -57,4 +57,4 @@ return (
 export const usePetContext = () => {
     const context = useContext(PetContext);
     return context
-}
+};
