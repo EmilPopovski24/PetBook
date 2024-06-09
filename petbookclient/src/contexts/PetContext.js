@@ -52,7 +52,6 @@ return (
         {children}
     </PetContext.Provider>
 )
-
 }
 
 export const usePetContext = () => {
