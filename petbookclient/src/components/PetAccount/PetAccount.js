@@ -99,8 +99,6 @@ export const PetAccount = () => {
             <div className="petComments-div">
                 <h5>Comments:</h5>
                 <ul className='petComments-ul'>  
-
-
                     {petComments?.map(x=> (
                         <li key={x._id} className='petComment-li'>
                             <p><b>{x.author.username}</b>: {x.petComment}</p>      
