@@ -99,11 +99,14 @@ export const PetAccount = () => {
             <div className="petComments-div">
                 <h5>Comments:</h5>
                 <ul className='petComments-ul'>  
-                    {petComments?.map(x=> (
+                    {petComments.length > 0 && (petComments?.map(x=> (
                         <li key={x._id} className='petComment-li'>
                             <p><b>{x.author.username}</b>: {x.petComment}</p>      
                         </li>
-                    ))}
+                    )))}
+                    {petComments.length === 0 && (
+                        <h5>No comments</h5>
+                    )}
                 </ul>
             </div>
         </div>
