@@ -11,7 +11,7 @@ export const Login = ({
     auth
 }) => {
     const { onLoginSubmit } = auth;
-    // const { onLoginSubmit } = useAuthContext();
+    const { onLoginSubmit } = useAuthContext();
     const { values, changeHandler, onSubmit} = useForm({
         [LoginKeys.Email]: '',
         [LoginKeys.Password]: ''
