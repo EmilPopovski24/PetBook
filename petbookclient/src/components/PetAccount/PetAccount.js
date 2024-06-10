@@ -18,13 +18,13 @@ export const PetAccount = () => {
     const [petComment, setPetComment] = useState('');
     const [petComments, setPetComments] = useState([]);
     const { deletePet } = usePetContext();
-    const [likes, setLikes] = useState({});
+    // const [likes, setLikes] = useState({});
 
     useEffect(()=> {
         petService.getOne(petId)
             .then(result => {
                 setPet(result)
-                profileService.getAllLikes(petId)
+                // profileService.getAllLikes(petId)
                 return profileService.getAllPetComments(petId)
             })
             .then(result => {
@@ -55,11 +55,11 @@ export const PetAccount = () => {
         setPetComment('');
     }
 
-    const onLikeSubmit = async(e) => {
-        e.preventDefault();
-        const response = await profileService.likePet(petId);
-        setLikes(state => [...state, response])
-    }
+    // const onLikeSubmit = async(e) => {
+    //     e.preventDefault();
+    //     const response = await profileService.likePet(petId);
+    //     setLikes(state => [...state, response])
+    // }
 
     const isOwner = pet._ownerId === userId;
 
@@ -74,8 +74,8 @@ export const PetAccount = () => {
                     <li><h3>Breed: {pet.breed}</h3></li>
                     <li><h3>Age: {pet.age}</h3></li>
                     <li><h3>Color: {pet.color}</h3></li>
-                    <li><h3>Color: {likes.length}</h3></li>
-                    <li><button onClick={onLikeSubmit}>Like</button></li> 
+                    {/* <li><h3>Likes: {likes.length}</h3></li> */}
+                    {/* <li><button onClick={onLikeSubmit}>Like</button></li>  */}
                 </ul> 
                     <div className='actionsDiv'>
                         <div className='go-back'>
