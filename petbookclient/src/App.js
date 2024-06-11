@@ -24,14 +24,13 @@ import { RouteGuard } from './components/common/RouteGuard';
 import { profileServiceFactory } from './services/profileService';
 import { Post } from './components/AdvicesList/PostItem/Post/Post';
 import { withAuth } from './components/hoc/withAuth';
-import './App.css'
+import './App.css';
 
 function App() {
-    const navigate = useNavigate();
 
+    const navigate = useNavigate();
     const [image, setImage] = useState({}); 
     const [posts, setPosts] = useState([]);
-
     const profileService = profileServiceFactory(); 
 
     const onProfilePicSubmit = async(data) => {
