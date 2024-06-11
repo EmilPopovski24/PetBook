@@ -39,13 +39,13 @@ export const PetProvider = ({
         setPets(state => state.filter(pet => pet._id !== petId))
 };
 
-const contextValues = {
+    const contextValues = {
     onAddPetSubmit,
     onPetEditSubmit,
     getPet,
     deletePet,
     pets
-}
+};
 
 return (
     <PetContext.Provider value={contextValues}>
