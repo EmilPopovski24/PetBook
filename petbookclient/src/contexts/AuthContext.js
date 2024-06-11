@@ -16,8 +16,7 @@ export const AuthProvider = ({
 
     const onLoginSubmit = async (data) => {
         const result = await authService.login(data);
-        // setAuth(result)
-        // navigate('/catalog')
+        
         try {
             setAuth(result)
             navigate('/catalog')
