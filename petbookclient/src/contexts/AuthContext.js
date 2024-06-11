@@ -20,7 +20,7 @@ export const AuthProvider = ({
         try {
             setAuth(result)
             navigate('/catalog')
-            alert("You are welcome!")
+            alert("Welcome!")
         } catch(error) {
             alert("Incorrect details")
         }    
