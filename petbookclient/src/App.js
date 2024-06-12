@@ -46,7 +46,6 @@ function App() {
 };
 
 const EnhancedLogin = withAuth(Login);
-
 return (
     <AuthProvider>
       <PetProvider>
