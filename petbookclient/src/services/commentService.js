@@ -21,6 +21,6 @@ export const commentServiceFactory = (token) => {
     
     return {
         addComment,
-        getAllComments
+        getAllComments,
     }
 }
