@@ -45,7 +45,8 @@ function App() {
         navigate('/advices')
 };
 
-const EnhancedLogin = withAuth(Login);
+const EnhancedLogin = withAuth(Login); 
+
 return (
     <AuthProvider>
       <PetProvider>
