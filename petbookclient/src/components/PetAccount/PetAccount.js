@@ -39,7 +39,8 @@ export const PetAccount = () => {
         navigate("/catalog")
     }
 
-    const onPetCommentSubmit = async (e) => {
+    const onPetCommentSubmit = async(e) => {
+
         e.preventDefault();
         const response = await profileService.addPetComment({
             petId,
