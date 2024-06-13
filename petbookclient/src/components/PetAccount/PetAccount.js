@@ -53,12 +53,6 @@ export const PetAccount = () => {
         setPetComment('');
     }
 
-    // const onLikeSubmit = async(e) => {
-    //     e.preventDefault();
-    //     const response = await profileService.likePet(petId);
-    //     setLikes(state => [...state, response])
-    // }
-
     const isOwner = pet._ownerId === userId;
 
     return(
