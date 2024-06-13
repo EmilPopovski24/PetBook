@@ -10,5 +10,5 @@ export const withAuth = (Component) => {
         )
     }
 
-    return WrapperComponent
+    return WrapperComponent;
 }
