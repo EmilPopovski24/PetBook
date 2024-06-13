@@ -4,7 +4,7 @@ import './PetItem.css';
 export const PetItem = ({
     name,
     _id,
-    imageUrl,
+    imageUrl
 }) => {
 
     return (
