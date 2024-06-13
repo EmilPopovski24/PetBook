@@ -11,7 +11,7 @@
     flex-direction: column;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
     #catalog-page {
         flex-direction: column;
         flex: 100%;
