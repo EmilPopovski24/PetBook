@@ -1,13 +1,12 @@
 import { useForm } from '../../hooks/useForm';
 import { useContext } from 'react';
 import { PetContext } from '../../contexts/PetContext';
-import './AddPet.css';
 import { AuthContext } from '../../contexts/AuthContext';
+import './AddPet.css';
 
 export const AddPet = () => {
 
-    const user = useContext(AuthContext)
-
+    const user = useContext(AuthContext);
     const { onAddPetSubmit } = useContext(PetContext);
     const { values, changeHandler, onSubmit } = useForm({
         name: '',
