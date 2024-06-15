@@ -5,7 +5,7 @@ import './Catalog.css';
 export const Catalog = () => {
 
     const { pets } = usePetContext();
-
+    // console.log(pets)
     return (
         <>
             {pets.length > 0 && (
