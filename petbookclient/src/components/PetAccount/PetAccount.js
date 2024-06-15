@@ -7,7 +7,9 @@ import { profileServiceFactory } from '../../services/profileService';
 import { usePetContext } from '../../contexts/PetContext';
 import './PetAccount.css';
 
-export const PetAccount = () => {
+export const PetAccount = ({
+    user
+}) => {
 
     const navigate = useNavigate();
     const { userId } = useContext(AuthContext);
@@ -67,6 +69,7 @@ export const PetAccount = () => {
                     <li><h3>Breed: {pet.breed}</h3></li>
                     <li><h3>Age: {pet.age}</h3></li>
                     <li><h3>Color: {pet.color}</h3></li>
+                    <li><h3>Owner: {user.username}</h3></li>
                 </ul> 
                     <div className='actionsDiv'>
                         <div className='go-back'>
