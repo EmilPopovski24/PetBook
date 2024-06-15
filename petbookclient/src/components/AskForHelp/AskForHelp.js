@@ -1,14 +1,21 @@
+import { useContext } from "react";
 import { useForm } from "../../hooks/useForm"
 import './AskForHelp.css';
+import { AuthContext } from "../../contexts/AuthContext";
 
 export const AskForHelp = ({
     onPostSubmit, 
     username
 }) => {
 
+    const user = useContext(AuthContext)
+
     const {values, changeHandler, onSubmit} = useForm({
-        problem: ''
+        problem: '',
+        username: {user}
     }, onPostSubmit)  
+
+   
 
     return (
         <>
