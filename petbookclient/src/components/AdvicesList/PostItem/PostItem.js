@@ -3,6 +3,7 @@ import "./PostItem.css";
 
 export const PostItem = ({
     problem, 
+    user,
     username,
     _id
 }) => {
