@@ -5,6 +5,8 @@ export const AdvicesList = ({
     posts
 }) => {
 
+console.log(posts)
+
     return(
         <> 
         <div id='advices-page'>
