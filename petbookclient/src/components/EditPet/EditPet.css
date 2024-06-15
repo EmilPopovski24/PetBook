@@ -31,3 +31,7 @@
     border: 2px solid rgb(53, 189, 0);
     padding: 20px 40px 20px 40px;
 }
+
+input {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
