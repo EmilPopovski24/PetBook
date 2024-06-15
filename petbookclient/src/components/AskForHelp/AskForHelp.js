@@ -13,9 +13,7 @@ export const AskForHelp = ({
     const {values, changeHandler, onSubmit} = useForm({
         problem: '',
         user
-    }, onPostSubmit)  
-
-   
+    }, onPostSubmit) ;
 
     return (
         <>
