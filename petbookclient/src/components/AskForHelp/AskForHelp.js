@@ -8,11 +8,11 @@ export const AskForHelp = ({
     username
 }) => {
 
-    // const user = useContext(AuthContext)
+    const user = useContext(AuthContext)
 
     const {values, changeHandler, onSubmit} = useForm({
         problem: '',
-        owner: {username}
+        username: user.username
     }, onPostSubmit) ;
 
     return (
