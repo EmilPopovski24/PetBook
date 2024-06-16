@@ -19,6 +19,7 @@ li {
     border-radius: 5px;
     background-color:rgb(53, 189, 0);
     margin-top: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .add-photo a {
@@ -29,4 +30,8 @@ li {
 .add-photo:hover {
     cursor: pointer;
     background-color: rgb(65, 1, 10);
+}
+
+.card {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
