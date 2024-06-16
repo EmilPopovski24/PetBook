@@ -7,9 +7,18 @@
     margin-top: 5px;
     color: white;
     text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .register-btn:hover {
     cursor: pointer;
     background-color: rgb(65, 1, 10);
+}
+
+label {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
