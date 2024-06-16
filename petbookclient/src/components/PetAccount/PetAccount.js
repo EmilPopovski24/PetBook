@@ -7,9 +7,7 @@ import { profileServiceFactory } from '../../services/profileService';
 import { usePetContext } from '../../contexts/PetContext';
 import './PetAccount.css';
 
-export const PetAccount = ({
-    user
-}) => {
+export const PetAccount = () => {
 
     const navigate = useNavigate();
     const { userId } = useContext(AuthContext);
