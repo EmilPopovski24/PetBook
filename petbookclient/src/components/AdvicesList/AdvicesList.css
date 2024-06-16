@@ -1,5 +1,6 @@
 .adviceslist-header {
     text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .adviceslist-post {
@@ -17,6 +18,7 @@
     border: 2px solid rgb(53, 189, 0);;
     color: black;
     background-color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .post-btn {
@@ -34,6 +36,7 @@
 .post-btn:hover {
     cursor: pointer;
     background-color: rgb(65, 1, 10);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .catalog-posts {
