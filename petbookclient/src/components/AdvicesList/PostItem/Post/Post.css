@@ -1,5 +1,5 @@
 .comment-li {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #comment-username {
@@ -22,6 +22,10 @@
 
 .addComment-form {
     margin-top: 10px;
+}
+
+.post-btn {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
