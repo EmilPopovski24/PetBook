@@ -10,6 +10,7 @@ body {
   bottom: 0;
   position: fixed;
   width: 100%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-links {
@@ -23,13 +24,16 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-links a:hover {
   background-color: #111;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-logo {
   display: inline;
   color:white;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
