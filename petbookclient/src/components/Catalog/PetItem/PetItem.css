@@ -7,16 +7,19 @@
     display: block;
     border:none;
     border-radius: 5%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .account-buttons a {
     text-decoration: none;
     color:white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .account-buttons:hover {
     cursor: pointer;
     background-color: rgb(65, 1, 10);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .pet-item {
