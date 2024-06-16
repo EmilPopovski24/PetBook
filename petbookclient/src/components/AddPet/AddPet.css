@@ -6,6 +6,7 @@
     padding: 20px 40px 20px 40px;
     background-color: #333;
     color:white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .parameters {
@@ -17,6 +18,7 @@
     padding-left: 5px;
     border:1px solid rgb(53, 189, 0);;
     border-radius: 2px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .addPetBtn {
@@ -25,9 +27,19 @@
     border-radius: 5px;
     background-color: rgb(53, 189, 0);;
     color:white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .addPetHeader {
     text-align: center;
     padding:30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
