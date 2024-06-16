@@ -32,6 +32,11 @@
     padding: 20px 40px 20px 40px;
 }
 
+label {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 input {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
