@@ -54,9 +54,10 @@ export const PetAccount = () => {
         setPetComment('');
     }
 
-    const onLikeSubmit = async() => {
+    const onLikeSubmit = async(e) => {
+        e.preventDefault()
         console.log("like")
-        const res = await profileService.likePet()
+        const res = await profileService.likePet(petId)
         return res
     }
 
