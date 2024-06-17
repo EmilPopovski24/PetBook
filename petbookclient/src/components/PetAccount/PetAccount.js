@@ -17,6 +17,7 @@ export const PetAccount = () => {
     const profileService = useService(profileServiceFactory);
     const [petComment, setPetComment] = useState('');
     const [petComments, setPetComments] = useState([]);
+    const [likes, setLikes] = useState([]);
     const { deletePet } = usePetContext();
 
     useEffect(()=> {
@@ -56,8 +57,9 @@ export const PetAccount = () => {
 
     const onLikeSubmit = async(e) => {
         e.preventDefault()
-        console.log("like")
         const res = await profileService.likePet(petId)
+        setLikes(state => [...state, res])
+        console.log(likes.length)
         return res
     }
 
