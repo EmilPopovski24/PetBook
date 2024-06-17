@@ -54,6 +54,10 @@ export const PetAccount = () => {
         setPetComment('');
     }
 
+    const onLikeSubmit = async() => {
+        console.log("like")
+    }
+
     const isOwner = pet._ownerId === userId;
     
     return(
