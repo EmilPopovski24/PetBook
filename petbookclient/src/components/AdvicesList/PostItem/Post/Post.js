@@ -44,7 +44,7 @@ export const Post = () => {
 
     return (
         <div className="post-comment">
-            <h3 className="post-author">Author: {post.username}</h3>
+            <h3 className="post-author">{post.username} wrote:</h3>
             <p className="post-problem">{post.problem}</p>
             <div className="addComment-div">
                 <form className="addComment-form" onSubmit={onCommentSubmit}>
