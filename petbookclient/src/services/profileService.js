@@ -39,10 +39,10 @@ export const profileServiceFactory = (token) => {
         return result
     };
 
-    const likePet = async(petId) => {
-        const result = await request.post(`${profileUrl}/likes`, petId)
-        return result
-    }
+    // const likePet = async(petId) => {
+    //     const result = await request.post(`${profileUrl}/likes`, petId)
+    //     return result
+    // }
 
     return {
        addPhoto,
@@ -51,6 +51,6 @@ export const profileServiceFactory = (token) => {
        getOnePost,
        addPetComment,
        getAllPetComments,
-       likePet
+    //    likePet
     }
 }

@@ -24,10 +24,16 @@ export const petServiceFactory = (token) => {
   
     const edit = (petId, petData) => request.put(`${baseUrl}/${petId}`, petData);
 
+    const likePet = async(petId) => {
+        const result = await request.post(`${baseUrl}/likes`, petId)
+        return result
+    }
+
     return {
         getAll, 
         addPet,
         getOne,
-        edit
+        edit,
+        likePet
     }
 }
