@@ -60,7 +60,6 @@ export const PetAccount = () => {
         const res = await profileService.likePet(petId)
         setLikes(state => [...state, res])
         console.log(likes.length)
-        return res
     }
 
     const isOwner = pet._ownerId === userId;
