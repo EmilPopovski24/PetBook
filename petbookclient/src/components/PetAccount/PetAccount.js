@@ -56,6 +56,8 @@ export const PetAccount = () => {
 
     const onLikeSubmit = async() => {
         console.log("like")
+        const res = await profileService.likePet()
+        return res
     }
 
     const isOwner = pet._ownerId === userId;
