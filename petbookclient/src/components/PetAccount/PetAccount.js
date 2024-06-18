@@ -17,7 +17,6 @@ export const PetAccount = () => {
     const profileService = useService(profileServiceFactory);
     const [petComment, setPetComment] = useState('');
     const [petComments, setPetComments] = useState([]);
-    const [likes, setLikes] = useState([]);
     const { deletePet } = usePetContext();
 
     useEffect(()=> {
@@ -54,7 +53,7 @@ export const PetAccount = () => {
 
         setPetComment('');
     }
-    
+
     const isOwner = pet._ownerId === userId;
     
     return(
