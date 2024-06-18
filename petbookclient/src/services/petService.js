@@ -25,7 +25,7 @@ export const petServiceFactory = (token) => {
     const edit = (petId, petData) => request.put(`${baseUrl}/${petId}`, petData);
 
     const likePet = async(petId) => {
-        const result = await request.put(`${baseUrl}/likes`, petId)
+        const result = await request.post(`${baseUrl}/likes`, petId)
         return result
     }
 
