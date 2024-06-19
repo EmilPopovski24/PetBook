@@ -4,9 +4,9 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 export const PetContext = createContext();
 
-export const PetProvider = ({
-    children
-}) => {
+export const PetProvider = (
+    
+) => {
 
     const petService = petServiceFactory();
     const [pets, setPets] = useState([]);
