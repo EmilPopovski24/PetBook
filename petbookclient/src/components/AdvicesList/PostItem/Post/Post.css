@@ -18,6 +18,7 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: 1px solid rgb(53, 189, 0);
     border-radius: 5px;
+    width: 40%;
 }
 
 .addComment-form {

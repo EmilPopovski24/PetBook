@@ -43,8 +43,6 @@ export const Post = () => {
         return commentService.getAllComments(postId)
     };
 
-
-
     return (
         <div className="post-comment">
             <h3 className="post-author">{post.username} wrote:</h3>
