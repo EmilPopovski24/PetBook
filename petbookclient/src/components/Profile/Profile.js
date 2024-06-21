@@ -2,14 +2,21 @@ import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import "./Profile.css"
+import { userServiceFactory } from "../../services/userService";
+import { useService } from "../../hooks/useService";
 
 export const Profile = ({
     image,
     userId
 }) => {
+    
+    const userService = useService(userServiceFactory)
 
+    useEffect(() => {
+        userService.getOneUser()
 
-
+    }, [userId]);
+    
     const user = useContext(AuthContext);
 
     return(
