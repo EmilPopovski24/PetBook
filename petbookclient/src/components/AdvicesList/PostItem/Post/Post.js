@@ -27,7 +27,7 @@ export const Post = () => {
     }, [postId]);
   
     const onCommentSubmit = (e) => {
-
+        e.preventDefault()
         const response = commentService.addComment({
             postId,
             username,
