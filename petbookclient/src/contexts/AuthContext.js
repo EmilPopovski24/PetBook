@@ -16,15 +16,9 @@ export const AuthProvider = ({
 
     const onLoginSubmit = async (data) => {
         const result = await authService.login(data);
-        
-        try {
-            setAuth(result)
-            navigate('/catalog')
-            alert("Welcome!")
-        } catch(error) {
-            alert("Incorrect details")
-        }    
-
+        setAuth(result)
+        navigate('/catalog')
+        alert("Welcome!")
     };
     
     const onRegisterSubmit = async(values) => {
