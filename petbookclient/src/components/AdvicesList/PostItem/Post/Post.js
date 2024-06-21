@@ -25,7 +25,7 @@ export const Post = () => {
                 setComments(result)
         })
     }, [postId]);
-  
+
     const onCommentSubmit = (e) => {
         e.preventDefault()
         const response = commentService.addComment({
@@ -40,7 +40,10 @@ export const Post = () => {
 
         setUsername('');
         setComment('');
+        return commentService.getAllComments(postId)
     };
+
+
 
     return (
         <div className="post-comment">
