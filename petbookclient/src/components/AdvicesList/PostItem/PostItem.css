@@ -11,6 +11,7 @@
    border: 2px solid rgb(53, 189, 0);;
    border-radius: 5px;
    width: 40%;
+   min-height: 50px;
 }
 
 .account-buttons {
