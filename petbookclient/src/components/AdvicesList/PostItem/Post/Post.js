@@ -26,9 +26,9 @@ export const Post = () => {
         })
     }, [postId]);
   
-    const onCommentSubmit = async (e) => {
-        e.preventDefault();
-        const response = await commentService.addComment({
+    const onCommentSubmit = (e) => {
+
+        const response = commentService.addComment({
             postId,
             username,
             comment,
