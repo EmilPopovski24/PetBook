@@ -15,7 +15,7 @@ console.log(posts)
             )}
             {posts.map(x=> <PostItem key={x._id} {...x} />)}
             {posts.length === 0 && (
-                <h1 className="catalog-posts">No posts for now</h1>
+                <h1 className="catalog-posts">Nothing to advice for now</h1>
             )}
         </div>
        </>
