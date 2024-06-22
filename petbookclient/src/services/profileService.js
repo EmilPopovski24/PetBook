@@ -6,8 +6,8 @@ export const profileServiceFactory = (token) => {
     
     const request = requestFactory(token);
 
-    const addPhoto = (photo) => {
-        const result = request.post(`${profileUrl}/pictures`, photo);
+    const addPhoto = (photo, token) => {
+        const result = request.post(`${profileUrl}/pictures`, photo, token);
         return result
     };
 
