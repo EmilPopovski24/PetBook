@@ -6,15 +6,15 @@ export const profileServiceFactory = (token) => {
     
     const request = requestFactory(token);
 
-    // const addPhoto = (photo, token) => {
-    //     const result = request.post(`${profileUrl}/pictures`, photo, token);
-    //     return result
-    // };
+    const addPhoto = (photo, token) => {
+        const result = request.post(`${profileUrl}/pictures`, photo, token);
+        return result
+    };
 
-    // const getOnePhoto = async(photoId) => {
-    //     const result = await request.get(`${profileUrl}/pictures`, photoId);
-    //     return result;
-    // };
+    const getOnePhoto = async(photoId) => {
+        const result = await request.get(`${profileUrl}/pictures`, photoId);
+        return result;
+    };
 
     const addPost = (post) => {
         const result = request.post(`${profileUrl}/posts`, post)
@@ -39,18 +39,14 @@ export const profileServiceFactory = (token) => {
         return result
     };
 
-    // const likePet = async(petId) => {
-    //     const result = await request.post(`${profileUrl}/likes`, petId)
-    //     return result
-    // }
+
 
     return {
-    //    addPhoto,
-    //    getOnePhoto,
+       addPhoto,
+       getOnePhoto,
        addPost,
        getOnePost,
        addPetComment,
-       getAllPetComments,
-    //    likePet
+       getAllPetComments
     }
 }
