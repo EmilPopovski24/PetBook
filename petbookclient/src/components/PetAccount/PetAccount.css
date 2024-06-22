@@ -73,13 +73,8 @@
     width: 100%;
 }
 
-.like-btn {
-    background-color: rgb(53, 189, 0);
-    color: white;
-    padding:10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.petComment-li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 

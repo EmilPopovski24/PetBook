@@ -40,7 +40,6 @@ export const PetAccount = () => {
     }
 
     const onPetCommentSubmit = async(e) => {
-
         e.preventDefault();
         const response = await profileService.addPetComment({
             petId,
@@ -68,6 +67,7 @@ export const PetAccount = () => {
                     <li><h3>Age: {pet.age}</h3></li>
                     <li><h3>Color: {pet.color}</h3></li>
                     <li><h3>Owner: {pet.username}</h3></li>
+
                 </ul> 
                     <div className='actionsDiv'>
                         <div className='go-back'>
