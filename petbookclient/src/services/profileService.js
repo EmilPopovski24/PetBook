@@ -45,8 +45,8 @@ export const profileServiceFactory = (token) => {
     // }
 
     return {
-       addPhoto,
-       getOnePhoto,
+    //    addPhoto,
+    //    getOnePhoto,
        addPost,
        getOnePost,
        addPetComment,
