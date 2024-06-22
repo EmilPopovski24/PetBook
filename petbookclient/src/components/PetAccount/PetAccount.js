@@ -68,7 +68,6 @@ export const PetAccount = () => {
                     <li><h3>Age: {pet.age}</h3></li>
                     <li><h3>Color: {pet.color}</h3></li>
                     <li><h3>Owner: {pet.username}</h3></li>
-                    {/* <li><button className="like-btn" onClick={onLikeSubmit}>Like Me</button></li> */}
                 </ul> 
                     <div className='actionsDiv'>
                         <div className='go-back'>
@@ -94,7 +93,8 @@ export const PetAccount = () => {
                 <ul className='petComments-ul'>  
                     {petComments.length > 0 && (petComments?.map(x=> (
                         <li key={x._id} className='petComment-li'>
-                            <p><b>{x.author.username}</b>: {x.petComment}</p>      
+                            <p><b>{x.author.username}</b>: {x.petComment}</p>  
+                            <hr />    
                         </li>
                     )))}
                     {petComments.length === 0 && (
