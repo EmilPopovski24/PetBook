@@ -65,7 +65,12 @@
 }
 
 .addComment-div {
+    max-width: 1000px
+}
+
+.addComment-form {
     margin-top: 50px;
+    width: 100%;
 }
 
 .like-btn {
