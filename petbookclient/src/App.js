@@ -33,8 +33,8 @@ function App() {
     const [posts, setPosts] = useState([]);
     const profileService = profileServiceFactory(); 
 
-    const onProfilePicSubmit = async(data, token) => {
-        const result = await profileService.addPhoto(data, token)
+    const onProfilePicSubmit = async(data) => {
+        const result = await profileService.addPhoto(data)
         setImage(result)
         navigate(`/profile`)
 };
