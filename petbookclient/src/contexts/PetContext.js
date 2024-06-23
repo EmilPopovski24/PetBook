@@ -13,10 +13,12 @@ export const PetProvider = ({
     const navigate = useNavigate();
 
     useEffect(() => {
-        petService.getAll()
+        if(pets.length > 0) {
+            petService.getAll()
           .then(result=> {
             setPets(result)
         })
+        }  
       },[]); 
 
     const onAddPetSubmit = async(petData) => {
