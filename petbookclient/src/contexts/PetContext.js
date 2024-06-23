@@ -17,7 +17,7 @@ export const PetProvider = ({
           .then(result=> {
             setPets(result)
         })
-      }, []);
+      },[]); 
 
     const onAddPetSubmit = async(petData) => {
         const newPet = await petService.addPet(petData);
