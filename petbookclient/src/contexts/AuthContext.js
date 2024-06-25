@@ -1,9 +1,8 @@
 import { createContext} from "react"; 
 import { authServiceFactory } from '../services/authService';
-import { profileServiceFactory } from "../services/profileService";
 import { useNavigate } from "react-router-dom";
 import { useLocalStorage } from "../hooks/useLocalStorage";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 export const AuthContext = createContext();
 
