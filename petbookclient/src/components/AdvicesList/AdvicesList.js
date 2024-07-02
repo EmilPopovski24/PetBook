@@ -11,7 +11,7 @@ console.log(posts)
         <> 
         <div id='advices-page'>
             {posts.length > 0 && (
-                <h1 className="catalog-posts">Please advise the other pet owners</h1>
+                <h1 className="catalog-posts">Please advise</h1>
             )}
             {posts.map(x=> <PostItem key={x._id} {...x} />)}
             {posts.length === 0 && (
