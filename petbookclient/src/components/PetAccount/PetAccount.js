@@ -84,7 +84,7 @@ export const PetAccount = () => {
                <div className="post-comment">
             <div className="addComment-div">
                 <form className="addComment-form" onSubmit={onPetCommentSubmit}>
-                    <textarea name="comment" id="comment-text" cols="50" rows="3" value={petComment} onChange={(e) => setPetComment(e.target.value) }></textarea>
+                    <textarea name="comment" className='comment-area' id="comment-text" cols="50" rows="3" value={petComment} onChange={(e) => setPetComment(e.target.value) }></textarea>
                     <button className='post-btn' type="submit">Add comment</button>
                 </form>
             </div>
