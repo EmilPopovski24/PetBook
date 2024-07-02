@@ -33,7 +33,7 @@ export const EditPet = () => {
         <>
         <section className="edit-page">
             <h1 className='editPetHeader'>Edit Your Pet Details</h1>
-                <form id="edit" onSubmit={onSubmit}  method="POST">
+                <form id="edit" onSubmit={onSubmit} method="POST">
                     <label htmlFor="task-title">Name</label>
                     <input type="text" id="name" name="name" value={values.name} onChange={changeHandler}  className='parameters'/>
                     <hr />
