@@ -98,7 +98,7 @@ export const PetAccount = () => {
                         </li>
                     )))}
                     {petComments.length === 0 && (
-                        <h5>No comments</h5>
+                        <h5>No comments yet</h5>
                     )}
                 </ul>
             </div>
