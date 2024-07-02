@@ -10,6 +10,10 @@
 .header-links {
     display: inline;
     float:left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
