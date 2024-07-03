@@ -12,7 +12,7 @@ export const PetItem = ({
         <div className='pet-item'>
             <h1 className="pet-name">{name}</h1>
             <div className='petitem-pic'>
-                {/* <Link to={`/catalog/${_id}`}><img src={imageUrl} alt={name} className='catalog-pic'/></Link> */}
+                <img src={imageUrl} alt={name} className='catalog-pic'/>
             </div>
             <button className="account-buttons"><Link to={`/catalog/${_id}`}>Visit Account</Link></button>
            <hr />
