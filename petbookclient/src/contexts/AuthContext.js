@@ -51,7 +51,7 @@ export const AuthProvider = ({
         token: auth.accessToken,
         userEmail: auth.email,
         username: auth.username,
-        isAuthenticated: !!auth.accessToken //truthy - false and vice versa
+        isAuthenticated: !!auth.accessToken 
       };
 
     return (
