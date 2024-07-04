@@ -23,6 +23,9 @@ export const PetAccount = () => {
         petService.getOne(petId)
             .then(result => {
                 setPet(result)
+                if(petComments.length === 0) {
+                    return
+                }
                 return profileService.getAllPetComments(petId)   
             })
             .then(result => {
@@ -68,7 +71,6 @@ export const PetAccount = () => {
                     <li><h3>Color: {pet.color}</h3></li>
                     <li><h3>Owner: {pet.username}</h3></li>
                     <li><button className='like-btn'>Like Me</button></li>
-
                 </ul> 
                     <div className='actionsDiv'>
                         <div className='go-back'>
