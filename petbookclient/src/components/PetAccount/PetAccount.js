@@ -67,6 +67,7 @@ export const PetAccount = () => {
                     <li><h3>Age: {pet.age}</h3></li>
                     <li><h3>Color: {pet.color}</h3></li>
                     <li><h3>Owner: {pet.username}</h3></li>
+                    <li><button>Like Me</button></li>
 
                 </ul> 
                     <div className='actionsDiv'>
