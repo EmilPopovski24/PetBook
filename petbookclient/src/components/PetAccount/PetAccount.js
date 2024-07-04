@@ -26,7 +26,7 @@ export const PetAccount = () => {
                     profileService.getAllPetComments(petId)   
                 }
                 setPet(result)
-                // return 
+                return 
             })
             .then(result => {
                 setPetComments(result)
