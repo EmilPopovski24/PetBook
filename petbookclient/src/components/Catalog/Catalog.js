@@ -15,7 +15,7 @@ export const Catalog = () => {
                 {pets.map(x=> <PetItem key={x._id} {...x} />)}
             </div>
             {pets.length === 0 && (
-                <h1 className="catalog-pets">No pet accounts for now</h1>
+                <h1 className="catalog-pets">No pet accounts yet</h1>
             )}
         </>
     )
