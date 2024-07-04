@@ -21,12 +21,12 @@ export const PetAccount = () => {
 
     useEffect(()=> {
         petService.getOne(petId)
-            .then(result => {
-                setPet(result)
-                if(petComments.length === 0) {
-                    return
+            .then(result => {        
+                if(petComments.length > 0) {
+                    profileService.getAllPetComments(petId)   
                 }
-                return profileService.getAllPetComments(petId)   
+                setPet(result)
+                // return 
             })
             .then(result => {
                 setPetComments(result)
