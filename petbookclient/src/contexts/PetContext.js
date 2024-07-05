@@ -43,7 +43,8 @@ export const PetProvider = ({
 };
 
     const onLikeSubmit = (petId) => {
-        setLikes()
+        const newLike = await petService.likePet(petId)
+        setLikes(state => ...state, newLike)
     }
 
     const contextValues = {
