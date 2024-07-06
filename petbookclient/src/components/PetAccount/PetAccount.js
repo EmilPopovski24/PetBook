@@ -23,9 +23,9 @@ export const PetAccount = ({
 
     useEffect(()=> {
         petService.getOne(petId)
-            .then(result => {        
-                setPet(result)
-                // profileService.getAllPetComments(petId)      
+            .then(result => {  
+                profileService.getAllPetComments(petId)         
+                setPet(result)    
             })
             .then(result => {
                 setPetComments(result)
