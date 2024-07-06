@@ -52,6 +52,7 @@ export const PetProvider = ({
     onPetEditSubmit,
     getPet,
     deletePet,
+    onLikeSubmit,
     pets
 };
 
