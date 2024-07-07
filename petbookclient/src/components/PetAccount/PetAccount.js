@@ -7,9 +7,7 @@ import { profileServiceFactory } from '../../services/profileService';
 import { usePetContext } from '../../contexts/PetContext';
 import './PetAccount.css';
 
-export const PetAccount = ({
-    onLikeSubmit
-}) => {
+export const PetAccount = () => {
 
     const navigate = useNavigate();
     const { userId } = useContext(AuthContext);
@@ -20,6 +18,7 @@ export const PetAccount = ({
     const [petComment, setPetComment] = useState('');
     const [petComments, setPetComments] = useState([]);
     const { deletePet } = usePetContext();
+    const [likes, setLikes] = useState([]);
 
     useEffect(()=> {
         petService.getOne(petId)
@@ -53,6 +52,11 @@ export const PetAccount = ({
         }))
 
         setPetComment('');
+    }
+
+    const onLikeSubmit = (petId) => {
+        const newLike =  petService.likePet(petId)
+        setLikes(state => [...state, newLike])
     }
 
     const isOwner = pet._ownerId === userId;

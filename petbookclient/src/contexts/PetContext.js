@@ -10,7 +10,6 @@ export const PetProvider = ({
 
     const petService = petServiceFactory();
     const [pets, setPets] = useState([]);
-    const [likes, setLikes] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -42,17 +41,13 @@ export const PetProvider = ({
         setPets(state => state.filter(pet => pet._id !== petId))
 };
 
-    const onLikeSubmit =  (petId) => {
-        const newLike =  petService.likePet(petId)
-        setLikes(state => [...state, newLike])
-    }
+
 
     const contextValues = {
     onAddPetSubmit,
     onPetEditSubmit,
     getPet,
     deletePet,
-    onLikeSubmit,
     pets
 };
 
