@@ -41,8 +41,6 @@ export const PetProvider = ({
         setPets(state => state.filter(pet => pet._id !== petId))
 };
 
-
-
     const contextValues = {
     onAddPetSubmit,
     onPetEditSubmit,
