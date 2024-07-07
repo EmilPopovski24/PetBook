@@ -57,7 +57,7 @@ export const PetAccount = () => {
     }
 
     const onLikeSubmit = (petId) => {
-        const newLike =  li.likePet(petId)
+        const newLike =  likeService.addLike(petId)
         setLikes(state => [...state, newLike])
     }
 
