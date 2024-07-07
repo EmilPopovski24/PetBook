@@ -42,8 +42,8 @@ export const PetProvider = ({
         setPets(state => state.filter(pet => pet._id !== petId))
 };
 
-    const onLikeSubmit = async (petId) => {
-        const newLike = await petService.likePet(petId)
+    const onLikeSubmit =  (petId) => {
+        const newLike =  petService.likePet(petId)
         setLikes(state => [...state, newLike])
     }
 
