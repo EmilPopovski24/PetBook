@@ -6,6 +6,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 import { profileServiceFactory } from '../../services/profileService';
 import { usePetContext } from '../../contexts/PetContext';
 import './PetAccount.css';
+import { likeServiceFactory } from '../../services/likeService';
 
 export const PetAccount = () => {
 
@@ -15,6 +16,7 @@ export const PetAccount = () => {
     const [pet, setPet] = useState({});
     const petService = useService(petServiceFactory);
     const profileService = useService(profileServiceFactory);
+    const likeService = useService(likeServiceFactory);
     const [petComment, setPetComment] = useState('');
     const [petComments, setPetComments] = useState([]);
     const { deletePet } = usePetContext();
@@ -55,7 +57,7 @@ export const PetAccount = () => {
     }
 
     const onLikeSubmit = (petId) => {
-        const newLike =  petService.likePet(petId)
+        const newLike =  li.likePet(petId)
         setLikes(state => [...state, newLike])
     }
 
