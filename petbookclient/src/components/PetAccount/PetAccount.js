@@ -59,6 +59,7 @@ export const PetAccount = () => {
     const onLikeSubmit = (petId) => {
         const newLike =  likeService.addLike(petId)
         setLikes(state => [...state, newLike])
+        console.log(likes.length)
     }
 
     const isOwner = pet._ownerId === userId;
