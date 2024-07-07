@@ -5,22 +5,22 @@ import { useEffect, useState, useContext } from "react";
 import { AuthContext } from '../../contexts/AuthContext';
 import { profileServiceFactory } from '../../services/profileService';
 import { usePetContext } from '../../contexts/PetContext';
-import './PetAccount.css';
 import { likeServiceFactory } from '../../services/likeService';
+import './PetAccount.css';
 
 export const PetAccount = () => {
 
     const navigate = useNavigate();
-    const { userId } = useContext(AuthContext);
-    const { petId } = useParams();
-    const [pet, setPet] = useState({});
     const petService = useService(petServiceFactory);
     const profileService = useService(profileServiceFactory);
     const likeService = useService(likeServiceFactory);
+    const { userId } = useContext(AuthContext);
+    const { petId } = useParams();
+    const { deletePet } = usePetContext();
+    const [pet, setPet] = useState({});
+    const [likes, setLikes] = useState([]);
     const [petComment, setPetComment] = useState('');
     const [petComments, setPetComments] = useState([]);
-    const { deletePet } = usePetContext();
-    const [likes, setLikes] = useState([]);
 
     useEffect(()=> {
         petService.getOne(petId)
