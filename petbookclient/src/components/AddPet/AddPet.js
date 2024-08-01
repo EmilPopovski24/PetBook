@@ -38,8 +38,7 @@ export const AddPet = () => {
                     <label htmlFor="color">Color</label>
                     <input type="text" id="color" name="color" values={values.color}  onChange={changeHandler} placeholder="Color..." className='parameters' />
                     <hr />
-                    <label htmlFor="image">Image URL</label>
-                    
+                    <label htmlFor="image">Image URL</label>               
                     <input type="imageUrl" alt="PetPicture" id="imageUrl" name="imageUrl" values={values.imageUrl} onChange={changeHandler} placeholder="Image..." className='parameters' />
                     <hr />
                     <button type="submit" className="addPetBtn">Add Your Pet</button>
