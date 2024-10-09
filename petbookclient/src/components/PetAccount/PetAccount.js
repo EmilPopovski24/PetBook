@@ -14,13 +14,25 @@ export const PetAccount = () => {
     const petService = useService(petServiceFactory);
     const profileService = useService(profileServiceFactory);
     const likeService = useService(likeServiceFactory);
-    const { userId } = useContext(AuthContext);
+    const { userId, username } = useContext(AuthContext);
     const { petId } = useParams();
     const { deletePet } = usePetContext();
     const [pet, setPet] = useState({});
     const [likes, setLikes] = useState([]);
     const [petComment, setPetComment] = useState('');
     const [petComments, setPetComments] = useState([]);
+
+    // useEffect(() => {
+    //     Promise.all([
+    //         petService.getOne(petId),
+    //         profileService.getAllPetComments(petId)
+    //     ]).then(([petData, comments]) => {
+    //         setPet({
+    //             ...petData,
+    //             comments
+    //         })
+    //     })
+    // },[petId])
 
     useEffect(()=> {
         petService.getOne(petId)
@@ -50,7 +62,12 @@ export const PetAccount = () => {
         })
         setPet(state => ({
             ...state, 
-            petComments: [...petComments, response]
+            petComments: [...petComments, {
+                ...response,
+                author:{
+                    username,
+                }
+            }]
         }))
 
         setPetComment('');
