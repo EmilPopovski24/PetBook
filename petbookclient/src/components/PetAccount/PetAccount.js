@@ -22,28 +22,28 @@ export const PetAccount = () => {
     const [petComment, setPetComment] = useState('');
     const [petComments, setPetComments] = useState([]);
 
-    // useEffect(() => {
-    //     Promise.all([
-    //         petService.getOne(petId),
-    //         profileService.getAllPetComments(petId)
-    //     ]).then(([petData, comments]) => {
-    //         setPet({
-    //             ...petData,
-    //             comments
-    //         })
-    //     })
-    // },[petId])
+    useEffect(() => {
+        Promise.all([
+            petService.getOne(petId),
+            profileService.getAllPetComments(petId)
+        ]).then(([petData, comments]) => {
+            setPet({
+                ...petData,
+                comments
+            })
+        })
+    },[petId])
 
-    useEffect(()=> {
-        petService.getOne(petId)
-            .then(result => { 
-                setPet(result)
-                return profileService.getAllPetComments(petId)        
-            })
-            .then(result => {
-                setPetComments(result)
-            })
-    }, [petId]);
+    // useEffect(()=> {
+    //     petService.getOne(petId)
+    //         .then(result => { 
+    //             setPet(result)
+    //             return profileService.getAllPetComments(petId)        
+    //         })
+    //         .then(result => {
+    //             setPetComments(result)
+    //         })
+    // }, [petId]);
 
     const onDeletePet = async() => {
         // eslint-disable-next-line
