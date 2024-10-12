@@ -5,7 +5,6 @@ import { useForm } from '../../hooks/useForm';
 import './Register.css';
 
 export const Register = () => {
-
     const { onRegisterSubmit } = useContext(AuthContext);
     const { values, changeHandler, onSubmit } = useForm({
         username: '',
