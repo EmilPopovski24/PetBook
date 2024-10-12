@@ -6,7 +6,7 @@ export const AddPhoto = ({
 }) => {
 
     const { values, changeHandler, onSubmit } = useForm({
-        imageUrl:''
+        imageUrl:'',
     }, onProfilePicSubmit)
 
         return(
