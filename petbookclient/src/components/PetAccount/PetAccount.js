@@ -46,7 +46,7 @@ export const PetAccount = () => {
     }, [petId]);
 
     const onDeletePet = async() => {
-        eslint-disable-next-line
+        // eslint-disable-next-line
         const result = confirm((`Are you sure you want to delete ${pet.name}`))
             if(result) {
                 await deletePet(pet._id);
