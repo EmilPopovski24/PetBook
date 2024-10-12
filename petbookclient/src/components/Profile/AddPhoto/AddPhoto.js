@@ -2,7 +2,7 @@ import { useForm } from "../../../hooks/useForm";
 import './AddPhoto.css';
 
 export const AddPhoto = ({
-    onProfilePicSubmit 
+    onProfilePicSubmit,
 }) => {
 
     const { values, changeHandler, onSubmit } = useForm({
